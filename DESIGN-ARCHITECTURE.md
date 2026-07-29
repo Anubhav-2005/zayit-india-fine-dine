@@ -42,7 +42,9 @@ No palace pastiche, decorative borders, generic food-grid templates, or “best 
 ## Content guardrails
 
 - Use the confirmed public details: Jaisalmer, Fort Parking Road / Dhibba Para, first-party Instagram hours of 11:00 AM–12:30 AM with the Google conflict disclosed, verified telephone `+91 70730 96695`, and the Indian–Mediterranean identity.
-- Do not present WhatsApp as a reservation route until the owner confirms that service.
+- A private preview may expose a clearly marked WhatsApp test shortcut to the
+  public phone number, but it must never imply monitoring or confirmation.
+  Remove it from a public launch until the owner verifies the service.
 - Do not invent a chef, tasting menu, awards, hotel affiliation, or false fine-dining claims.
 - Never call review-mentioned dishes “best sellers” without owner POS data.
 - Dish photography is described broadly to avoid attributing a pictured dish to an unverified menu item.

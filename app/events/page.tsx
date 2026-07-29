@@ -1,6 +1,6 @@
 import { ArrowUpRight, CalendarX2 } from "lucide-react";
 
-import { InquiryForm } from "@/components/forms/inquiry-form";
+import { DeferredInquiryForm } from "@/components/forms/deferred-inquiry-form";
 import { OwnerNotice } from "@/components/shared/owner-notice";
 import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -87,7 +87,7 @@ export default function EventsPage() {
               owner confirmation.
             </OwnerNotice>
           </div>
-          <InquiryForm kind="event" />
+          <DeferredInquiryForm kind="event" />
         </div>
       </section>
     </main>

@@ -257,7 +257,7 @@ export const reviewThemes = [
 
 export const galleryAssets: MediaAsset[] = [
   {
-    src: "/images/zayit-ambience-spaces.jpg",
+    src: "/images/zayit-ambience-spaces.webp",
     alt: "Preview crop showing Zayit dining spaces",
     label: "Dining spaces",
     rightsStatus: "owner-original-required",
@@ -265,7 +265,7 @@ export const galleryAssets: MediaAsset[] = [
     height: 640,
   },
   {
-    src: "/images/zayit-ambience-dining.jpg",
+    src: "/images/zayit-ambience-dining.webp",
     alt: "Preview crop showing guests dining at Zayit",
     label: "The table",
     rightsStatus: "owner-original-required",
@@ -273,7 +273,7 @@ export const galleryAssets: MediaAsset[] = [
     height: 640,
   },
   {
-    src: "/images/zayit-kitchen-fire.jpg",
+    src: "/images/zayit-kitchen-fire.webp",
     alt: "Preview crop showing live-fire cooking at Zayit",
     label: "The kitchen",
     rightsStatus: "owner-original-required",
@@ -281,7 +281,7 @@ export const galleryAssets: MediaAsset[] = [
     height: 640,
   },
   {
-    src: "/images/zayit-03.jpg",
+    src: "/images/zayit-03.webp",
     alt: "Preview crop of a plated dish from Zayit’s public profile",
     label: "From the fire",
     rightsStatus: "owner-original-required",
@@ -289,7 +289,7 @@ export const galleryAssets: MediaAsset[] = [
     height: 640,
   },
   {
-    src: "/images/zayit-04.jpg",
+    src: "/images/zayit-04.webp",
     alt: "Preview crop of a shared platter from Zayit’s public profile",
     label: "Made to share",
     rightsStatus: "owner-original-required",
@@ -297,7 +297,7 @@ export const galleryAssets: MediaAsset[] = [
     height: 640,
   },
   {
-    src: "/images/zayit-05.jpg",
+    src: "/images/zayit-05.webp",
     alt: "Preview crop of a restaurant dish from Zayit’s public profile",
     label: "At the table",
     rightsStatus: "owner-original-required",
@@ -305,7 +305,7 @@ export const galleryAssets: MediaAsset[] = [
     height: 640,
   },
   {
-    src: "/images/zayit-06.jpg",
+    src: "/images/zayit-06.webp",
     alt: "Preview crop of a plated dish from Zayit’s public profile",
     label: "The plate",
     rightsStatus: "owner-original-required",
@@ -355,7 +355,7 @@ export const faqs = [
   {
     question: "How do I reserve a table?",
     answer:
-      "Call +91 70730 96695. Reservations are publicly listed as accepted; no current official online booking form or verified WhatsApp reservation service was found.",
+      "Call +91 70730 96695, open a pre-filled WhatsApp request to the same public number, or prepare an email request on this website. WhatsApp monitoring is not independently confirmed, and no request becomes a reservation until the restaurant replies.",
   },
   {
     question: "What cuisine does Zayit serve?",
@@ -424,7 +424,7 @@ export const blogPosts: BlogPost[] = [
     paragraphs: [
       "The restaurant is on the first floor above the Jaisalmer Art Museum, Fort Parking Road, Dhibba Para. The verified primary telephone number is +91 70730 96695.",
       "Current official Instagram information states daily service from 11:00 AM until 12:30 AM. Google may show an earlier 9:30 AM opening, so the most reliable same-day step is to call.",
-      "Reservations are publicly listed as accepted, but no official booking form or verified WhatsApp reservation flow was found. A telephone call remains the clearest confirmed route.",
+      "Reservations are publicly listed as accepted. This website can open a pre-filled WhatsApp request to the public telephone number or prepare an email, but neither channel is a confirmed booking until the restaurant responds. A telephone call remains the clearest verified route.",
     ],
   },
 ];

@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { navigation, siteConfig } from "@/lib/site";
+import { NewsletterInvitation } from "@/components/shared/newsletter-invitation";
+import { footerNavigation, siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
   return (
     <footer className="bg-olive px-5 pb-8 pt-20 text-ivory sm:px-8 lg:px-12 lg:pt-28">
       <div className="mx-auto max-w-[1500px]">
+        <NewsletterInvitation className="mb-16 md:mb-20" />
         <div className="grid gap-14 border-b border-white/18 pb-16 md:grid-cols-[1.1fr_0.7fr_0.7fr] lg:gap-20">
           <div>
             <Image
@@ -27,7 +29,7 @@ export function SiteFooter() {
               Explore
             </p>
             <ul className="mt-5 grid grid-cols-2 gap-x-5 gap-y-3 text-sm text-ivory/72">
-              {navigation.map((item) => (
+              {footerNavigation.map((item) => (
                 <li key={item.href}>
                   <Link className="hover:text-gold-light" href={item.href}>
                     {item.label}
@@ -60,7 +62,19 @@ export function SiteFooter() {
               >
                 Official Instagram ↗
               </a>
+              <a
+                className="text-ivory/72 hover:text-gold-light"
+                href={siteConfig.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+              >
+                WhatsApp enquiry* ↗
+              </a>
             </div>
+            <p className="mt-4 text-[0.65rem] leading-5 text-ivory/48">
+              *Uses the public phone number. Monitoring awaits owner
+              confirmation; a message does not confirm a table.
+            </p>
           </div>
         </div>
         <div className="flex flex-col gap-4 pt-6 text-[0.58rem] uppercase tracking-[0.12em] text-ivory/50 md:flex-row md:items-center md:justify-between">

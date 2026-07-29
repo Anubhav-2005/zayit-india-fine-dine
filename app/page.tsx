@@ -5,10 +5,10 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { EditorialImage } from "@/components/gallery/editorial-image";
 import { MenuCategoryCard } from "@/components/menu/menu-category-card";
 import { LocalTimeStatus } from "@/components/motion/local-time-status";
-import { Reveal } from "@/components/motion/reveal";
 import { CtaBand } from "@/components/shared/cta-band";
 import { FactStrip } from "@/components/shared/fact-strip";
 import { FaqBlock } from "@/components/shared/faq-block";
+import { KitchenDesk } from "@/components/shared/kitchen-desk";
 import { NearbyList } from "@/components/shared/nearby-list";
 import { RatingGrid } from "@/components/shared/rating-grid";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -88,15 +88,13 @@ export default function HomePage() {
         className="px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40"
       >
         <div className="mx-auto max-w-[1500px]">
-          <Reveal>
-            <SectionHeading
-              index="01"
-              eyebrow="A table in the Golden City"
-              title="Come hungry."
-              accent="Leave a little later."
-              description="Zayit means “olive” in Hebrew. Its public story brings an Indian kitchen and Mediterranean spirit together, close to the living walls of Jaisalmer Fort."
-            />
-          </Reveal>
+          <SectionHeading
+            index="01"
+            eyebrow="A table in the Golden City"
+            title="Come hungry."
+            accent="Leave a little later."
+            description="Zayit means “olive” in Hebrew. Its public story brings an Indian kitchen and Mediterranean spirit together, close to the living walls of Jaisalmer Fort."
+          />
           <div className="mt-20 grid gap-10 border-t border-foreground/18 pt-8 md:grid-cols-[0.75fr_1.25fr] md:gap-20">
             <p className="text-[0.62rem] font-semibold uppercase tracking-[0.17em] text-accent">
               What public guests return to
@@ -148,6 +146,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <KitchenDesk />
 
       <section className="overflow-hidden bg-olive px-5 py-24 text-ivory sm:px-8 md:py-32 lg:px-12">
         <div className="mx-auto max-w-[1500px]">

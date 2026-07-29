@@ -6,11 +6,16 @@ export const siteConfig = {
   url: "https://zayit-india-jaisalmer.hello-tchopra.chatgpt.site",
   phoneDisplay: "+91 70730 96695",
   phoneHref: "tel:+917073096695",
+  whatsapp:
+    "https://wa.me/917073096695?text=Namaste%20Zayit%20India%20Fine%20Dine.%20I%20would%20like%20to%20request%20a%20table.%20Please%20confirm%20the%20date%2C%20time%20and%20guest%20count%20with%20me.",
   email: "zayitindia@gmail.com",
   instagram: "https://www.instagram.com/zayitindiafinedine/",
-  maps: "https://www.google.com/maps?cid=5749341020435167030",
+  maps:
+    "https://www.google.com/maps/search/?api=1&query=Zayit%20India%20Fine%20Dine&query_place_id=ChIJlUCdHga9RzkRNreeXzLDyU8",
+  mapEmbed:
+    "https://www.google.com/maps?q=26.9115606,70.9130601&z=17&output=embed",
   directions:
-    "https://www.google.com/maps/dir/?api=1&destination=26.9115606%2C70.9130601",
+    "https://www.google.com/maps/dir/?api=1&destination=Zayit%20India%20Fine%20Dine%2C%20Jaisalmer&destination_place_id=ChIJlUCdHga9RzkRNreeXzLDyU8",
   menu:
     "https://www.zomato.com/jaisalmer/zayit-india-fine-dine-amar-sagar-pol/order",
   tripadvisor:
@@ -44,7 +49,8 @@ export type NavigationItem = {
     | "/events"
     | "/private-dining"
     | "/contact"
-    | "/blog";
+    | "/blog"
+    | "/guide";
   label: string;
 };
 
@@ -58,4 +64,9 @@ export const navigation: NavigationItem[] = [
   { href: "/private-dining", label: "Private dining" },
   { href: "/contact", label: "Contact" },
   { href: "/blog", label: "Journal" },
+];
+
+export const footerNavigation: NavigationItem[] = [
+  ...navigation,
+  { href: "/guide", label: "Jaisalmer guide" },
 ];

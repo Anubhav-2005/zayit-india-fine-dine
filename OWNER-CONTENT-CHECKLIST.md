@@ -6,10 +6,11 @@ The current deployment should remain a private working preview until the items b
 
 Replace the private-preview social crops in `public/images/` with the owner’s original, licensed high-resolution exports. Keep the same filenames to preserve the design:
 
-- `zayit-01.jpg` through `zayit-06.jpg`
-- `zayit-ambience-dining.jpg`
-- `zayit-ambience-spaces.jpg`
-- `zayit-kitchen-fire.jpg`
+- `zayit-01.jpg` through `zayit-06.jpg` (source references; the interface
+  currently serves optimized `.webp` derivatives for `03`–`06`)
+- `zayit-ambience-dining.jpg` / `.webp`
+- `zayit-ambience-spaces.jpg` / `.webp`
+- `zayit-kitchen-fire.jpg` / `.webp`
 
 Recommended delivery:
 
@@ -38,17 +39,31 @@ Do not use “Chef Safa” based only on a historic customer review.
 - Update the Google Business profile if its hours are wrong.
 - Confirm `zayitindia@gmail.com` is monitored. Remove it from the site if not.
 - Confirm whether `+91 70231 45500` remains an active secondary number.
-- Confirm whether the restaurant accepts WhatsApp reservations. The site currently uses telephone only.
+- Confirm that `+91 70730 96695` is WhatsApp-enabled and monitored for
+  reservation enquiries. The private preview includes a clearly marked test
+  shortcut to that number; remove it before public launch if unconfirmed.
 - Provide the canonical official Facebook page URL, or confirm that no official page exists.
 - Repair or redirect `zayitindia.com`, which currently shows a hosting-provider default page.
 - Choose and authorize a real enquiry-delivery service before public launch. The current accessible forms validate details and open the visitor’s email application; they do not silently transmit or confirm anything.
 - Supply reservation confirmation, cancellation and privacy wording before enabling a true booking workflow.
+- Choose an owner-authorized table-inventory or reservation system before
+  showing live availability. The current interface shows Jaisalmer time and the
+  published service window only, never fake seats or automatic confirmation.
+- Choose a consent-based newsletter provider, privacy notice, retention rule
+  and unsubscribe flow. The current newsletter action only opens the visitor’s
+  email application and stores nothing.
+- If a live Instagram feed is required, provide approved official embed code or
+  an authorized Meta integration. The current sequence is a labelled static
+  private-preview, not an API feed.
 
 ## Required: menu and commercial claims
 
 - Export the current dine-in menu with prices as a PDF or structured list.
 - Identify temporary, seasonal and delivery-only items.
 - Provide POS-backed top-selling dishes if the website should use “best sellers.”
+- Approve the exact “signature dishes,” chef selections and same-day-special
+  publishing workflow. Until then, the website keeps these states marked as
+  unverified and uses guest-mentioned favourites only as review themes.
 - Confirm whether Laal Maas is currently available.
 - Confirm whether Galaouti Kebab, Rumali Roti, Lagan Dum Murgh and Chicken Shawarma are current dine-in items.
 - Confirm service charges, taxes and any reservation/deposit policy before publishing them.
@@ -78,3 +93,5 @@ Confirm before adding claims about:
 - Official reservation URL
 - Google review deep link for post-visit follow-up
 - Preferred Instagram post URLs for embeds, if embeds are desired
+- Owner-shot 8K equirectangular panoramas, usage rights and an approved
+  Matterport/Street View/provider embed if the 360° tour should be activated

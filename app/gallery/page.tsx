@@ -1,6 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 
-import { GallerySwiper } from "@/components/gallery/gallery-swiper";
+import { DeferredGallerySwiper } from "@/components/gallery/deferred-gallery-swiper";
+import { DeferredInstagramPreview } from "@/components/gallery/deferred-instagram-preview";
+import { VirtualTourPlaceholder } from "@/components/gallery/virtual-tour-placeholder";
 import { AssetRightsNotice } from "@/components/shared/asset-rights-notice";
 import { CtaBand } from "@/components/shared/cta-band";
 import { PageHero } from "@/components/shared/page-hero";
@@ -48,13 +50,16 @@ export default function GalleryPage() {
             </a>
           </div>
           <div className="mt-16">
-            <GallerySwiper assets={galleryAssets} />
+            <DeferredGallerySwiper assets={galleryAssets} />
           </div>
           <div className="mt-8">
             <AssetRightsNotice />
           </div>
         </div>
       </section>
+
+      <DeferredInstagramPreview className="bg-sand" />
+      <VirtualTourPlaceholder />
 
       <CtaBand
         eyebrow="See it in person"

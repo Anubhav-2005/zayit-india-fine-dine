@@ -4,7 +4,7 @@ export function SourceStamp() {
   return (
     <section
       aria-labelledby="source-heading"
-      className="border-t border-foreground/15 bg-ivory px-5 py-16 sm:px-8 lg:px-12"
+      className="border-t border-foreground/15 bg-background px-5 py-16 sm:px-8 lg:px-12"
     >
       <div className="mx-auto grid max-w-[1500px] gap-10 md:grid-cols-[1fr_1.2fr]">
         <div>

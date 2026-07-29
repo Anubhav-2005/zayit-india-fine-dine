@@ -60,7 +60,11 @@ const inquirySchema = z.object({
 });
 
 type InquiryFormValues = z.infer<typeof inquirySchema>;
-type InquiryKind = "reservation" | "event" | "private-dining" | "contact";
+export type InquiryKind =
+  | "reservation"
+  | "event"
+  | "private-dining"
+  | "contact";
 
 const formCopy: Record<
   InquiryKind,

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { AmbientSoundToggle, ThemeToggle } from "@/components/experience";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { Button } from "@/components/ui/button";
 import { navigation } from "@/lib/site";
@@ -11,6 +12,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-5 sm:px-8 lg:px-12">
         <Link
           href="/"
+          prefetch={false}
           className="flex min-h-11 items-center gap-3 rounded-full focus-visible:ring-2 focus-visible:ring-gold-light"
           aria-label="Zayit India Fine Dine, home"
         >
@@ -49,6 +51,10 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <div className="flex items-center">
+            <AmbientSoundToggle className="text-ivory hover:bg-white/10" />
+            <ThemeToggle className="text-ivory hover:bg-white/10" />
+          </div>
           <Button
             asChild
             variant="gold"

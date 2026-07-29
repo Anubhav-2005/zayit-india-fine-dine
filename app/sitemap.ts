@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
 
 import { blogPosts } from "@/lib/content";
-import { navigation, siteConfig } from "@/lib/site";
+import { footerNavigation, siteConfig } from "@/lib/site";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = navigation.map((item) => ({
+  const routes = footerNavigation.map((item) => ({
     url: new URL(
       item.href === "/" ? "/" : `${item.href.replace(/\/+$/, "")}/`,
       siteConfig.url,

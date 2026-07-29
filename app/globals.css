@@ -59,6 +59,21 @@
   --focus: #83501e;
 }
 
+[data-theme="dark"] {
+  --background: #10150f;
+  --foreground: #f4eddf;
+  --sand: #1b241c;
+  --sand-deep: #2b352a;
+  --olive: #0d130e;
+  --olive-soft: #182219;
+  --gold: #d0ad6f;
+  --gold-light: #f0dca8;
+  --accent: #d6875d;
+  --muted: #b9b0a0;
+  --destructive: #ef8c83;
+  --focus: #f0dca8;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -79,6 +94,9 @@ body {
   font-family: var(--font-sans-system);
   font-size: 1rem;
   line-height: 1.5;
+  transition:
+    background-color 320ms ease,
+    color 320ms ease;
 }
 
 ::selection {
@@ -212,6 +230,35 @@ img {
   opacity: 0;
 }
 
+.lightbox-dialog {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(8, 11, 8, 0.97);
+  color: var(--ivory);
+  opacity: 0;
+  transition:
+    opacity 260ms ease,
+    display 260ms allow-discrete,
+    overlay 260ms allow-discrete;
+}
+
+.lightbox-dialog[open] {
+  opacity: 1;
+}
+
+.lightbox-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.86);
+  backdrop-filter: blur(12px);
+}
+
 @starting-style {
   .navigation-dialog[open] {
     opacity: 0;
@@ -219,6 +266,10 @@ img {
   }
 
   .navigation-dialog[open]::backdrop {
+    opacity: 0;
+  }
+
+  .lightbox-dialog[open] {
     opacity: 0;
   }
 }

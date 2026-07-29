@@ -2,6 +2,11 @@ import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
 
+import {
+  CursorAura,
+  FloatingActionDock,
+  NavigationTransition,
+} from "@/components/experience";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { CinematicEffects } from "@/components/motion/cinematic-effects";
@@ -45,8 +50,11 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#182219",
-  colorScheme: "light",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8f3e9" },
+    { media: "(prefers-color-scheme: dark)", color: "#10150f" },
+  ],
+  colorScheme: "light dark",
   width: "device-width",
   initialScale: 1,
 };
@@ -57,7 +65,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var t=localStorage.getItem('zayit-color-theme');var d=t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=d?'dark':'light';document.documentElement.classList.toggle('dark',d);document.documentElement.style.colorScheme=d?'dark':'light'}catch(e){}})();",
+          }}
+        />
+      </head>
       <body>
         <a className="skip-link" href="#main-content">
           Skip to content
@@ -67,6 +83,12 @@ export default function RootLayout({
         <CinematicEffects />
         {children}
         <SiteFooter />
+        <FloatingActionDock
+          phoneHref={siteConfig.phoneHref}
+          whatsappHref={siteConfig.whatsapp}
+        />
+        <NavigationTransition />
+        <CursorAura />
         <div className="site-grain" aria-hidden="true" />
       </body>
     </html>

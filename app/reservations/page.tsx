@@ -1,6 +1,13 @@
-import { ArrowUpRight, Clock3, MapPin, Phone } from "lucide-react";
+import {
+  ArrowUpRight,
+  Clock3,
+  MapPin,
+  MessageCircle,
+  Phone,
+} from "lucide-react";
 
-import { InquiryForm } from "@/components/forms/inquiry-form";
+import { DeferredInquiryForm } from "@/components/forms/deferred-inquiry-form";
+import { LiveServiceStatus } from "@/components/reservations/live-service-status";
 import { CtaBand } from "@/components/shared/cta-band";
 import { FaqBlock } from "@/components/shared/faq-block";
 import { OwnerNotice } from "@/components/shared/owner-notice";
@@ -21,6 +28,11 @@ const reservationFaqs = [
     question: "Does this form confirm a reservation?",
     answer:
       "No. It prepares an email request in your own mail app. A reservation is confirmed only when the restaurant responds. Calling +91 70730 96695 is the verified route.",
+  },
+  {
+    question: "Is WhatsApp reservation verified?",
+    answer:
+      "Not yet. This private preview can open a pre-filled enquiry to the publicly listed phone number, but the owner still needs to confirm that the number is monitored on WhatsApp. Opening or sending a message never confirms a table; wait for a restaurant reply.",
   },
   {
     question: "How far ahead should I call?",
@@ -45,9 +57,9 @@ export default function ReservationsPage() {
       <PageHero
         eyebrow="Reservations"
         title="Your table,"
-        accent="held by a call."
-        description="Reservations are publicly listed as accepted. A telephone call is the only current booking channel we could verify."
-        meta="Call-first reservations · no verified WhatsApp booking flow"
+        accent="begins with a request."
+        description="Call the verified restaurant number, try a clearly disclosed WhatsApp enquiry, or prepare an online email request. The table is held only after Zayit replies."
+        meta="No request is an automatic confirmation"
         image={{
           src: "/images/jaisalmer-night-2560.webp",
           alt: "Jaisalmer Fort illuminated at night",
@@ -55,10 +67,10 @@ export default function ReservationsPage() {
       />
 
       <section className="bg-sand px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
-        <div className="mx-auto grid max-w-[1500px] gap-4 md:grid-cols-3">
+        <div className="mx-auto grid max-w-[1500px] gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <a
             href={siteConfig.phoneHref}
-            className="group flex min-h-40 flex-col justify-between border border-foreground/20 bg-ivory p-6 transition-colors hover:bg-olive hover:text-ivory focus-visible:bg-olive focus-visible:text-ivory"
+            className="group flex min-h-40 flex-col justify-between border border-foreground/20 bg-background p-6 transition-colors hover:bg-olive hover:text-ivory focus-visible:bg-olive focus-visible:text-ivory"
           >
             <Phone aria-hidden="true" className="size-5 text-accent" />
             <span>
@@ -70,7 +82,23 @@ export default function ReservationsPage() {
               </strong>
             </span>
           </a>
-          <div className="flex min-h-40 flex-col justify-between border border-foreground/20 bg-ivory p-6">
+          <a
+            href={siteConfig.whatsapp}
+            target="_blank"
+            rel="noreferrer"
+            className="group flex min-h-40 flex-col justify-between border border-foreground/20 bg-background p-6 transition-colors hover:bg-olive hover:text-ivory focus-visible:bg-olive focus-visible:text-ivory"
+          >
+            <MessageCircle aria-hidden="true" className="size-5 text-accent" />
+            <span>
+              <small className="block text-[0.58rem] uppercase tracking-[0.15em] text-muted group-hover:text-ivory/72 group-focus-visible:text-ivory/72">
+                WhatsApp enquiry · unverified
+              </small>
+              <strong className="mt-2 block font-serif text-3xl font-normal tracking-[-0.035em]">
+                Prepare a message
+              </strong>
+            </span>
+          </a>
+          <div className="flex min-h-40 flex-col justify-between border border-foreground/20 bg-background p-6">
             <Clock3 aria-hidden="true" className="size-5 text-accent" />
             <span>
               <small className="block text-[0.58rem] uppercase tracking-[0.15em] text-muted">
@@ -85,7 +113,7 @@ export default function ReservationsPage() {
             href={siteConfig.directions}
             target="_blank"
             rel="noreferrer"
-            className="group flex min-h-40 flex-col justify-between border border-foreground/20 bg-ivory p-6 transition-colors hover:bg-olive hover:text-ivory focus-visible:bg-olive focus-visible:text-ivory"
+            className="group flex min-h-40 flex-col justify-between border border-foreground/20 bg-background p-6 transition-colors hover:bg-olive hover:text-ivory focus-visible:bg-olive focus-visible:text-ivory"
           >
             <MapPin aria-hidden="true" className="size-5 text-accent" />
             <span>
@@ -100,7 +128,8 @@ export default function ReservationsPage() {
           </a>
         </div>
         <p className="mx-auto mt-5 max-w-[1500px] text-xs leading-6 text-muted">
-          {siteConfig.hours.disclosure}
+          {siteConfig.hours.disclosure} The WhatsApp link uses the same public
+          phone number, but WhatsApp monitoring awaits owner confirmation.
         </p>
       </section>
 
@@ -122,8 +151,11 @@ export default function ReservationsPage() {
               requires owner confirmation. For a time-sensitive reservation,
               call the verified number.
             </OwnerNotice>
+            <div className="mt-5">
+              <LiveServiceStatus />
+            </div>
           </div>
-          <InquiryForm kind="reservation" />
+          <DeferredInquiryForm kind="reservation" />
         </div>
       </section>
 

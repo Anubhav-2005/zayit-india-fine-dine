@@ -1,4 +1,4 @@
-import { InquiryForm } from "@/components/forms/inquiry-form";
+import { DeferredInquiryForm } from "@/components/forms/deferred-inquiry-form";
 import { CtaBand } from "@/components/shared/cta-band";
 import { OwnerNotice } from "@/components/shared/owner-notice";
 import { PageHero } from "@/components/shared/page-hero";
@@ -88,7 +88,7 @@ export default function PrivateDiningPage() {
             accent="gathering."
             description="The form prepares an email request. Nothing is booked until the restaurant confirms directly."
           />
-          <InquiryForm kind="private-dining" />
+          <DeferredInquiryForm kind="private-dining" />
         </div>
       </section>
 

@@ -4,10 +4,11 @@ import {
   Clock3,
   Mail,
   MapPin,
+  MessageCircle,
   Phone,
 } from "lucide-react";
 
-import { InquiryForm } from "@/components/forms/inquiry-form";
+import { DeferredInquiryForm } from "@/components/forms/deferred-inquiry-form";
 import { NearbyList } from "@/components/shared/nearby-list";
 import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -42,6 +43,12 @@ const contacts = [
     icon: Camera,
   },
   {
+    label: "WhatsApp enquiry*",
+    value: "Prepare a message",
+    href: siteConfig.whatsapp,
+    icon: MessageCircle,
+  },
+  {
     label: "Public first-party hours",
     value: siteConfig.hours.compact,
     icon: Clock3,
@@ -60,7 +67,7 @@ export default function ContactPage() {
       />
 
       <section className="px-5 py-20 sm:px-8 md:py-28 lg:px-12">
-        <div className="mx-auto grid max-w-[1500px] gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mx-auto grid max-w-[1500px] gap-4 sm:grid-cols-2 xl:grid-cols-5">
           {contacts.map((contact) => {
             const Icon = contact.icon;
             const content = (
@@ -100,52 +107,68 @@ export default function ContactPage() {
           })}
         </div>
         <p className="mx-auto mt-5 max-w-[1500px] text-xs leading-6 text-muted">
-          *The email is publicly listed but awaits owner confirmation. No
-          verifiable official Facebook page was found. {siteConfig.hours.disclosure}
+          *The email is publicly listed but awaits owner confirmation. The
+          WhatsApp shortcut uses the public phone number, but monitoring still
+          needs owner confirmation; a message never confirms a booking. No
+          verifiable official Facebook page was found.{" "}
+          {siteConfig.hours.disclosure}
         </p>
       </section>
 
       <section className="bg-sand px-5 py-24 sm:px-8 md:py-32 lg:px-12">
         <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
-          <div className="relative min-h-[32rem] overflow-hidden bg-olive p-8 text-ivory md:p-12">
-            <div
-              className="absolute -right-20 -top-20 size-96 rounded-full border border-gold/25"
-              aria-hidden="true"
+          <div className="flex min-h-[38rem] flex-col overflow-hidden bg-olive text-ivory">
+            <div className="p-7 md:p-10">
+              <div className="flex items-center justify-between gap-5">
+                <p className="flex items-center gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold-light">
+                  <MapPin aria-hidden="true" className="size-5" />
+                  Google Maps
+                </p>
+                <a
+                  className="text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-ivory/70 underline underline-offset-4 hover:text-gold-light"
+                  href={siteConfig.maps}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open full map
+                </a>
+              </div>
+              <h2 className="mt-5 font-serif text-4xl font-normal leading-[0.88] tracking-[-0.05em]">
+                {siteConfig.address.line1}
+              </h2>
+            </div>
+            <iframe
+              title="Google Map showing Zayit India Fine Dine in Jaisalmer"
+              src={siteConfig.mapEmbed}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="min-h-[25rem] w-full grow border-0"
+              allowFullScreen
             />
-            <MapPin aria-hidden="true" className="size-6 text-gold-light" />
-            <p className="mt-20 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold-light">
-              Exact location
-            </p>
-            <h2 className="mt-6 font-serif text-5xl font-normal leading-[0.84] tracking-[-0.055em] md:text-6xl">
-              {siteConfig.address.line1}
-            </h2>
-            <address className="mt-7 text-sm not-italic leading-7 text-ivory/66">
-              {siteConfig.address.line2}
-              <br />
-              {siteConfig.address.city}, {siteConfig.address.region}{" "}
-              {siteConfig.address.postalCode}
-              <br />
-              Coordinates {siteConfig.address.latitude},{" "}
-              {siteConfig.address.longitude}
-            </address>
-            <a
-              className="rule-link dark-rule-link mt-8"
-              href={siteConfig.directions}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Get live directions
-              <ArrowUpRight aria-hidden="true" className="size-4" />
-            </a>
+            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/15 px-7 py-5 md:px-10">
+              <address className="text-xs not-italic leading-6 text-ivory/62">
+                {siteConfig.address.line2}, {siteConfig.address.city} ·{" "}
+                {siteConfig.address.plusCode}
+              </address>
+              <a
+                className="rule-link dark-rule-link"
+                href={siteConfig.directions}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Live directions
+                <ArrowUpRight aria-hidden="true" className="size-4" />
+              </a>
+            </div>
           </div>
-          <div className="border border-foreground/20 bg-ivory p-7 md:p-12">
+          <div className="border border-foreground/20 bg-background p-7 md:p-12">
             <p className="text-[0.62rem] font-semibold uppercase tracking-[0.17em] text-accent">
               Contact enquiry
             </p>
             <h2 className="mt-5 font-serif text-5xl font-normal leading-[0.86] tracking-[-0.05em]">
               Write a clear note.
             </h2>
-            <InquiryForm kind="contact" className="mt-10" />
+            <DeferredInquiryForm kind="contact" className="mt-10" />
           </div>
         </div>
       </section>
