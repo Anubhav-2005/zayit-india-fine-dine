@@ -16,19 +16,21 @@ No palace pastiche, decorative borders, generic food-grid templates, or “best 
 | Display type | Cormorant Garamond: high contrast, editorial, oversized |
 | Utility type | Manrope: calm, tiny caps, generous tracking |
 | Grid | Twelve columns on desktop; 24px gutters / 44px outer margin. Asymmetry is intentional. |
-| Image treatment | Authentic public venue photography plus a real Jaisalmer Fort night panorama, gently darkened, never artificial. Images crop like printed plates in an art book. |
+| Image treatment | A licensed Jaisalmer Fort night panorama plus restaurant social-profile crops held only as private-preview references. Owner-original venue photography is required before public launch. |
 | Motion | Quiet fade / rise reveals; a fine gold reading-progress line; no bouncy effects or scroll-jacking. |
 
 ## Page narrative
 
 1. **Arrival / Hero — “The golden hour, served after dark.”** A full-screen real night photograph of Jaisalmer Fort, paired with a live local-time dining status. The first action is a low-pressure reservation link.
-2. **Manifesto — “Not a meal. A pause.”** A quiet ivory spread establishes the philosophy: fire, season, conversation.
-3. **The table — “Made for lingering.”** An asymmetric photographic composition turns real food into editorial material rather than a menu thumbnail grid.
-4. **A little journey through Zayit.** Three material, photo-led chapters: From the fire, the garden, and the Mediterranean table. These convey range without overloading the visitor with a menu.
-5. **Proof of feeling.** A single strong guest sentiment and the 4.8 Google rating, used sparingly.
-6. **The invitation.** A dark-olive booking panel designed like a handwritten restaurant card, with the real phone / WhatsApp reservation route.
-7. **Arrival details.** Fort Road location, daily hours, map link, and an unobtrusive social link.
-8. **Closing spread.** Large quiet wordmark, practical navigation, no visual clutter.
+2. **Verified facts ribbon.** The changing public Google signal, current first-party hours, phone and exact Fort Parking Road location appear immediately.
+3. **Manifesto and table.** Quiet editorial spreads establish the Indian–Mediterranean identity and recurring public guest themes.
+4. **The menu edit.** Four typographic chapters drawn from the current Zomato menu, with no invented prices and an explicit live-menu route.
+5. **A night at Zayit.** A cinematic horizontal photo journey, clearly labelled as private-preview social-profile reference crops.
+6. **Proof in public.** Current Google, Tripadvisor and Zomato snapshots plus paraphrased review themes—never fabricated quotations.
+7. **The city nearby.** Approximate walks to the fort, Jain temples, Patwon Ki Haveli and Gadisar Lake.
+8. **The invitation.** A dark-olive booking panel with the verified telephone route and disclosed opening-hours conflict.
+9. **Arrival, FAQ and transparency.** Exact map coordinates, practical answers, live sources and owner-replacement requirements.
+10. **Closing spread.** Official logo, verified social/map links and image licence credit.
 
 ## Interaction principles
 
@@ -39,6 +41,8 @@ No palace pastiche, decorative borders, generic food-grid templates, or “best 
 
 ## Content guardrails
 
-- Use the confirmed public details: Jaisalmer, Fort Road / Dibhapara, daily service 11:00 AM–12:30 AM, WhatsApp/phone `+91 70730 96695`, Indian and Mediterranean cooking.
+- Use the confirmed public details: Jaisalmer, Fort Parking Road / Dhibba Para, first-party Instagram hours of 11:00 AM–12:30 AM with the Google conflict disclosed, verified telephone `+91 70730 96695`, and the Indian–Mediterranean identity.
+- Do not present WhatsApp as a reservation route until the owner confirms that service.
 - Do not invent a chef, tasting menu, awards, hotel affiliation, or false fine-dining claims.
+- Never call review-mentioned dishes “best sellers” without owner POS data.
 - Dish photography is described broadly to avoid attributing a pictured dish to an unverified menu item.

@@ -24,33 +24,159 @@ const gallery = [
     number: '01',
     label: 'The room',
     title: 'Arrive slowly.',
-    copy: 'Warm light, low voices, and a table overlooking the Golden City.',
+    copy: 'Public guest photos show warm interiors and a terrace facing Jaisalmer Fort.',
     image: '/images/zayit-ambience-spaces.jpg',
-    alt: 'The indoor and terrace spaces at Zayit'
+    alt: 'Preview crop of Zayit dining spaces from the restaurant’s public social profile'
   },
   {
     number: '02',
     label: 'The table',
     title: 'Gather close.',
-    copy: 'Indian generosity meets the ease of a Mediterranean evening.',
+    copy: 'An Indian and Mediterranean identity, served across a generous multi-cuisine menu.',
     image: '/images/zayit-ambience-dining.jpg',
-    alt: 'Guests gathered around a table at Zayit'
+    alt: 'Preview crop of guests dining at Zayit from the restaurant’s public social profile'
   },
   {
     number: '03',
     label: 'The fire',
     title: 'Let it burn.',
-    copy: 'Char, smoke, spice and the unmistakable energy of an open flame.',
+    copy: 'Tikkas, kebabs and tandoor favourites recur throughout the current public menu.',
     image: '/images/zayit-kitchen-fire.jpg',
-    alt: 'A live flame in the Zayit kitchen'
+    alt: 'Preview crop of live-fire cooking from Zayit’s public social profile'
   },
   {
     number: '04',
     label: 'The plate',
     title: 'Stay curious.',
-    copy: 'Familiar flavours, travelled ingredients, and plates made to share.',
+    copy: 'North Indian mains, biryani, breads, café plates, desserts and drinks.',
     image: '/images/zayit-03.jpg',
-    alt: 'A fire-grilled dish served at Zayit'
+    alt: 'Preview crop of a plated dish from Zayit’s public social profile'
+  }
+];
+
+const menuGroups = [
+  {
+    eyebrow: 'From the tandoor',
+    title: 'Smoke & char',
+    items: ['Paneer Tikka', 'Dahi ke Kebab', 'Hara Bhara Kebab', 'Chicken Tikka', 'Chicken Malai Kebab', 'Chicken 65']
+  },
+  {
+    eyebrow: 'From the handi',
+    title: 'Slow & generous',
+    items: ['Dal Makhani', 'Paneer Butter Masala', 'Chicken Lahori', 'Butter Chicken', 'Mutton Rogan Josh', 'Bhuna Mutton']
+  },
+  {
+    eyebrow: 'Alongside',
+    title: 'Bread & rice',
+    items: ['Garlic Naan', 'Bajre ki Roti', 'Laccha Paratha', 'Jeera Rice', 'Dum Chicken Biryani', 'Chicken Mandi']
+  },
+  {
+    eyebrow: 'A wider table',
+    title: 'Café & drinks',
+    items: ['Kathi Rolls', 'Sandwiches', 'Cold Coffee', 'Cappuccino', 'Blue Lagoon', 'Non-alcoholic Piña Colada']
+  }
+];
+
+const ratings = [
+  {
+    platform: 'Google',
+    rating: '4.8',
+    detail: '490+ public reviews',
+    href: 'https://www.google.com/maps?cid=5749341020435167030'
+  },
+  {
+    platform: 'Tripadvisor',
+    rating: '5.0',
+    detail: '9 traveller reviews',
+    href: 'https://www.tripadvisor.in/Restaurant_Review-g297667-d27171541-Reviews-Zayit_India_Fine_Dine-Jaisalmer_Jaisalmer_District_Rajasthan.html'
+  },
+  {
+    platform: 'Zomato',
+    rating: '4.2',
+    detail: 'delivery rating',
+    href: 'https://www.zomato.com/jaisalmer/zayit-india-fine-dine-amar-sagar-pol/order'
+  }
+];
+
+const reviewThemes = [
+  {
+    number: '01',
+    title: 'The fort-facing terrace',
+    copy: 'Guests repeatedly mention the outlook toward Jaisalmer Fort and the atmosphere after dusk.'
+  },
+  {
+    number: '02',
+    title: 'Warm, attentive hosting',
+    copy: 'Friendly service and thoughtful attention are recurring themes across public reviews.'
+  },
+  {
+    number: '03',
+    title: 'Flavour with generosity',
+    copy: 'Authentic spice, broad choice, satisfying portions and fair value are frequently noted.'
+  }
+];
+
+const favourites = ['Laal Maas', 'Chicken Lahori', 'Dal Makhani with Butter Roti', 'Butter Chicken', 'Chicken Tikka & Kebabs'];
+
+const nearbyPlaces = [
+  {
+    distance: '0.17 km',
+    name: 'Jain Temples',
+    note: 'Inside Jaisalmer Fort',
+    href: 'https://www.google.com/maps/search/?api=1&query=Jain+Temples+Jaisalmer'
+  },
+  {
+    distance: '0.30 km',
+    name: 'Jaisalmer Fort',
+    note: 'The living golden citadel',
+    href: 'https://www.google.com/maps/search/?api=1&query=Jaisalmer+Fort'
+  },
+  {
+    distance: '0.85 km',
+    name: 'Patwon Ki Haveli',
+    note: 'A cluster of merchant havelis',
+    href: 'https://www.google.com/maps/search/?api=1&query=Patwon+Ki+Haveli+Jaisalmer'
+  },
+  {
+    distance: '1.4 km',
+    name: 'Gadisar Lake',
+    note: 'Historic reservoir and ghats',
+    href: 'https://www.google.com/maps/search/?api=1&query=Gadisar+Lake+Jaisalmer'
+  }
+];
+
+const faqs = [
+  {
+    question: 'Where is Zayit India Fine Dine?',
+    answer: 'On the first floor above the Jaisalmer Art Museum, Fort Parking Road, Dhibba Para, Jaisalmer, Rajasthan 345001. The Google plus code is WW67+J6.'
+  },
+  {
+    question: 'What are the opening hours?',
+    answer: 'Zayit’s official Instagram currently states 11:00 AM–12:30 AM, seven days a week. Google may show an earlier 9:30 AM opening, so call the restaurant for today’s service hours.'
+  },
+  {
+    question: 'How do I reserve a table?',
+    answer: 'Call +91 70730 96695. Reservations are publicly listed as accepted; no current official online booking form or verified WhatsApp reservation service was found.'
+  },
+  {
+    question: 'What cuisine does Zayit serve?',
+    answer: 'The restaurant describes itself as Indian and Mediterranean. Its current public delivery menu also spans North Indian, Chinese, biryani, breads, sandwiches, desserts and beverages.'
+  },
+  {
+    question: 'Are vegetarian and non-vegetarian dishes available?',
+    answer: 'Yes. The public menu lists substantial vegetarian and non-vegetarian sections, including paneer, kebabs, curries, breads and biryanis.'
+  },
+  {
+    question: 'Can I see the latest menu and prices?',
+    answer: 'Use the live Zomato menu linked on this page. Prices and availability can change, and some dishes mentioned by guests may be dine-in specials rather than delivery items.'
+  },
+  {
+    question: 'Does the restaurant have a fort view or parking?',
+    answer: 'Public guest reviews mention a terrace view toward Jaisalmer Fort. Tripadvisor reports parking options, but guests should call ahead to confirm access and current arrangements.'
+  },
+  {
+    question: 'What about allergies, Jain, vegan or gluten-free requirements?',
+    answer: 'These guarantees are not verified in current first-party information. Please speak directly with the restaurant before ordering so the kitchen can advise safely.'
   }
 ];
 
@@ -654,7 +780,7 @@ function App() {
           <div className="sand-veil" aria-hidden="true" />
           <p className="eyebrow hero-meta">Jaisalmer, Rajasthan <span /> 26°55&apos; N</p>
           <div className="hero-title-wrap">
-            <p className="hero-kicker">Indian &amp; Mediterranean kitchen</p>
+            <p className="hero-kicker">Indian &amp; Mediterranean identity · Fort Road</p>
             <h1 id="hero-title">The golden hour,<br /><em>served after dark.</em></h1>
           </div>
           <div className="hero-bottom">
@@ -667,14 +793,29 @@ function App() {
           </div>
         </section>
 
+        <section className="fact-ribbon section-sand" aria-label="Verified restaurant information">
+          <a href="https://www.google.com/maps?cid=5749341020435167030" target="_blank" rel="noreferrer" className="fact-item">
+            <span>Google</span><strong>4.8 · 490+ reviews</strong>
+          </a>
+          <div className="fact-item">
+            <span>Service</span><strong>Daily · 11 AM–12:30 AM*</strong>
+          </div>
+          <a href="tel:+917073096695" className="fact-item">
+            <span>Reservations</span><strong>+91 70730 96695</strong>
+          </a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=26.9115606%2C70.9130601" target="_blank" rel="noreferrer" className="fact-item">
+            <span>Find us</span><strong>First floor · Fort Parking Road</strong>
+          </a>
+        </section>
+
         <section id="story" className="manifesto section-light section-pad section-transition">
           <div className="section-label fade-up"><span>01</span><span>Our way of gathering</span></div>
           <div className="manifesto-copy">
-            <p className="overline fade-up">Not another dinner reservation</p>
+            <p className="overline fade-up">A first-floor table in the Golden City</p>
             <h2 data-split-scroll>Come hungry.<br /><em>Leave a little later</em><br />than you planned.</h2>
             <div className="manifesto-note fade-up">
               <span className="note-rule" />
-              <p>Set above the old city, Zayit brings together fire-led Indian flavours, a Mediterranean ease, and the kind of conversation that does not watch the clock.</p>
+              <p>Zayit means “olive” in Hebrew. The restaurant’s public story brings an Indian kitchen and Mediterranean spirit together, close to the living walls of Jaisalmer Fort.</p>
             </div>
           </div>
           <div className="manifesto-seal fade-up" aria-label="Zayit fine dine Jaisalmer">
@@ -685,10 +826,10 @@ function App() {
         <section className="table-story section-light section-transition">
           <div className="image-essay">
             <figure className="essay-image image-fire reveal-image parallax-image">
-              <img src="/images/zayit-03.jpg" alt="A fire-grilled dish served at Zayit" width="640" height="640" loading="lazy" decoding="async" />
+              <img src="/images/zayit-03.jpg" alt="Preview crop of a grilled platter from Zayit’s public social profile" width="640" height="640" loading="lazy" decoding="async" />
             </figure>
             <figure className="essay-image image-night reveal-image parallax-image">
-              <img src="/images/zayit-06.jpg" alt="Whole fish prepared at Zayit" width="640" height="640" loading="lazy" decoding="async" />
+              <img src="/images/zayit-06.jpg" alt="Preview crop of a plated dish from Zayit’s public social profile" width="640" height="640" loading="lazy" decoding="async" />
             </figure>
             <div className="image-caption fade-up"><span>After sundown</span><span>Jaisalmer / India</span></div>
             <p className="image-number">02</p>
@@ -696,17 +837,59 @@ function App() {
           <div className="table-copy">
             <p className="overline fade-up">The table is the destination</p>
             <h2 data-split-scroll>Slow.<br /><em>Glowing.</em><br />A little wild.</h2>
-            <p className="fade-up">There is a particular kind of magic in the city after dusk: stone softens, spice warms, and the table becomes the place everyone wants to stay.</p>
-            <MagneticLink className="text-link fade-up" href="#reserve">Make an evening of it <i>↗</i></MagneticLink>
+            <p className="fade-up">Guests consistently return to the fort-facing terrace, warm hosting and a broad table of tikkas, curries, breads and biryanis.</p>
+            <MagneticLink className="text-link fade-up" href="#menu">Read the menu edit <i>↓</i></MagneticLink>
+          </div>
+        </section>
+
+        <section id="menu" className="menu-story section-sand section-pad section-transition" aria-labelledby="menu-title">
+          <div className="menu-heading">
+            <div>
+              <div className="section-label fade-up"><span>02</span><span>The public menu, edited</span></div>
+              <h2 id="menu-title" data-split-scroll>Four ways<br />into the <em>kitchen.</em></h2>
+            </div>
+            <div className="menu-intro fade-up">
+              <p>A concise selection from Zayit’s current public delivery menu, checked in July 2026. Availability and prices can change.</p>
+              <MagneticLink className="text-link" href="https://www.zomato.com/jaisalmer/zayit-india-fine-dine-amar-sagar-pol/order" target="_blank" rel="noreferrer">See live menu &amp; prices <i>↗</i></MagneticLink>
+            </div>
+          </div>
+          <div className="menu-grid">
+            {menuGroups.map((group, index) => (
+              <article className="menu-group fade-up" key={group.title}>
+                <div className="menu-group-head">
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <p>{group.eyebrow}</p>
+                </div>
+                <h3>{group.title}</h3>
+                <ul>
+                  {group.items.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </article>
+            ))}
+          </div>
+          <div className="menu-lower">
+            <div className="favourites fade-up">
+              <p className="overline">Most mentioned by public guests</p>
+              <h3>Guest favourites,<br /><em>not sales claims.</em></h3>
+              <div className="favourite-list">
+                {favourites.map((item, index) => <span key={item}><b>{String(index + 1).padStart(2, '0')}</b>{item}</span>)}
+              </div>
+              <p className="menu-caveat">These dishes recur in public reviews. Some may be dine-in specials; ask about availability. Only the owner’s POS data can establish true best sellers.</p>
+            </div>
+            <aside className="owner-placeholder fade-up" aria-label="Chef information placeholder">
+              <span>Owner asset required before public launch</span>
+              <h3>The chef story is waiting for its signature.</h3>
+              <p>No current chef identity or biography could be verified from a first-party source. Replace this panel with the owner-approved chef name, title, an 80–120 word biography and an original high-resolution portrait.</p>
+            </aside>
           </div>
         </section>
 
         <section className="gallery-section section-dark section-transition" aria-labelledby="gallery-title">
           <div className="gallery-track">
             <div className="gallery-intro">
-              <div className="section-label"><span>02</span><span>A night at Zayit</span></div>
+              <div className="section-label"><span>03</span><span>A night at Zayit</span></div>
               <h2 id="gallery-title" data-split-scroll>One evening.<br /><em>Four chapters.</em></h2>
-              <p>Scroll to follow the night.</p>
+              <p>Restaurant imagery from Zayit’s public profile, held here as private-preview reference crops.</p>
               <div className="gallery-progress" aria-hidden="true"><span /></div>
             </div>
             {gallery.map((item) => <GalleryCard key={item.number} item={item} reducedMotion={reducedMotion} />)}
@@ -717,17 +900,65 @@ function App() {
           <div className="testimony-inner section-pad">
             <div className="testimony-ring" aria-hidden="true" />
             <div className="testimony-rating fade-up"><span>4.8</span><small>Google rating<br />from 490+ reviews</small></div>
-            <blockquote data-split-scroll>“The food, the warmth,<br />the <em>whole evening.</em>”</blockquote>
-            <p className="testimony-detail fade-up">A local favourite for Indian and Mediterranean flavours,<br />thoughtful service and an easy, unhurried atmosphere.</p>
+            <blockquote data-split-scroll>The terrace. The welcome.<br /><em>The generous table.</em></blockquote>
+            <p className="testimony-detail fade-up">The themes guests mention most across public reviews—<br />paraphrased here, never presented as invented quotations.</p>
+          </div>
+        </section>
+
+        <section className="guest-proof section-light section-pad section-transition" aria-labelledby="reviews-title">
+          <div className="guest-proof-head">
+            <div>
+              <div className="section-label fade-up"><span>04</span><span>Public guest signals</span></div>
+              <h2 id="reviews-title" data-split-scroll>Reputation,<br /><em>in the open.</em></h2>
+            </div>
+            <p className="fade-up">Ratings are snapshots from public platforms, checked July 29, 2026. Counts and scores will continue to change.</p>
+          </div>
+          <div className="rating-grid">
+            {ratings.map((item) => (
+              <a className="rating-card fade-up" href={item.href} target="_blank" rel="noreferrer" key={item.platform} data-cursor="expand">
+                <span>{item.platform}</span>
+                <strong>{item.rating}</strong>
+                <p>{item.detail}</p>
+                <i>↗</i>
+              </a>
+            ))}
+          </div>
+          <div className="review-theme-grid">
+            {reviewThemes.map((theme) => (
+              <article className="review-theme fade-up" key={theme.number}>
+                <span>{theme.number}</span>
+                <h3>{theme.title}</h3>
+                <p>{theme.copy}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="nearby section-dark section-pad section-transition" aria-labelledby="nearby-title">
+          <div className="nearby-head">
+            <div className="section-label fade-up"><span>05</span><span>Before or after dinner</span></div>
+            <h2 id="nearby-title" data-split-scroll>The city,<br /><em>within a walk.</em></h2>
+            <p className="fade-up">Approximate distances from public map routes; open each landmark in Google Maps for live directions.</p>
+          </div>
+          <div className="nearby-list">
+            {nearbyPlaces.map((place, index) => (
+              <a href={place.href} target="_blank" rel="noreferrer" className="nearby-row fade-up" key={place.name} data-cursor="expand">
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <strong>{place.name}</strong>
+                <p>{place.note}</p>
+                <b>{place.distance} approx.</b>
+                <i>↗</i>
+              </a>
+            ))}
           </div>
         </section>
 
         <section id="reserve" className="reservation section-dark section-pad section-transition" aria-labelledby="reserve-title">
           <div className="reservation-orb" aria-hidden="true" />
           <div className="reservation-copy">
-            <div className="section-label fade-up"><span>03</span><span>Come to the table</span></div>
+            <div className="section-label fade-up"><span>06</span><span>Come to the table</span></div>
             <h2 id="reserve-title" data-split-scroll>Save the<br /><em>best part</em><br />of the day.</h2>
-            <p className="fade-up">Reservations are warmly welcomed. Tell us when you would like to join us, and we will take care of the rest.</p>
+            <p className="fade-up">Reservations are publicly listed as accepted. Calling the restaurant is the only current reservation channel we could verify.</p>
           </div>
           <motion.div
             className="booking-card glass-card"
@@ -736,20 +967,61 @@ function App() {
           >
             <span className="booking-glare" aria-hidden="true" />
             <p className="booking-title">A table at Zayit</p>
-            <MagneticLink className="booking-button booking-primary" href="https://wa.me/917073096695" target="_blank" rel="noreferrer"><span>Reserve on WhatsApp</span><i>↗</i></MagneticLink>
-            <MagneticLink className="booking-button" href="tel:+917073096695"><span>Call +91 70730 96695</span><i>↗</i></MagneticLink>
-            <div className="booking-foot"><span>Daily</span><span>11 AM — 12:30 AM</span></div>
+            <MagneticLink className="booking-button booking-primary" href="tel:+917073096695"><span>Call to reserve</span><i>↗</i></MagneticLink>
+            <MagneticLink className="booking-button" href="mailto:zayitindia@gmail.com"><span>Email the restaurant</span><i>↗</i></MagneticLink>
+            <div className="booking-foot"><span>Daily*</span><span>11 AM — 12:30 AM</span></div>
+            <p className="booking-source">*Official Instagram hours. Google currently shows a 9:30 AM opening. Call for today’s hours. Email is publicly listed and awaits owner confirmation.</p>
           </motion.div>
         </section>
 
         <section className="arrival section-light section-pad section-transition">
-          <div className="section-label fade-up"><span>04</span><span>Find us in the Golden City</span></div>
+          <div className="section-label fade-up"><span>07</span><span>Find us in the Golden City</span></div>
           <div className="arrival-grid">
             <div className="arrival-title">
               <h2 data-split-scroll>Follow the<br /><em>fort road.</em></h2>
-              <MagneticLink className="text-link fade-up" href="https://www.google.com/maps/search/?api=1&query=Zayit%20India%20Fine%20Dine%20Jaisalmer" target="_blank" rel="noreferrer">Open in maps <i>↗</i></MagneticLink>
+              <MagneticLink className="text-link fade-up" href="https://www.google.com/maps/dir/?api=1&destination=26.9115606%2C70.9130601" target="_blank" rel="noreferrer">Get directions <i>↗</i></MagneticLink>
             </div>
-            <div className="arrival-details fade-up"><p>Parking, Art Museum<br />First Floor, Fort Road<br />Dibhapara, Jaisalmer<br />Rajasthan 345001</p><p>Every day<br />11:00 AM — 12:30 AM</p></div>
+            <div className="arrival-details fade-up">
+              <p>First Floor<br />Above Jaisalmer Art Museum<br />Fort Parking Road, Dhibba Para<br />Jaisalmer, Rajasthan 345001</p>
+              <p>26.9115606, 70.9130601<br />Plus code WW67+J6<br /><a href="tel:+917073096695">+91 70730 96695</a></p>
+            </div>
+          </div>
+        </section>
+
+        <section className="faq section-sand section-pad section-transition" aria-labelledby="faq-title">
+          <div className="faq-heading">
+            <div className="section-label fade-up"><span>08</span><span>Before you arrive</span></div>
+            <h2 id="faq-title" data-split-scroll>Good to<br /><em>know.</em></h2>
+          </div>
+          <div className="faq-list">
+            {faqs.map((item, index) => (
+              <details className="faq-item fade-up" key={item.question}>
+                <summary>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <strong>{item.question}</strong>
+                  <i aria-hidden="true">+</i>
+                </summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section className="research-note section-light section-pad section-transition" aria-labelledby="research-note-title">
+          <div className="research-note-copy fade-up">
+            <p className="overline">Source transparency · checked July 29, 2026</p>
+            <h2 id="research-note-title">Real information.<br /><em>Clear boundaries.</em></h2>
+            <p>Business facts were cross-checked against the live Google listing, official Instagram, Zomato and Tripadvisor. Platform conflicts are disclosed instead of silently resolved.</p>
+          </div>
+          <div className="source-links fade-up">
+            <a href="https://www.google.com/maps?cid=5749341020435167030" target="_blank" rel="noreferrer">Google Business <i>↗</i></a>
+            <a href="https://www.instagram.com/zayitindiafinedine/" target="_blank" rel="noreferrer">Official Instagram <i>↗</i></a>
+            <a href="https://www.zomato.com/jaisalmer/zayit-india-fine-dine-amar-sagar-pol/order" target="_blank" rel="noreferrer">Current menu <i>↗</i></a>
+            <a href="https://www.tripadvisor.in/Restaurant_Review-g297667-d27171541-Reviews-Zayit_India_Fine_Dine-Jaisalmer_Jaisalmer_District_Rajasthan.html" target="_blank" rel="noreferrer">Tripadvisor <i>↗</i></a>
+          </div>
+          <div className="asset-disclosure fade-up">
+            <strong>Private preview asset notice</strong>
+            <p>Restaurant-specific image crops in this working preview come from Zayit’s public social profile and are not evidence of a reuse licence. Before public launch, replace the files named <code>public/images/zayit-*</code> with the owner’s original high-resolution exports using the same filenames. The Jaisalmer hero is separately licensed under CC BY-SA.</p>
           </div>
         </section>
       </main>
@@ -758,8 +1030,15 @@ function App() {
         <div className="footer-brand reveal-image">
           <img src="/images/zayit-official-logo.webp" alt="Zayit India Fine Dine" width="1200" height="1200" loading="lazy" decoding="async" />
         </div>
-        <div className="footer-bottom"><p>India Fine Dine · Jaisalmer</p><a href="https://www.instagram.com/zayitindiafinedine/" target="_blank" rel="noreferrer" data-cursor="expand">Instagram ↗</a><p>© {new Date().getFullYear()} Zayit</p></div>
-        <p className="photo-credit">Hero photograph: Jitendra Parande / Wikimedia Commons · CC BY-SA</p>
+        <div className="footer-bottom">
+          <p>India Fine Dine · Jaisalmer</p>
+          <div className="footer-links">
+            <a href="https://www.instagram.com/zayitindiafinedine/" target="_blank" rel="noreferrer" data-cursor="expand">Instagram ↗</a>
+            <a href="https://www.google.com/maps?cid=5749341020435167030" target="_blank" rel="noreferrer" data-cursor="expand">Google ↗</a>
+          </div>
+          <p>© {new Date().getFullYear()} Zayit</p>
+        </div>
+        <p className="photo-credit">Hero photograph: <a href="https://commons.wikimedia.org/wiki/File:Jaisalmer_Night.jpg" target="_blank" rel="noreferrer">Jitendra Parande / Wikimedia Commons · CC BY-SA</a> · No verified official Facebook page was found; owner should add the canonical URL when available.</p>
       </footer>
     </div>
   );
