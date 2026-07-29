@@ -41,6 +41,8 @@ Do not use “Chef Safa” based only on a historic customer review.
 - Confirm whether the restaurant accepts WhatsApp reservations. The site currently uses telephone only.
 - Provide the canonical official Facebook page URL, or confirm that no official page exists.
 - Repair or redirect `zayitindia.com`, which currently shows a hosting-provider default page.
+- Choose and authorize a real enquiry-delivery service before public launch. The current accessible forms validate details and open the visitor’s email application; they do not silently transmit or confirm anything.
+- Supply reservation confirmation, cancellation and privacy wording before enabling a true booking workflow.
 
 ## Required: menu and commercial claims
 
@@ -64,6 +66,8 @@ Confirm before adding claims about:
 - Child seats, pets, smoking areas and dress code
 - Takeaway and delivery zones
 - Accepted card and digital-payment methods
+- Event programming, dates, ticketing and entertainment
+- Private dining availability, space exclusivity, capacity, minimum spend, deposits and AV facilities
 
 ## Optional but valuable
 
@@ -74,4 +78,3 @@ Confirm before adding claims about:
 - Official reservation URL
 - Google review deep link for post-visit follow-up
 - Preferred Instagram post URLs for embeds, if embeds are desired
-
