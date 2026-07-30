@@ -158,11 +158,10 @@ export default function JaisalmerGuidePage() {
             </h2>
           </div>
           <div>
-            <OwnerNotice title="Live attraction details stay outside this static guide.">
-              Entry fees, access rules, attraction hours, road conditions and
-              seasonal closures are not reproduced here because they can
-              change. Check Rajasthan Tourism and each attraction’s current
-              listing before travel.
+            <OwnerNotice title="Check the day before you go.">
+              Entry fees, access rules, opening hours, road conditions and
+              seasonal closures can change. Check Rajasthan Tourism and each
+              attraction’s current listing before travel.
             </OwnerNotice>
             <Link
               href="/blog/an-evening-near-jaisalmer-fort"

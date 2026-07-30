@@ -141,11 +141,11 @@ export default function ReservationsPage() {
             />
             <OwnerNotice
               className="mt-10"
-              title="Email delivery is not yet owner-confirmed."
+              title="Calling is the quickest route."
             >
-              The address zayitindia@gmail.com is publicly listed but still
-              requires owner confirmation. For a time-sensitive reservation,
-              call the verified number.
+              Email requests use the restaurant’s public address, but a table
+              is held only after Zayit replies. For a time-sensitive visit,
+              call the restaurant directly.
             </OwnerNotice>
             <div className="mt-5">
               <LiveServiceStatus />

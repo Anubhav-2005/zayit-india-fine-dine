@@ -7,8 +7,8 @@ import { siteConfig } from "@/lib/site";
 const deskCards = [
   {
     eyebrow: "Today’s special",
-    title: "Ask what arrived in the kitchen today.",
-    copy: "Zayit does not currently publish a dependable same-day special online. Call or message for tonight’s kitchen update.",
+    title: "Ask what the kitchen is serving tonight.",
+    copy: "The day’s special changes with the kitchen. Call or message before you arrive for tonight’s recommendation.",
     icon: Sparkles,
     href: siteConfig.phoneHref,
     action: "Call for today’s special",
@@ -16,17 +16,17 @@ const deskCards = [
   },
   {
     eyebrow: "Chef recommendations",
-    title: "The chef’s edit awaits an owner-approved selection.",
-    copy: "The current chef identity and personal recommendations are not verified in public first-party information. This card is ready for the owner’s original profile and choices.",
+    title: "Let the table guide the order.",
+    copy: "Tell the team what you enjoy—vegetarian or non-vegetarian, mild or fiery—and ask them to shape a spread for the table.",
     icon: ChefHat,
     href: "/about",
-    action: "See the chef asset brief",
+    action: "Meet the restaurant",
     external: false,
   },
   {
-    eyebrow: "Signature dishes",
-    title: "Guest favourites, clearly separated from sales claims.",
-    copy: `${guestMentionedDishes.slice(1, 4).join(", ")} recur in public guest feedback. They are not presented as signatures or best sellers without owner or POS confirmation.`,
+    eyebrow: "Guest favourites",
+    title: "A few names guests return to.",
+    copy: `${guestMentionedDishes.slice(1, 4).join(", ")} are among the dishes mentioned in public guest reviews. Availability can change, so call if you have one in mind.`,
     icon: BadgeCheck,
     href: "/menu",
     action: "Explore the public menu",
@@ -43,10 +43,10 @@ export function KitchenDesk() {
             The kitchen desk
           </p>
           <h2 className="display-balance max-w-5xl font-serif text-[clamp(2.3rem,9.5vw,2.7rem)] font-normal leading-none tracking-[-0.04em] md:text-[clamp(3.75rem,4.8vw,5.5rem)] md:leading-[0.9] md:tracking-[-0.05em]">
-            What is known.
+            Begin with curiosity.
             <br />
             <em className="font-normal text-accent">
-              What still needs the chef.
+              Let the table unfold.
             </em>
           </h2>
         </div>

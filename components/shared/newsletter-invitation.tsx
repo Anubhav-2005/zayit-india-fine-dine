@@ -22,26 +22,24 @@ export function NewsletterInvitation({ className }: { className?: string }) {
       />
       <Mail aria-hidden="true" className="size-5 text-accent" />
       <p className="mt-12 text-[0.59rem] font-semibold uppercase tracking-[0.17em] text-accent">
-        Newsletter · integration ready
+        The Zayit Letter
       </p>
       <h2
         id="zayit-letter-title"
         className="mt-5 max-w-xl font-serif text-[1.9rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-5xl md:leading-[0.94] md:tracking-[-0.045em]"
       >
-        The Zayit Letter.
+        Stories from the Golden City.
       </h2>
       <p className="pretty-copy mt-5 max-w-xl text-sm leading-7 text-muted">
-        Seasonal plates, Golden City notes and table announcements—once the
-        owner connects an authorised mailing platform, consent wording and
-        privacy policy.
+        Seasonal plates, Golden City notes and table announcements. Email us
+        to be notified when the first letter is ready.
       </p>
       <a className="rule-link mt-7" href={requestHref}>
         Ask to be notified
         <ArrowUpRight aria-hidden="true" className="size-4" />
       </a>
       <p className="mt-5 max-w-xl text-[0.67rem] leading-5 text-muted">
-        This opens your email app. It does not subscribe or store your address.
-        Replace with the owner’s consent-based provider before public launch.
+        This opens your email app; your address is not stored by this website.
       </p>
     </aside>
   );

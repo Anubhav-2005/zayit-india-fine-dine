@@ -15,6 +15,10 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  generator: "Next.js 16",
+  creator: "Zayit India Fine Dine",
+  publisher: "Zayit India Fine Dine",
+  category: "restaurant",
   title: {
     default: "Zayit India Fine Dine | Jaisalmer",
     template: "%s | Zayit India Fine Dine",
@@ -41,11 +45,20 @@ export const metadata: Metadata = {
     title: "Zayit India Fine Dine | Jaisalmer",
     description: siteConfig.description,
     url: "/",
+    images: [
+      {
+        url: assetPath("/images/owner/zayit-fort-official-daylight.webp"),
+        width: 1333,
+        height: 1420,
+        alt: "Zayit India Fine Dine with Jaisalmer Fort beyond",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Zayit India Fine Dine | Jaisalmer",
     description: siteConfig.description,
+    images: [assetPath("/images/owner/zayit-fort-official-daylight.webp")],
   },
 };
 
@@ -62,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-IN" data-framework="nextjs">
       <body>
         <a className="skip-link" href="#main-content">
           Skip to content

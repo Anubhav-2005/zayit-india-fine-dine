@@ -13,7 +13,7 @@ type CtaBandProps = {
 export function CtaBand({
   eyebrow = "Come to the table",
   title = "Save the best part of the day.",
-  description = "Calling the restaurant is the only reservation channel currently verified.",
+  description = "For the quickest confirmation, call the restaurant directly.",
 }: CtaBandProps) {
   return (
     <section className="relative overflow-hidden bg-sand-deep/55 px-5 py-16 text-foreground sm:px-8 lg:px-12 lg:py-24">

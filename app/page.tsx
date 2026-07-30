@@ -13,7 +13,6 @@ import { KitchenDesk } from "@/components/shared/kitchen-desk";
 import { NearbyList } from "@/components/shared/nearby-list";
 import { RatingGrid } from "@/components/shared/rating-grid";
 import { SectionHeading } from "@/components/shared/section-heading";
-import { SourceStamp } from "@/components/shared/source-stamp";
 import { StarRating } from "@/components/shared/star-rating";
 import { Button } from "@/components/ui/button";
 import {
@@ -71,7 +70,7 @@ export default function HomePage() {
         />
 
         <div className="relative z-20 mx-auto flex min-h-[calc(100svh-7.25rem)] max-w-[1500px] items-end">
-          <div className="w-full max-w-[53rem] border border-foreground/12 bg-ivory p-5 shadow-[0_1rem_3rem_rgba(58,42,21,0.1)] sm:p-8 lg:max-w-[48rem] lg:border-white/40 lg:bg-ivory/88 lg:p-10 lg:shadow-[0_2rem_6rem_rgba(58,42,21,0.16)] xl:max-w-[44rem]">
+          <div className="zayit-hero-card w-full max-w-[53rem] border border-foreground/12 bg-ivory p-5 shadow-[0_1rem_3rem_rgba(58,42,21,0.1)] sm:p-8 lg:max-w-[48rem] lg:border-white/40 lg:bg-ivory/88 lg:p-10 lg:shadow-[0_2rem_6rem_rgba(58,42,21,0.16)] xl:max-w-[44rem]">
             <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
               <p className="text-[0.58rem] font-semibold uppercase tracking-[0.17em] text-accent sm:text-[0.62rem] sm:tracking-[0.2em]">
                 Fine dining · Fort Parking Road
@@ -115,10 +114,10 @@ export default function HomePage() {
 
       <section
         id="story"
-        className="overflow-hidden px-5 py-16 sm:px-8 md:py-28 lg:px-12"
+        className="zayit-section"
       >
-        <div className="mx-auto max-w-[1500px]">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-20">
+        <div className="zayit-shell">
+          <div className="zayit-story-intro">
             <SectionHeading
               index="01"
               eyebrow="A bright room in the Golden City"
@@ -154,15 +153,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-sand px-5 py-16 sm:px-8 md:py-28 lg:px-12">
-        <div className="mx-auto max-w-[1500px]">
-          <div className="grid gap-10 lg:grid-cols-[1fr_0.55fr] lg:items-end">
+      <section className="zayit-section zayit-section--sand">
+        <div className="zayit-shell">
+          <div className="zayit-menu-intro">
             <SectionHeading
-              index="02"
-              eyebrow="The current public menu"
+              eyebrow="From the kitchen"
               title="Four ways into"
               accent="the kitchen."
-              description="A selected reading of the live delivery menu. Prices and availability stay with the changing source of truth."
+              description="Tandoor smoke, slow-cooked curries and generous plates made for sharing. The live menu carries today’s selection and prices."
             />
             <a
               className="rule-link lg:justify-self-end"
@@ -188,21 +186,20 @@ export default function HomePage() {
           </div>
           <div className="mt-8">
             <Button asChild variant="outline">
-              <Link href="/menu">Read the full menu edit</Link>
+              <Link href="/menu">View the complete menu</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
-        <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[0.85fr_0.65fr] lg:items-center lg:gap-24">
+      <section className="zayit-section">
+        <div className="zayit-shell zayit-interior-grid">
           <div>
             <SectionHeading
-              index="03"
               eyebrow="Inside Zayit"
               title="Ivory walls."
               accent="Golden light."
-              description="A quiet look through the restaurant’s owner-supplied interior film. It loads only when you choose to play it."
+              description="A quiet look through the restaurant’s light-filled dining room. The short film begins only when you choose to play it."
             />
             <div className="mt-9 border-t border-foreground/18 pt-7">
               <p className="max-w-xl text-sm leading-7 text-muted">
@@ -217,14 +214,13 @@ export default function HomePage() {
 
       <KitchenDesk />
 
-      <section className="overflow-hidden px-5 py-16 sm:px-8 md:py-28 lg:px-12">
-        <div className="mx-auto max-w-[1500px]">
+      <section className="zayit-section">
+        <div className="zayit-shell">
           <SectionHeading
-            index="04"
-            eyebrow="Owner-supplied visual journal"
+            eyebrow="A glimpse of Zayit"
             title="One place."
             accent="Many quiet details."
-            description="Real restaurant and Jaisalmer photographs supplied for this website. No AI-generated or traveller imagery."
+            description="The long table, soft blue seating and the fort beyond—photographed at Zayit."
           />
           <div className="mt-12 grid grid-cols-2 gap-3 md:mt-16 md:grid-cols-12 md:gap-7">
             <EditorialImage
@@ -253,20 +249,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-sand px-5 py-16 sm:px-8 md:py-28 lg:px-12">
-        <div className="mx-auto max-w-[1500px]">
+      <section className="zayit-section zayit-section--sand">
+        <div className="zayit-shell">
           <SectionHeading
-            index="05"
-            eyebrow="Public guest signals"
+            eyebrow="What guests say"
             title="Reputation,"
             accent="with the stars."
-            description="Platform snapshots checked July 29, 2026. Counts and scores continue to change."
+            description="Current ratings across Google, Tripadvisor and Zomato, with direct links to each platform."
           />
           <div className="mt-12 md:mt-16">
             <RatingGrid />
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-3 md:gap-9">
+          <div className="zayit-review-themes">
             {reviewThemes.map((theme) => (
               <article
                 key={theme.number}
@@ -287,11 +282,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
-        <div className="mx-auto max-w-[1500px]">
-          <div className="grid gap-9 lg:grid-cols-[1fr_0.55fr] lg:items-end">
+      <section className="zayit-section">
+        <div className="zayit-shell">
+          <div className="zayit-nearby-intro">
             <SectionHeading
-              index="06"
               eyebrow="Before or after dinner"
               title="The city,"
               accent="within a walk."
@@ -307,10 +301,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="grid gap-12 bg-sand px-5 py-16 sm:px-8 md:py-28 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24 lg:px-12">
+      <section className="zayit-faq-section">
         <div className="lg:sticky lg:top-32 lg:self-start">
           <SectionHeading
-            index="07"
             eyebrow="Before you arrive"
             title="Good to"
             accent="know."
@@ -319,7 +312,6 @@ export default function HomePage() {
         <FaqBlock />
       </section>
 
-      <SourceStamp />
       <CtaBand />
     </main>
   );
