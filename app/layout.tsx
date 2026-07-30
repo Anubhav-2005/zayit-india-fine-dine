@@ -79,7 +79,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN" data-framework="nextjs">
-      <body>
+      <body data-reactroot="">
         <a className="skip-link" href="#main-content">
           Skip to content
         </a>
