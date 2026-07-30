@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { Button } from "@/components/ui/button";
+import { assetPath } from "@/lib/paths";
 import { navigation } from "@/lib/site";
 
 export function SiteHeader() {
@@ -16,7 +17,7 @@ export function SiteHeader() {
           aria-label="Zayit India Fine Dine, home"
         >
           <Image
-            src="/images/zayit-official-logo-112.webp"
+            src={assetPath("/images/zayit-official-logo-112.webp")}
             alt=""
             width={52}
             height={52}

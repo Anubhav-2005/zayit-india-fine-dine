@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { NewsletterInvitation } from "@/components/shared/newsletter-invitation";
+import { assetPath } from "@/lib/paths";
 import { footerNavigation, siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
@@ -12,7 +13,7 @@ export function SiteFooter() {
         <div className="grid gap-12 border-b border-foreground/16 pb-14 md:grid-cols-[1.1fr_0.7fr_0.7fr] lg:gap-20">
           <div>
             <Image
-              src="/images/zayit-official-logo-112.webp"
+              src={assetPath("/images/zayit-official-logo-112.webp")}
               alt="Zayit India Fine Dine"
               width={120}
               height={120}

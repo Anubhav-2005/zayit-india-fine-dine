@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/paths";
+
 export type SourceRef = {
   id: string;
   label: string;
@@ -89,7 +91,7 @@ export const ratings: RatingSnapshot[] = [
   },
   {
     platform: "Zomato",
-    rating: "4.2",
+    rating: "4.3",
     detail: "delivery rating",
     href: sources[2].url,
   },
@@ -258,7 +260,7 @@ export const reviewThemes = [
 
 export const galleryAssets: MediaAsset[] = [
   {
-    src: "/images/owner/zayit-room-wide.jpg",
+    src: assetPath("/images/owner/zayit-room-wide.jpg"),
     alt: "Bright dining room at Zayit India Fine Dine with a long set table",
     label: "The dining room",
     rightsStatus: "owner-original",
@@ -267,7 +269,7 @@ export const galleryAssets: MediaAsset[] = [
     objectPosition: "50% 52%",
   },
   {
-    src: "/images/owner/zayit-table-chandelier-portrait.avif",
+    src: assetPath("/images/owner/zayit-table-chandelier-portrait.avif"),
     alt: "Long dining table beneath a chandelier inside Zayit India Fine Dine",
     label: "The long table",
     rightsStatus: "owner-original",
@@ -276,7 +278,7 @@ export const galleryAssets: MediaAsset[] = [
     objectPosition: "50% 45%",
   },
   {
-    src: "/images/owner/zayit-lounge-portrait.avif",
+    src: assetPath("/images/owner/zayit-lounge-portrait.avif"),
     alt: "Ivory architectural details and blue lounge seating inside Zayit",
     label: "The lounge",
     rightsStatus: "owner-original",
@@ -285,7 +287,7 @@ export const galleryAssets: MediaAsset[] = [
     objectPosition: "50% 45%",
   },
   {
-    src: "/images/owner/zayit-table-portrait.avif",
+    src: assetPath("/images/owner/zayit-table-portrait.avif"),
     alt: "Close view down a polished dining table set with plates and glassware",
     label: "Table details",
     rightsStatus: "owner-original",
@@ -294,7 +296,7 @@ export const galleryAssets: MediaAsset[] = [
     objectPosition: "50% 42%",
   },
   {
-    src: "/images/owner/zayit-fort-daylight-portrait.avif",
+    src: assetPath("/images/owner/zayit-fort-daylight-portrait.avif"),
     alt: "Jaisalmer Fort in daylight above terrace plants near Zayit",
     label: "The Golden Fort",
     rightsStatus: "owner-original",
@@ -303,7 +305,7 @@ export const galleryAssets: MediaAsset[] = [
     objectPosition: "50% 42%",
   },
   {
-    src: "/images/owner/zayit-table-window.avif",
+    src: assetPath("/images/owner/zayit-table-window.avif"),
     alt: "Dining table set beside tall softly coloured curtains at Zayit",
     label: "Window light",
     rightsStatus: "owner-original",
@@ -312,7 +314,7 @@ export const galleryAssets: MediaAsset[] = [
     objectPosition: "50% 40%",
   },
   {
-    src: "/images/owner/zayit-fort-sign.avif",
+    src: assetPath("/images/owner/zayit-fort-sign.avif"),
     alt: "Zayit India sign below the illuminated walls of Jaisalmer Fort",
     label: "Under the fort",
     rightsStatus: "owner-original",

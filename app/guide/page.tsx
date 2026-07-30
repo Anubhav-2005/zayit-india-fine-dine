@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { SourceStamp } from "@/components/shared/source-stamp";
 import { Button } from "@/components/ui/button";
 import { createPageMetadata } from "@/lib/metadata";
+import { assetPath } from "@/lib/paths";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = createPageMetadata({
@@ -63,7 +64,9 @@ export default function JaisalmerGuidePage() {
           <figure className="mt-12 md:mt-16">
             <div className="relative h-[30rem] overflow-hidden bg-sand-deep md:h-[38rem]">
               <Image
-                src="/images/owner/zayit-fort-daylight-portrait.avif"
+                src={assetPath(
+                  "/images/owner/zayit-fort-daylight-portrait.avif",
+                )}
                 alt="Jaisalmer Fort in daylight above plants near Zayit"
                 fill
                 sizes="(max-width: 767px) 92vw, 88vw"

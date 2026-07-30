@@ -22,6 +22,7 @@ import {
   reviewThemes,
 } from "@/lib/content";
 import { createPageMetadata } from "@/lib/metadata";
+import { assetPath } from "@/lib/paths";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = createPageMetadata({
@@ -35,14 +36,26 @@ export default function HomePage() {
   return (
     <main id="main-content">
       <section className="relative isolate min-h-svh overflow-hidden bg-sand px-4 pb-5 pt-24 text-foreground sm:px-8 sm:pb-8 sm:pt-28 lg:px-12">
-        <div className="home-hero-lounge-media" aria-hidden="true" />
+        <div
+          className="home-hero-lounge-media"
+          aria-hidden="true"
+          style={{
+            backgroundImage: `url("${assetPath(
+              "/images/owner/zayit-lounge-original.jpeg",
+            )}")`,
+          }}
+        />
         <picture className="home-hero-fort-media">
           <source
             media="(max-width: 767px)"
-            srcSet="/images/owner/zayit-fort-official-daylight-mobile.webp"
+            srcSet={assetPath(
+              "/images/owner/zayit-fort-official-daylight-mobile.webp",
+            )}
           />
           <Image
-            src="/images/owner/zayit-fort-official-daylight.webp"
+            src={assetPath(
+              "/images/owner/zayit-fort-official-daylight.webp",
+            )}
             alt="Jaisalmer Fort seen from Zayit India Fine Dine's bright terrace"
             width={1333}
             height={1420}
@@ -122,14 +135,18 @@ export default function HomePage() {
             <EditorialImage
               asset={galleryAssets[2]}
               index={1}
-              mobileSrc="/images/owner/zayit-lounge-mobile.avif"
+              mobileSrc={assetPath(
+                "/images/owner/zayit-lounge-mobile.avif",
+              )}
               className="col-span-2 [&>div]:min-h-[26rem] md:col-span-7 md:[&>div]:min-h-[42rem]"
               sizes="(max-width: 767px) 92vw, 56vw"
             />
             <EditorialImage
               asset={galleryAssets[4]}
               index={2}
-              mobileSrc="/images/owner/zayit-fort-daylight-square-mobile.avif"
+              mobileSrc={assetPath(
+                "/images/owner/zayit-fort-daylight-square-mobile.avif",
+              )}
               className="col-span-2 [&>div]:min-h-[23rem] md:col-span-5 md:mt-24 md:[&>div]:min-h-[38rem]"
               sizes="(max-width: 767px) 92vw, 38vw"
             />

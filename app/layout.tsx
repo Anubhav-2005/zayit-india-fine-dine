@@ -10,6 +10,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { CinematicEffects } from "@/components/motion/cinematic-effects";
 import { RestaurantJsonLd } from "@/components/seo/json-ld";
+import { assetPath } from "@/lib/paths";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     "Mediterranean restaurant Jaisalmer",
   ],
   icons: {
-    icon: "/images/zayit-favicon.png",
+    icon: assetPath("/images/zayit-favicon.png"),
   },
   openGraph: {
     type: "website",

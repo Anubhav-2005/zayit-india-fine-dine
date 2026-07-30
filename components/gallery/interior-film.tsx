@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { Pause, Play } from "lucide-react";
 
+import { assetPath } from "@/lib/paths";
+
 export function InteriorFilm() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [started, setStarted] = useState(false);
@@ -38,7 +40,7 @@ export function InteriorFilm() {
           <video
             ref={videoRef}
             className="size-full object-cover"
-            src="/images/owner/zayit-interior-film.mp4"
+            src={assetPath("/images/owner/zayit-interior-film.mp4")}
             preload="metadata"
             playsInline
             muted
@@ -51,7 +53,7 @@ export function InteriorFilm() {
           />
         ) : (
           <Image
-            src="/images/owner/zayit-lounge-portrait.avif"
+            src={assetPath("/images/owner/zayit-lounge-portrait.avif")}
             alt="The bright ivory-and-blue lounge inside Zayit India Fine Dine"
             fill
             sizes="(max-width: 767px) 92vw, 40vw"

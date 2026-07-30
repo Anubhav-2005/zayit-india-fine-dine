@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { assetPath } from "@/lib/paths";
 import { cn } from "@/lib/utils";
 
 type RouteLoadingScreenProps = {
@@ -28,7 +29,7 @@ export function RouteLoadingScreen({
             aria-hidden="true"
           />
           <Image
-            src="/images/zayit-official-logo-112.webp"
+            src={assetPath("/images/zayit-official-logo-112.webp")}
             alt=""
             width={88}
             height={88}

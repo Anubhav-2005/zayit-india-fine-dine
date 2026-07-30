@@ -15,6 +15,7 @@ import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { SourceStamp } from "@/components/shared/source-stamp";
 import { createPageMetadata } from "@/lib/metadata";
+import { assetPath } from "@/lib/paths";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = createPageMetadata({
@@ -121,7 +122,7 @@ export default function ContactPage() {
           <figure className="lg:col-span-2">
             <div className="relative h-[24rem] overflow-hidden bg-olive md:h-[34rem]">
               <Image
-                src="/images/owner/zayit-fort-sign.avif"
+                src={assetPath("/images/owner/zayit-fort-sign.avif")}
                 alt="Zayit India sign below the illuminated walls of Jaisalmer Fort"
                 fill
                 sizes="(max-width: 767px) 92vw, 88vw"
