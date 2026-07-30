@@ -25,8 +25,8 @@ export function ArticleCard({
       <h2
         className={
           featured
-            ? "display-balance mt-8 max-w-4xl font-serif text-5xl font-normal leading-[0.85] tracking-[-0.055em] md:text-7xl"
-            : "display-balance mt-7 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em]"
+            ? "display-balance mt-7 max-w-4xl font-serif text-[2.2rem] font-normal leading-none tracking-[-0.04em] md:mt-8 md:text-6xl md:leading-[0.9] md:tracking-[-0.05em]"
+            : "display-balance mt-6 font-serif text-[1.8rem] font-normal leading-[1.02] tracking-[-0.035em] md:mt-7 md:text-4xl md:leading-[0.94] md:tracking-[-0.045em]"
         }
       >
         <Link href={`/blog/${post.slug}`} className="hover:text-accent">

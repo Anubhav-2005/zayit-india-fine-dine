@@ -150,7 +150,7 @@ export default function ContactPage() {
                   Open full map
                 </a>
               </div>
-              <h2 className="mt-5 font-serif text-4xl font-normal leading-[0.88] tracking-[-0.05em]">
+              <h2 className="mt-5 font-serif text-[1.9rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-4xl md:leading-[0.94] md:tracking-[-0.045em]">
                 {siteConfig.address.line1}
               </h2>
             </div>
@@ -182,7 +182,7 @@ export default function ContactPage() {
             <p className="text-[0.62rem] font-semibold uppercase tracking-[0.17em] text-accent">
               Contact enquiry
             </p>
-            <h2 className="mt-5 font-serif text-5xl font-normal leading-[0.86] tracking-[-0.05em]">
+            <h2 className="mt-5 font-serif text-[2.2rem] font-normal leading-none tracking-[-0.04em] md:text-5xl md:leading-[0.92] md:tracking-[-0.05em]">
               Write a clear note.
             </h2>
             <DeferredInquiryForm kind="contact" className="mt-10" />

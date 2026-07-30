@@ -40,7 +40,7 @@ export default function EventsPage() {
             <p className="mt-12 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-accent">
               Current public status
             </p>
-            <h2 className="display-balance mt-6 max-w-5xl font-serif text-[clamp(3.4rem,7vw,7.5rem)] font-normal leading-[0.8] tracking-[-0.065em]">
+            <h2 className="display-balance mt-5 max-w-5xl font-serif text-[clamp(2.35rem,10vw,2.8rem)] font-normal leading-none tracking-[-0.045em] md:mt-6 md:text-[clamp(4rem,5.4vw,6rem)] md:leading-[0.9] md:tracking-[-0.055em]">
               No dated programme is currently verified.
             </h2>
             <p className="pretty-copy mt-7 max-w-2xl text-sm leading-7 text-muted">

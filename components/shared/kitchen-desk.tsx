@@ -42,7 +42,7 @@ export function KitchenDesk() {
           <p className="text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-accent">
             The kitchen desk
           </p>
-          <h2 className="display-balance max-w-5xl font-serif text-[clamp(2.9rem,6vw,6.8rem)] font-normal leading-[0.88] tracking-[-0.055em] md:leading-[0.86] md:tracking-[-0.06em]">
+          <h2 className="display-balance max-w-5xl font-serif text-[clamp(2.3rem,9.5vw,2.7rem)] font-normal leading-none tracking-[-0.04em] md:text-[clamp(3.75rem,4.8vw,5.5rem)] md:leading-[0.9] md:tracking-[-0.05em]">
             What is known.
             <br />
             <em className="font-normal text-accent">
@@ -51,7 +51,7 @@ export function KitchenDesk() {
           </h2>
         </div>
 
-        <div className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pt-6 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-0 lg:overflow-visible lg:px-0 lg:pt-0">
+        <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pt-6 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-0 lg:overflow-visible lg:px-0 lg:pt-0">
           {deskCards.map((card, index) => {
             const Icon = card.icon;
             const content = (
@@ -66,7 +66,7 @@ export function KitchenDesk() {
                   <p className="text-[0.59rem] font-semibold uppercase tracking-[0.16em] text-accent">
                     {card.eyebrow}
                   </p>
-                  <h3 className="mt-5 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em]">
+                  <h3 className="mt-5 font-serif text-[1.75rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-4xl md:leading-[0.94] md:tracking-[-0.045em]">
                     {card.title}
                   </h3>
                   <p className="pretty-copy mt-5 text-sm leading-7 text-muted">
@@ -84,7 +84,7 @@ export function KitchenDesk() {
               <Link
                 key={card.eyebrow}
                 href={card.href}
-                className="group min-h-[27rem] w-[84vw] max-w-sm shrink-0 snap-start border border-foreground/16 bg-ivory/55 p-6 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:w-[58vw] lg:min-h-[31rem] lg:w-auto lg:max-w-none lg:border-y-0 lg:border-l-0 lg:border-r lg:bg-transparent lg:px-8 lg:py-9 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
+                className="group min-h-[25rem] w-full shrink-0 snap-start border border-foreground/16 bg-ivory p-6 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:w-[58vw] lg:min-h-[31rem] lg:w-auto lg:max-w-none lg:border-y-0 lg:border-l-0 lg:border-r lg:bg-transparent lg:px-8 lg:py-9 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
               >
                 {content}
               </Link>
@@ -92,7 +92,7 @@ export function KitchenDesk() {
               <a
                 key={card.eyebrow}
                 href={card.href}
-                className="group min-h-[27rem] w-[84vw] max-w-sm shrink-0 snap-start border border-foreground/16 bg-ivory/55 p-6 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:w-[58vw] lg:min-h-[31rem] lg:w-auto lg:max-w-none lg:border-y-0 lg:border-l-0 lg:border-r lg:bg-transparent lg:px-8 lg:py-9 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
+                className="group min-h-[25rem] w-full shrink-0 snap-start border border-foreground/16 bg-ivory p-6 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:w-[58vw] lg:min-h-[31rem] lg:w-auto lg:max-w-none lg:border-y-0 lg:border-l-0 lg:border-r lg:bg-transparent lg:px-8 lg:py-9 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
               >
                 {content}
               </a>

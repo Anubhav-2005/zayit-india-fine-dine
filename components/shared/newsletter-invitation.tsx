@@ -26,7 +26,7 @@ export function NewsletterInvitation({ className }: { className?: string }) {
       </p>
       <h2
         id="zayit-letter-title"
-        className="mt-5 max-w-xl font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em] md:text-5xl"
+        className="mt-5 max-w-xl font-serif text-[1.9rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-5xl md:leading-[0.94] md:tracking-[-0.045em]"
       >
         The Zayit Letter.
       </h2>

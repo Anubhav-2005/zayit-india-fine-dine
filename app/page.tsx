@@ -80,7 +80,7 @@ export default function HomePage() {
               <StarRating value={4.8} size="sm" showValue />
             </div>
 
-            <h1 className="hero-display display-balance mt-5 text-[clamp(3.45rem,8.4vw,8.5rem)] font-normal leading-[0.78] tracking-[-0.07em]">
+            <h1 className="hero-display display-balance mt-5 text-[clamp(2.65rem,11.5vw,3.05rem)] font-normal leading-none tracking-[-0.045em] sm:text-[clamp(3.4rem,8vw,4.75rem)] sm:leading-[0.94] lg:text-[clamp(4.5rem,5.6vw,6.25rem)] lg:leading-[0.9] lg:tracking-[-0.055em]">
               A table lit by
               <br />
               <em className="font-normal text-accent">the Golden City.</em>
@@ -104,7 +104,7 @@ export default function HomePage() {
               </Button>
             </div>
 
-            <div className="mt-7 border-t border-foreground/16 pt-5">
+            <div className="mt-7 hidden border-t border-foreground/16 pt-5 sm:block">
               <LocalTimeStatus />
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function HomePage() {
               accent="Stay unhurried."
               description="Zayit means “olive” in Hebrew. Its public story brings an Indian kitchen and Mediterranean spirit together near Jaisalmer Fort."
             />
-            <p className="display-balance max-w-3xl font-serif text-[clamp(2.15rem,4.2vw,4.75rem)] leading-[0.98] tracking-[-0.045em] lg:justify-self-end">
+            <p className="display-balance max-w-3xl font-serif text-[clamp(1.7rem,7.5vw,2rem)] leading-[1.05] tracking-[-0.035em] md:text-[clamp(2.5rem,3.5vw,3.75rem)] md:leading-[1.02] md:tracking-[-0.04em] lg:justify-self-end">
               Warm hosting, generous spice and a room made for the whole table.
             </p>
           </div>
@@ -175,14 +175,14 @@ export default function HomePage() {
             </a>
           </div>
 
-          <div className="-mx-5 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 sm:-mx-8 sm:px-8 md:grid md:grid-cols-2 md:gap-x-8 md:overflow-visible xl:grid-cols-4">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 md:gap-x-8 xl:grid-cols-4">
             {menuCategories.slice(1, 5).map((category, index) => (
               <MenuCategoryCard
                 key={category.id}
                 category={category}
                 index={index}
                 compact
-                className="w-[84vw] max-w-sm shrink-0 snap-start sm:w-[58vw] md:w-auto md:max-w-none"
+                className={index > 1 ? "hidden md:block" : undefined}
               />
             ))}
           </div>
@@ -266,16 +266,16 @@ export default function HomePage() {
             <RatingGrid />
           </div>
 
-          <div className="-mx-5 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 sm:-mx-8 sm:px-8 md:mx-0 md:grid md:grid-cols-3 md:gap-9 md:overflow-visible md:px-0">
+          <div className="mt-12 grid gap-8 md:grid-cols-3 md:gap-9">
             {reviewThemes.map((theme) => (
               <article
                 key={theme.number}
-                className="w-[82vw] max-w-sm shrink-0 snap-start border-t border-foreground/18 pt-6 sm:w-[58vw] md:w-auto md:max-w-none"
+                className="border-t border-foreground/18 pt-6"
               >
                 <span className="text-[0.62rem] font-semibold tracking-[0.16em] text-accent">
                   {theme.number}
                 </span>
-                <h3 className="mt-7 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em]">
+                <h3 className="mt-6 font-serif text-[1.75rem] font-normal leading-[1.02] tracking-[-0.035em] md:mt-7 md:text-4xl md:leading-[0.94] md:tracking-[-0.045em]">
                   {theme.title}
                 </h3>
                 <p className="pretty-copy mt-5 max-w-sm text-sm leading-7 text-muted">

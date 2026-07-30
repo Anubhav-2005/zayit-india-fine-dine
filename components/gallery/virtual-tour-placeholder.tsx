@@ -39,7 +39,7 @@ export function VirtualTourPlaceholder({
           </p>
           <h2
             id="virtual-tour-title"
-            className="display-balance mt-8 font-serif text-[clamp(3.5rem,7vw,7.75rem)] font-normal leading-[0.8] tracking-[-0.07em]"
+            className="display-balance mt-6 font-serif text-[clamp(2.35rem,10vw,2.8rem)] font-normal leading-none tracking-[-0.045em] md:mt-8 md:text-[clamp(4rem,5.4vw,6rem)] md:leading-[0.9] md:tracking-[-0.055em]"
           >
             Enter the room,
             <br />
@@ -81,7 +81,7 @@ export function VirtualTourPlaceholder({
               <p className="mt-7 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-accent">
                 Owner integration required
               </p>
-              <p className="mt-5 font-serif text-4xl font-normal leading-[0.95] tracking-[-0.04em] md:text-5xl">
+              <p className="mt-5 font-serif text-[1.8rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-5xl md:leading-[0.95] md:tracking-[-0.04em]">
                 360° tour placeholder
               </p>
               <p className="pretty-copy mx-auto mt-5 max-w-md text-sm leading-7 text-muted">

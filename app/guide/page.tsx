@@ -96,7 +96,7 @@ export default function JaisalmerGuidePage() {
                   <p className="mt-20 text-[0.59rem] font-semibold uppercase tracking-[0.16em] text-accent">
                     {chapter.time}
                   </p>
-                  <h2 className="mt-5 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em]">
+                  <h2 className="mt-5 font-serif text-[1.9rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-4xl md:leading-[0.94] md:tracking-[-0.045em]">
                     {chapter.title}
                   </h2>
                   <p className="pretty-copy mt-5 text-sm leading-7 text-muted">
@@ -153,7 +153,7 @@ export default function JaisalmerGuidePage() {
             <p className="text-[0.62rem] font-semibold uppercase tracking-[0.17em] text-accent">
               Travel-note standard
             </p>
-            <h2 className="mt-6 font-serif text-5xl font-normal leading-[0.86] tracking-[-0.05em] md:text-6xl">
+            <h2 className="mt-5 font-serif text-[2.2rem] font-normal leading-none tracking-[-0.04em] md:mt-6 md:text-6xl md:leading-[0.9] md:tracking-[-0.05em]">
               Check what changes.
             </h2>
           </div>

@@ -55,6 +55,14 @@ export function SiteHeader() {
             asChild
             variant="default"
             size="sm"
+            className="inline-flex px-4 sm:hidden"
+          >
+            <Link href="/reservations">Reserve</Link>
+          </Button>
+          <Button
+            asChild
+            variant="default"
+            size="sm"
             className="hidden sm:inline-flex"
           >
             <Link href="/reservations">Reserve</Link>

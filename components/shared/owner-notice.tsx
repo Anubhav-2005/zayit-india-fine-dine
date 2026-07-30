@@ -34,7 +34,7 @@ export function OwnerNotice({
         <BadgeAlert aria-hidden="true" className="size-4" />
         Owner confirmation required
       </div>
-      <h2 className="mt-5 font-serif text-3xl font-normal leading-[0.95] tracking-[-0.04em] md:text-4xl">
+      <h2 className="mt-5 font-serif text-[1.75rem] font-normal leading-[1.04] tracking-[-0.035em] md:text-4xl md:leading-none md:tracking-[-0.04em]">
         {title}
       </h2>
       <div

@@ -13,7 +13,7 @@ export function SourceStamp() {
           </p>
           <h2
             id="source-heading"
-            className="mt-5 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em] md:text-5xl"
+            className="mt-5 font-serif text-[1.9rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-5xl md:leading-[0.94] md:tracking-[-0.045em]"
           >
             Facts checked
             <br />

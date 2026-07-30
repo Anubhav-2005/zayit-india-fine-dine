@@ -89,7 +89,7 @@ export default function AboutPage() {
                 <span className="text-[0.6rem] font-semibold tracking-[0.15em] text-accent">
                   {theme.number}
                 </span>
-                <h2 className="mt-10 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em]">
+                <h2 className="mt-8 font-serif text-[1.9rem] font-normal leading-[1.02] tracking-[-0.035em] md:mt-10 md:text-4xl md:leading-[0.94] md:tracking-[-0.045em]">
                   {theme.title}
                 </h2>
                 <p className="pretty-copy mt-5 text-sm leading-7 text-muted">

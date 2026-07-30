@@ -37,7 +37,7 @@ export default function MenuPage() {
               <p className="text-[0.62rem] font-semibold uppercase tracking-[0.17em] text-accent">
                 Most mentioned in public reviews
               </p>
-              <h2 className="mt-5 font-serif text-5xl font-normal leading-[0.84] tracking-[-0.055em] md:text-6xl">
+              <h2 className="mt-5 font-serif text-[2.2rem] font-normal leading-none tracking-[-0.04em] md:text-6xl md:leading-[0.9] md:tracking-[-0.05em]">
                 Guest favourites,
                 <br />
                 <em className="font-normal text-accent">not sales claims.</em>

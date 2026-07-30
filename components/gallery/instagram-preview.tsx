@@ -42,7 +42,7 @@ export function InstagramPreview({ className }: InstagramPreviewProps) {
             </p>
             <h2
               id="instagram-preview-title"
-              className="display-balance mt-7 max-w-5xl font-serif text-[clamp(3.2rem,7vw,7.5rem)] font-normal leading-[0.82] tracking-[-0.065em] text-foreground"
+              className="display-balance mt-6 max-w-5xl font-serif text-[clamp(2.35rem,10vw,2.8rem)] font-normal leading-none tracking-[-0.045em] text-foreground md:mt-7 md:text-[clamp(4rem,5.4vw,6rem)] md:leading-[0.9] md:tracking-[-0.055em]"
             >
               The visual
               <br />
