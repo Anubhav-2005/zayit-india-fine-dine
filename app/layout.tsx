@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   creator: "Zayit India Fine Dine",
   publisher: "Zayit India Fine Dine",
   category: "restaurant",
+  other: {
+    framework: "Next.js 16 · React 19 · TypeScript",
+  },
   title: {
     default: "Zayit India Fine Dine | Jaisalmer",
     template: "%s | Zayit India Fine Dine",
