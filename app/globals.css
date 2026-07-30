@@ -269,15 +269,27 @@ img {
   background:
     linear-gradient(
       90deg,
-      rgba(251, 247, 239, 0.5) 0%,
-      rgba(251, 247, 239, 0.12) 58%,
+      rgba(251, 247, 239, 0.16) 0%,
+      rgba(251, 247, 239, 0.04) 48%,
       transparent 100%
     ),
     linear-gradient(
       0deg,
-      rgba(251, 247, 239, 0.36) 0%,
-      transparent 58%
+      rgba(251, 247, 239, 0.1) 0%,
+      transparent 52%
     );
+}
+
+.home-hero-lounge-media {
+  display: none;
+}
+
+.home-hero-fort-media {
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 .editorial-grid {
@@ -408,6 +420,24 @@ img {
 
   .site-grain {
     display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-hero-lounge-media {
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    inset: 0 40% 0 0;
+    z-index: 0;
+    background-image: url("/images/owner/zayit-lounge-original.jpeg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .home-hero-fort-media {
+    left: 60%;
+    width: 40%;
   }
 }
 

@@ -247,6 +247,7 @@ export function MenuExplorer({
           <button
             type="button"
             onClick={resetExplorer}
+            aria-label="Reset menu explorer"
             className="min-h-11 shrink-0 text-accent underline decoration-accent/35 underline-offset-4 hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus"
           >
             Reset

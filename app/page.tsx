@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -34,28 +35,30 @@ export default function HomePage() {
   return (
     <main id="main-content">
       <section className="relative isolate min-h-svh overflow-hidden bg-sand px-4 pb-5 pt-24 text-foreground sm:px-8 sm:pb-8 sm:pt-28 lg:px-12">
-        <picture className="absolute inset-0 -z-20">
+        <div className="home-hero-lounge-media" aria-hidden="true" />
+        <picture className="home-hero-fort-media">
           <source
             media="(max-width: 767px)"
-            srcSet="/images/owner/zayit-fort-daylight-portrait-mobile.avif"
+            srcSet="/images/owner/zayit-fort-official-daylight-mobile.webp"
           />
-          <img
-            src="/images/owner/zayit-room-wide.avif"
-            alt="The bright dining room at Zayit India Fine Dine near Jaisalmer Fort"
-            width="1280"
-            height="575"
+          <Image
+            src="/images/owner/zayit-fort-official-daylight.webp"
+            alt="Jaisalmer Fort seen from Zayit India Fine Dine's bright terrace"
+            width={1333}
+            height={1420}
+            unoptimized
             fetchPriority="high"
             decoding="async"
             className="size-full object-cover object-center"
           />
         </picture>
         <div
-          className="home-hero-scrim absolute inset-0 -z-10"
+          className="home-hero-scrim pointer-events-none absolute inset-0 z-10"
           aria-hidden="true"
         />
 
-        <div className="mx-auto flex min-h-[calc(100svh-7.25rem)] max-w-[1500px] items-end">
-          <div className="w-full max-w-[53rem] border border-foreground/12 bg-ivory p-5 shadow-[0_1rem_3rem_rgba(58,42,21,0.1)] sm:p-8 lg:border-0 lg:bg-ivory/82 lg:p-10 lg:shadow-[0_2rem_6rem_rgba(58,42,21,0.13)] lg:backdrop-blur-md">
+        <div className="relative z-20 mx-auto flex min-h-[calc(100svh-7.25rem)] max-w-[1500px] items-end">
+          <div className="w-full max-w-[53rem] border border-foreground/12 bg-ivory p-5 shadow-[0_1rem_3rem_rgba(58,42,21,0.1)] sm:p-8 lg:max-w-[48rem] lg:border-white/40 lg:bg-ivory/88 lg:p-10 lg:shadow-[0_2rem_6rem_rgba(58,42,21,0.16)] xl:max-w-[44rem]">
             <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
               <p className="text-[0.58rem] font-semibold uppercase tracking-[0.17em] text-accent sm:text-[0.62rem] sm:tracking-[0.2em]">
                 Fine dining · Fort Parking Road

@@ -3,7 +3,6 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 import {
-  CursorAura,
   FloatingActionDock,
   NavigationTransition,
 } from "@/components/experience";
@@ -77,7 +76,6 @@ export default function RootLayout({
           whatsappHref={siteConfig.whatsapp}
         />
         <NavigationTransition />
-        <CursorAura />
         <div className="site-grain" aria-hidden="true" />
       </body>
     </html>

@@ -98,7 +98,7 @@ export function FloatingActionDock({
       {showBackToTop ? (
         <button
           type="button"
-          className={cn(actionClassName, "hidden sm:grid")}
+          className={actionClassName}
           aria-label="Back to top"
           title="Back to top"
           onClick={backToTop}

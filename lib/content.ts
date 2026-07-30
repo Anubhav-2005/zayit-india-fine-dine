@@ -258,7 +258,7 @@ export const reviewThemes = [
 
 export const galleryAssets: MediaAsset[] = [
   {
-    src: "/images/owner/zayit-room-wide.avif",
+    src: "/images/owner/zayit-room-wide.jpg",
     alt: "Bright dining room at Zayit India Fine Dine with a long set table",
     label: "The dining room",
     rightsStatus: "owner-original",

@@ -41,7 +41,7 @@ export function EditorialImage({
         data-parallax
       >
         {mobileSrc ? (
-          <picture>
+          <picture className="absolute inset-0">
             <source media="(max-width: 767px)" srcSet={mobileSrc} />
             {image}
           </picture>

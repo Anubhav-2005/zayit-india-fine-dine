@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
-import { AmbientSoundToggle } from "@/components/experience";
 import { footerNavigation, siteConfig } from "@/lib/site";
 
 const primaryHrefs = new Set([
@@ -189,7 +188,6 @@ export function MobileNavigation() {
                   {siteConfig.hours.display}
                 </p>
               </div>
-              <AmbientSoundToggle className="shrink-0 text-foreground hover:bg-sand" />
             </div>
           </div>
         </div>

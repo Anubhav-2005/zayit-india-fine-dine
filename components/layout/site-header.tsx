@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { AmbientSoundToggle } from "@/components/experience";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { Button } from "@/components/ui/button";
 import { navigation } from "@/lib/site";
@@ -51,7 +50,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <AmbientSoundToggle className="hidden text-foreground/70 hover:bg-sand sm:inline-flex" />
           <Button
             asChild
             variant="default"
