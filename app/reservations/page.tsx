@@ -32,7 +32,7 @@ const reservationFaqs = [
   {
     question: "Is WhatsApp reservation verified?",
     answer:
-      "Not yet. This private preview can open a pre-filled enquiry to the publicly listed phone number, but the owner still needs to confirm that the number is monitored on WhatsApp. Opening or sending a message never confirms a table; wait for a restaurant reply.",
+      "Not yet. This website can open a pre-filled enquiry to the publicly listed phone number, but the owner still needs to confirm that the number is monitored on WhatsApp. Opening or sending a message never confirms a table; wait for a restaurant reply.",
   },
   {
     question: "How far ahead should I call?",
@@ -60,24 +60,20 @@ export default function ReservationsPage() {
         accent="begins with a request."
         description="Call the verified restaurant number, try a clearly disclosed WhatsApp enquiry, or prepare an online email request. The table is held only after Zayit replies."
         meta="No request is an automatic confirmation"
-        image={{
-          src: "/images/jaisalmer-night-2560.webp",
-          alt: "Jaisalmer Fort illuminated at night",
-        }}
       />
 
       <section className="bg-sand px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
-        <div className="mx-auto grid max-w-[1500px] gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mx-auto grid max-w-[1500px] grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
           <a
             href={siteConfig.phoneHref}
-            className="group flex min-h-40 flex-col justify-between border border-foreground/20 bg-background p-6 transition-colors hover:bg-olive hover:text-ivory focus-visible:bg-olive focus-visible:text-ivory"
+            className="group flex min-h-36 flex-col justify-between border border-foreground/20 bg-background p-4 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:min-h-40 sm:p-6"
           >
             <Phone aria-hidden="true" className="size-5 text-accent" />
             <span>
-              <small className="block text-[0.58rem] uppercase tracking-[0.15em] text-muted group-hover:text-ivory/72 group-focus-visible:text-ivory/72">
+              <small className="block text-[0.55rem] uppercase tracking-[0.13em] text-muted sm:text-[0.58rem] sm:tracking-[0.15em]">
                 Call to reserve
               </small>
-              <strong className="mt-2 block font-serif text-3xl font-normal tracking-[-0.035em]">
+              <strong className="mt-2 block break-words font-serif text-xl font-normal tracking-[-0.035em] sm:text-3xl">
                 {siteConfig.phoneDisplay}
               </strong>
             </span>
@@ -86,25 +82,25 @@ export default function ReservationsPage() {
             href={siteConfig.whatsapp}
             target="_blank"
             rel="noreferrer"
-            className="group flex min-h-40 flex-col justify-between border border-foreground/20 bg-background p-6 transition-colors hover:bg-olive hover:text-ivory focus-visible:bg-olive focus-visible:text-ivory"
+            className="group flex min-h-36 flex-col justify-between border border-foreground/20 bg-background p-4 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:min-h-40 sm:p-6"
           >
             <MessageCircle aria-hidden="true" className="size-5 text-accent" />
             <span>
-              <small className="block text-[0.58rem] uppercase tracking-[0.15em] text-muted group-hover:text-ivory/72 group-focus-visible:text-ivory/72">
+              <small className="block text-[0.55rem] uppercase tracking-[0.13em] text-muted sm:text-[0.58rem] sm:tracking-[0.15em]">
                 WhatsApp enquiry · unverified
               </small>
-              <strong className="mt-2 block font-serif text-3xl font-normal tracking-[-0.035em]">
+              <strong className="mt-2 block font-serif text-xl font-normal tracking-[-0.035em] sm:text-3xl">
                 Prepare a message
               </strong>
             </span>
           </a>
-          <div className="flex min-h-40 flex-col justify-between border border-foreground/20 bg-background p-6">
+          <div className="flex min-h-36 flex-col justify-between border border-foreground/20 bg-background p-4 sm:min-h-40 sm:p-6">
             <Clock3 aria-hidden="true" className="size-5 text-accent" />
             <span>
-              <small className="block text-[0.58rem] uppercase tracking-[0.15em] text-muted">
+              <small className="block text-[0.55rem] uppercase tracking-[0.13em] text-muted sm:text-[0.58rem] sm:tracking-[0.15em]">
                 Public first-party hours
               </small>
-              <strong className="mt-2 block font-serif text-3xl font-normal tracking-[-0.035em]">
+              <strong className="mt-2 block font-serif text-xl font-normal tracking-[-0.035em] sm:text-3xl">
                 {siteConfig.hours.compact}
               </strong>
             </span>
@@ -113,14 +109,14 @@ export default function ReservationsPage() {
             href={siteConfig.directions}
             target="_blank"
             rel="noreferrer"
-            className="group flex min-h-40 flex-col justify-between border border-foreground/20 bg-background p-6 transition-colors hover:bg-olive hover:text-ivory focus-visible:bg-olive focus-visible:text-ivory"
+            className="group flex min-h-36 flex-col justify-between border border-foreground/20 bg-background p-4 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:min-h-40 sm:p-6"
           >
             <MapPin aria-hidden="true" className="size-5 text-accent" />
             <span>
-              <small className="block text-[0.58rem] uppercase tracking-[0.15em] text-muted group-hover:text-ivory/72 group-focus-visible:text-ivory/72">
+              <small className="block text-[0.55rem] uppercase tracking-[0.13em] text-muted sm:text-[0.58rem] sm:tracking-[0.15em]">
                 Live directions
               </small>
-              <strong className="mt-2 flex items-center gap-2 font-serif text-3xl font-normal tracking-[-0.035em]">
+              <strong className="mt-2 flex items-center gap-2 font-serif text-xl font-normal tracking-[-0.035em] sm:text-3xl">
                 Fort Parking Road
                 <ArrowUpRight aria-hidden="true" className="size-4" />
               </strong>
@@ -133,7 +129,7 @@ export default function ReservationsPage() {
         </p>
       </section>
 
-      <section className="px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
           <div>
             <SectionHeading
@@ -159,7 +155,7 @@ export default function ReservationsPage() {
         </div>
       </section>
 
-      <section className="grid gap-14 bg-sand px-5 py-24 sm:px-8 md:py-28 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24 lg:px-12">
+      <section className="grid gap-12 bg-sand px-5 py-16 sm:px-8 md:py-28 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24 lg:px-12">
         <SectionHeading
           index="02"
           eyebrow="Reservation notes"

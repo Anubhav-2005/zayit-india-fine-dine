@@ -1,35 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { AmbientSoundToggle, ThemeToggle } from "@/components/experience";
+import { AmbientSoundToggle } from "@/components/experience";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { Button } from "@/components/ui/button";
 import { navigation } from "@/lib/site";
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-80 border-b border-white/12 bg-olive/92 text-ivory backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-5 sm:px-8 lg:px-12">
+    <header className="fixed inset-x-0 top-0 z-80 border-b border-foreground/10 bg-ivory text-foreground shadow-[0_0.35rem_2rem_rgba(66,47,23,0.05)] sm:bg-ivory/92 sm:backdrop-blur-xl">
+      <div className="mx-auto flex h-[4.5rem] max-w-[1600px] items-center justify-between px-4 sm:h-20 sm:px-8 lg:px-12">
         <Link
           href="/"
           prefetch={false}
-          className="flex min-h-11 items-center gap-3 rounded-full focus-visible:ring-2 focus-visible:ring-gold-light"
+          className="flex min-h-11 items-center gap-3 rounded-full focus-visible:ring-2 focus-visible:ring-focus"
           aria-label="Zayit India Fine Dine, home"
         >
           <Image
             src="/images/zayit-official-logo-112.webp"
             alt=""
-            width={58}
-            height={58}
-            sizes="58px"
+            width={52}
+            height={52}
+            sizes="52px"
             loading="eager"
-            className="size-14 rounded-full"
+            className="size-12 rounded-full sm:size-[3.25rem]"
           />
           <span className="hidden sm:block">
             <strong className="block font-serif text-lg font-medium leading-none tracking-[-0.03em]">
               Zayit
             </strong>
-            <small className="mt-1 block text-[0.5rem] uppercase tracking-[0.19em] text-ivory/62">
+            <small className="mt-1 block text-[0.5rem] uppercase tracking-[0.19em] text-muted">
               India Fine Dine
             </small>
           </span>
@@ -41,7 +41,7 @@ export function SiteHeader() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-flex min-h-11 items-center text-[0.61rem] font-semibold uppercase tracking-[0.14em] text-ivory/78 transition-colors hover:text-gold-light focus-visible:text-gold-light"
+                  className="inline-flex min-h-11 items-center text-[0.61rem] font-semibold uppercase tracking-[0.14em] text-foreground/72 transition-colors hover:text-accent focus-visible:text-accent"
                 >
                   {item.label}
                 </Link>
@@ -51,13 +51,10 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="flex items-center">
-            <AmbientSoundToggle className="text-ivory hover:bg-white/10" />
-            <ThemeToggle className="text-ivory hover:bg-white/10" />
-          </div>
+          <AmbientSoundToggle className="hidden text-foreground/70 hover:bg-sand sm:inline-flex" />
           <Button
             asChild
-            variant="gold"
+            variant="default"
             size="sm"
             className="hidden sm:inline-flex"
           >

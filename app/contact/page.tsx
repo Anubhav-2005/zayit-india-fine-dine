@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ArrowUpRight,
   Camera,
@@ -66,18 +67,18 @@ export default function ContactPage() {
         meta={`Plus code ${siteConfig.address.plusCode}`}
       />
 
-      <section className="px-5 py-20 sm:px-8 md:py-28 lg:px-12">
-        <div className="mx-auto grid max-w-[1500px] gap-4 sm:grid-cols-2 xl:grid-cols-5">
+      <section className="px-5 py-16 sm:px-8 md:py-24 lg:px-12">
+        <div className="mx-auto grid max-w-[1500px] grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-5">
           {contacts.map((contact) => {
             const Icon = contact.icon;
             const content = (
               <>
                 <Icon aria-hidden="true" className="size-5 text-accent" />
                 <span className="mt-10">
-                  <small className="block text-[0.58rem] uppercase tracking-[0.15em] text-muted group-hover:text-ivory/72 group-focus-visible:text-ivory/72">
+                  <small className="block text-[0.54rem] uppercase tracking-[0.12em] text-muted sm:text-[0.58rem] sm:tracking-[0.15em]">
                     {contact.label}
                   </small>
-                  <strong className="mt-2 block break-words font-serif text-2xl font-normal tracking-[-0.03em]">
+                  <strong className="mt-2 block break-words font-serif text-lg font-normal tracking-[-0.03em] sm:text-2xl">
                     {contact.value}
                   </strong>
                 </span>
@@ -92,14 +93,14 @@ export default function ContactPage() {
                 rel={
                   contact.href.startsWith("http") ? "noreferrer" : undefined
                 }
-                className="group flex min-h-48 flex-col justify-between border border-foreground/20 p-6 transition-colors hover:bg-olive hover:text-ivory focus-visible:bg-olive focus-visible:text-ivory"
+                className="group flex min-h-40 flex-col justify-between border border-foreground/20 p-4 transition-colors hover:bg-sand focus-visible:bg-sand sm:min-h-48 sm:p-6 [&:last-child]:col-span-2 xl:[&:last-child]:col-span-1"
               >
                 {content}
               </a>
             ) : (
               <div
                 key={contact.label}
-                className="flex min-h-48 flex-col justify-between border border-foreground/20 p-6"
+                className="flex min-h-40 flex-col justify-between border border-foreground/20 p-4 sm:min-h-48 sm:p-6 [&:last-child]:col-span-2 xl:[&:last-child]:col-span-1"
               >
                 {content}
               </div>
@@ -115,17 +116,32 @@ export default function ContactPage() {
         </p>
       </section>
 
-      <section className="bg-sand px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="bg-sand px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
-          <div className="flex min-h-[38rem] flex-col overflow-hidden bg-olive text-ivory">
+          <figure className="lg:col-span-2">
+            <div className="relative h-[24rem] overflow-hidden bg-olive md:h-[34rem]">
+              <Image
+                src="/images/owner/zayit-fort-sign.avif"
+                alt="Zayit India sign below the illuminated walls of Jaisalmer Fort"
+                fill
+                sizes="(max-width: 767px) 92vw, 88vw"
+                className="image-wash object-cover object-[center_58%]"
+              />
+            </div>
+            <figcaption className="mt-4 flex items-center justify-between border-b border-foreground/18 pb-3 text-[0.58rem] font-semibold uppercase tracking-[0.15em] text-muted">
+              <span>Arriving beneath the fort</span>
+              <span>Owner-supplied photograph</span>
+            </figcaption>
+          </figure>
+          <div className="flex min-h-[34rem] flex-col overflow-hidden border border-foreground/16 bg-ivory text-foreground">
             <div className="p-7 md:p-10">
               <div className="flex items-center justify-between gap-5">
-                <p className="flex items-center gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold-light">
+                <p className="flex items-center gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-accent">
                   <MapPin aria-hidden="true" className="size-5" />
                   Google Maps
                 </p>
                 <a
-                  className="text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-ivory/70 underline underline-offset-4 hover:text-gold-light"
+                  className="text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-muted underline underline-offset-4 hover:text-accent"
                   href={siteConfig.maps}
                   target="_blank"
                   rel="noreferrer"
@@ -145,13 +161,13 @@ export default function ContactPage() {
               className="min-h-[25rem] w-full grow border-0"
               allowFullScreen
             />
-            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/15 px-7 py-5 md:px-10">
-              <address className="text-xs not-italic leading-6 text-ivory/62">
+            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-foreground/14 px-7 py-5 md:px-10">
+              <address className="text-xs not-italic leading-6 text-muted">
                 {siteConfig.address.line2}, {siteConfig.address.city} ·{" "}
                 {siteConfig.address.plusCode}
               </address>
               <a
-                className="rule-link dark-rule-link"
+                className="rule-link"
                 href={siteConfig.directions}
                 target="_blank"
                 rel="noreferrer"
@@ -173,14 +189,13 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-olive px-5 py-24 text-ivory sm:px-8 md:py-32 lg:px-12">
+      <section className="bg-background px-5 py-16 text-foreground sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
           <SectionHeading
             index="01"
             eyebrow="Nearby"
             title="The city,"
             accent="within a walk."
-            theme="dark"
           />
           <div className="mt-14">
             <NearbyList />

@@ -24,9 +24,10 @@ export type MediaAsset = {
   src: string;
   alt: string;
   label: string;
-  rightsStatus: "licensed" | "owner-original-required";
+  rightsStatus: "licensed" | "owner-original" | "owner-original-required";
   width: number;
   height: number;
+  objectPosition?: string;
 };
 
 export type BlogPost = {
@@ -257,60 +258,67 @@ export const reviewThemes = [
 
 export const galleryAssets: MediaAsset[] = [
   {
-    src: "/images/zayit-ambience-spaces.webp",
-    alt: "Preview crop showing Zayit dining spaces",
-    label: "Dining spaces",
-    rightsStatus: "owner-original-required",
-    width: 360,
-    height: 640,
+    src: "/images/owner/zayit-room-wide.avif",
+    alt: "Bright dining room at Zayit India Fine Dine with a long set table",
+    label: "The dining room",
+    rightsStatus: "owner-original",
+    width: 1280,
+    height: 575,
+    objectPosition: "50% 52%",
   },
   {
-    src: "/images/zayit-ambience-dining.webp",
-    alt: "Preview crop showing guests dining at Zayit",
-    label: "The table",
-    rightsStatus: "owner-original-required",
-    width: 360,
-    height: 640,
+    src: "/images/owner/zayit-table-chandelier-portrait.avif",
+    alt: "Long dining table beneath a chandelier inside Zayit India Fine Dine",
+    label: "The long table",
+    rightsStatus: "owner-original",
+    width: 575,
+    height: 1280,
+    objectPosition: "50% 45%",
   },
   {
-    src: "/images/zayit-kitchen-fire.webp",
-    alt: "Preview crop showing live-fire cooking at Zayit",
-    label: "The kitchen",
-    rightsStatus: "owner-original-required",
-    width: 361,
-    height: 640,
+    src: "/images/owner/zayit-lounge-portrait.avif",
+    alt: "Ivory architectural details and blue lounge seating inside Zayit",
+    label: "The lounge",
+    rightsStatus: "owner-original",
+    width: 1200,
+    height: 1450,
+    objectPosition: "50% 45%",
   },
   {
-    src: "/images/zayit-03.webp",
-    alt: "Preview crop of a plated dish from Zayit’s public profile",
-    label: "From the fire",
-    rightsStatus: "owner-original-required",
-    width: 640,
-    height: 640,
+    src: "/images/owner/zayit-table-portrait.avif",
+    alt: "Close view down a polished dining table set with plates and glassware",
+    label: "Table details",
+    rightsStatus: "owner-original",
+    width: 573,
+    height: 1280,
+    objectPosition: "50% 42%",
   },
   {
-    src: "/images/zayit-04.webp",
-    alt: "Preview crop of a shared platter from Zayit’s public profile",
-    label: "Made to share",
-    rightsStatus: "owner-original-required",
-    width: 640,
-    height: 640,
+    src: "/images/owner/zayit-fort-daylight-portrait.avif",
+    alt: "Jaisalmer Fort in daylight above terrace plants near Zayit",
+    label: "The Golden Fort",
+    rightsStatus: "owner-original",
+    width: 630,
+    height: 1120,
+    objectPosition: "50% 42%",
   },
   {
-    src: "/images/zayit-05.webp",
-    alt: "Preview crop of a restaurant dish from Zayit’s public profile",
-    label: "At the table",
-    rightsStatus: "owner-original-required",
-    width: 640,
-    height: 640,
+    src: "/images/owner/zayit-table-window.avif",
+    alt: "Dining table set beside tall softly coloured curtains at Zayit",
+    label: "Window light",
+    rightsStatus: "owner-original",
+    width: 575,
+    height: 1020,
+    objectPosition: "50% 40%",
   },
   {
-    src: "/images/zayit-06.webp",
-    alt: "Preview crop of a plated dish from Zayit’s public profile",
-    label: "The plate",
-    rightsStatus: "owner-original-required",
-    width: 640,
-    height: 640,
+    src: "/images/owner/zayit-fort-sign.avif",
+    alt: "Zayit India sign below the illuminated walls of Jaisalmer Fort",
+    label: "Under the fort",
+    rightsStatus: "owner-original",
+    width: 1280,
+    height: 1006,
+    objectPosition: "50% 58%",
   },
 ];
 

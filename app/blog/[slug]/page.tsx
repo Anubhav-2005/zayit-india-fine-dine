@@ -45,22 +45,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <main id="main-content">
       <article>
-        <header className="bg-olive px-5 pb-20 pt-40 text-ivory sm:px-8 md:pb-28 md:pt-48 lg:px-12">
+        <header className="bg-sand px-5 pb-16 pt-32 text-foreground sm:px-8 md:pb-24 md:pt-40 lg:px-12">
           <div className="mx-auto max-w-5xl">
             <Link
               href="/blog"
-              className="inline-flex min-h-11 items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.15em] text-gold-light"
+              className="inline-flex min-h-11 items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.15em] text-accent"
             >
               <ArrowLeft aria-hidden="true" className="size-4" />
               Back to the journal
             </Link>
-            <p className="mt-14 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold-light">
+            <p className="mt-14 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-accent">
               {post.category}
             </p>
             <h1 className="hero-display display-balance mt-6 text-[clamp(4rem,9vw,8.5rem)] font-normal leading-[0.76] tracking-[-0.07em]">
               {post.title}
             </h1>
-            <div className="mt-10 flex flex-wrap gap-x-7 gap-y-2 border-t border-white/22 pt-5 text-[0.62rem] uppercase tracking-[0.13em] text-ivory/58">
+            <div className="mt-10 flex flex-wrap gap-x-7 gap-y-2 border-t border-foreground/18 pt-5 text-[0.62rem] uppercase tracking-[0.13em] text-muted">
               <span>Facts checked {post.checkedAt}</span>
               <span>{post.readTime}</span>
               <span>Original editorial guide</span>

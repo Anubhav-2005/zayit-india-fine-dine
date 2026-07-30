@@ -26,30 +26,30 @@ export default function EventsPage() {
         meta="Public programme status · checked July 29, 2026"
       />
 
-      <section className="px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
-          <div className="relative overflow-hidden bg-olive p-8 text-ivory md:p-14 lg:p-20">
+          <div className="relative overflow-hidden border border-foreground/16 bg-sand p-7 text-foreground md:p-14 lg:p-20">
             <div
-              className="absolute -right-24 -top-28 size-96 rounded-full border border-gold/20"
+              className="absolute -right-24 -top-28 size-96 rounded-full border border-accent/14"
               aria-hidden="true"
             />
             <CalendarX2
               aria-hidden="true"
-              className="size-7 text-gold-light"
+              className="size-7 text-accent"
             />
-            <p className="mt-12 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold-light">
+            <p className="mt-12 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-accent">
               Current public status
             </p>
             <h2 className="display-balance mt-6 max-w-5xl font-serif text-[clamp(3.4rem,7vw,7.5rem)] font-normal leading-[0.8] tracking-[-0.065em]">
               No dated programme is currently verified.
             </h2>
-            <p className="pretty-copy mt-7 max-w-2xl text-sm leading-7 text-ivory/65">
+            <p className="pretty-copy mt-7 max-w-2xl text-sm leading-7 text-muted">
               For the newest announcements, use the official Instagram profile
               or call the restaurant directly. A future owner-supplied calendar
               can replace this state without changing the page architecture.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild variant="gold">
+              <Button asChild>
                 <a
                   href={siteConfig.instagram}
                   target="_blank"
@@ -62,7 +62,6 @@ export default function EventsPage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-ivory/45 text-ivory hover:bg-ivory hover:text-olive"
               >
                 <a href={siteConfig.phoneHref}>Call the restaurant</a>
               </Button>
@@ -71,7 +70,7 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <section className="bg-sand px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="bg-sand px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
           <div>
             <SectionHeading

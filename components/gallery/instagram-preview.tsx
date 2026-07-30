@@ -19,9 +19,8 @@ const editorialLayouts = [
 ] as const;
 
 /**
- * A curated editorial view of real reference crops from Zayit's official
- * public profile. This is intentionally static: a live Instagram API is not
- * implied until the owner supplies an approved integration.
+ * A curated editorial view of owner-supplied restaurant photography. This is
+ * intentionally static: a live Instagram API is not implied.
  */
 export function InstagramPreview({ className }: InstagramPreviewProps) {
   const previewAssets = galleryAssets.slice(0, editorialLayouts.length);
@@ -30,7 +29,7 @@ export function InstagramPreview({ className }: InstagramPreviewProps) {
     <section
       aria-labelledby="instagram-preview-title"
       className={cn(
-        "overflow-hidden bg-background px-5 py-24 sm:px-8 md:py-32 lg:px-12",
+        "overflow-hidden bg-background px-5 py-16 sm:px-8 md:py-28 lg:px-12",
         className,
       )}
     >
@@ -39,22 +38,22 @@ export function InstagramPreview({ className }: InstagramPreviewProps) {
           <div>
             <p className="flex items-center gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.19em] text-accent">
               <Camera aria-hidden="true" className="size-4" />
-              Official profile · Curated preview
+              Inside Zayit · Owner supplied
             </p>
             <h2
               id="instagram-preview-title"
               className="display-balance mt-7 max-w-5xl font-serif text-[clamp(3.2rem,7vw,7.5rem)] font-normal leading-[0.82] tracking-[-0.065em] text-foreground"
             >
-              From Zayit,
+              The visual
               <br />
-              <em className="font-normal text-accent">as it is.</em>
+              <em className="font-normal text-accent">journal.</em>
             </h2>
           </div>
 
           <div className="lg:justify-self-end lg:text-right">
             <p className="pretty-copy max-w-lg text-sm leading-7 text-muted md:text-base md:leading-8">
-              A hand-picked private-preview sequence from Zayit&apos;s official
-              public Instagram—not a live API feed.
+              Authentic restaurant and Jaisalmer photographs supplied for this
+              website, with the official profile one tap away.
             </p>
             <a
               className="rule-link mt-7"
@@ -73,7 +72,7 @@ export function InstagramPreview({ className }: InstagramPreviewProps) {
             <figure
               key={asset.src}
               className={cn(
-                "group relative isolate overflow-hidden bg-olive",
+                "group relative isolate h-full overflow-hidden bg-olive",
                 editorialLayouts[index],
               )}
             >
@@ -108,18 +107,17 @@ export function InstagramPreview({ className }: InstagramPreviewProps) {
         </div>
 
         <aside
-          aria-label="Instagram preview asset notice"
+          aria-label="Owner-supplied photography notice"
           className="mt-5 grid gap-3 border border-foreground/20 bg-sand/55 p-5 text-sm leading-7 text-muted md:grid-cols-[auto_1fr] md:gap-6 md:p-7"
         >
           <p className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-accent">
-            Private-preview notice
+            Photography status
           </p>
           <p className="pretty-copy max-w-5xl">
-            These public-profile crops are visual references, not proof of a
-            reuse licence. Before public launch, the owner must replace them
-            with original high-resolution files and confirm photographer usage
-            rights. Connect an approved Instagram API source only if a truly
-            live feed is required.
+            These are owner-supplied restaurant files, not traveller or
+            AI-generated images. The restaurant should retain photographer
+            permissions and uncompressed masters. This editorial grid is not
+            presented as a live Instagram API feed.
           </p>
         </aside>
       </div>

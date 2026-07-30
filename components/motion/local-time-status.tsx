@@ -23,14 +23,14 @@ export function LocalTimeStatus() {
   }, []);
 
   return (
-    <div className="flex items-center gap-3 text-ivory">
+    <div className="flex items-center gap-3 text-foreground">
       <span
-        className="relative size-2 rounded-full bg-gold-light before:absolute before:-inset-2 before:rounded-full before:border before:border-gold-light/35"
+        className="relative size-2 rounded-full bg-accent before:absolute before:-inset-2 before:rounded-full before:border before:border-accent/30"
         aria-hidden="true"
       />
       <p className="m-0 text-[0.68rem] font-semibold uppercase tracking-[0.16em]">
         Daily service
-        <span className="mt-1 block text-[0.62rem] font-normal normal-case tracking-[0.05em] text-ivory/70">
+        <span className="mt-1 block text-[0.62rem] font-normal normal-case tracking-[0.05em] text-muted">
           {time ? `Local time ${time}` : "Jaisalmer, India"}
         </span>
       </p>

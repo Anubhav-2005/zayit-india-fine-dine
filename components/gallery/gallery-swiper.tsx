@@ -47,7 +47,7 @@ export function GallerySwiper({ assets }: { assets: MediaAsset[] }) {
       <div
         role="region"
         aria-roledescription="carousel"
-        aria-label="Zayit private-preview image gallery"
+        aria-label="Zayit owner-supplied image gallery"
         className="overflow-hidden pb-12"
       >
         <Swiper
@@ -81,7 +81,7 @@ export function GallerySwiper({ assets }: { assets: MediaAsset[] }) {
               <figure className="group">
                 <button
                   type="button"
-                  className="relative block h-[62svh] min-h-[32rem] w-full cursor-zoom-in overflow-hidden bg-olive text-left focus-visible:ring-2 focus-visible:ring-gold"
+                  className="relative block h-[54svh] min-h-[26rem] w-full cursor-zoom-in overflow-hidden bg-olive text-left focus-visible:ring-2 focus-visible:ring-gold md:h-[62svh] md:min-h-[32rem]"
                   onClick={() => setSelectedIndex(index)}
                   aria-label={`Open ${asset.label} in image lightbox`}
                 >
@@ -90,6 +90,7 @@ export function GallerySwiper({ assets }: { assets: MediaAsset[] }) {
                     alt={asset.alt}
                     fill
                     sizes="(max-width: 767px) 92vw, (max-width: 1199px) 60vw, 44vw"
+                    style={{ objectPosition: asset.objectPosition }}
                     className="image-wash object-cover object-center"
                   />
                   <span className="absolute bottom-4 right-4 grid size-11 place-items-center rounded-full border border-white/35 bg-olive/75 text-gold-light backdrop-blur-md">
@@ -163,8 +164,7 @@ export function GallerySwiper({ assets }: { assets: MediaAsset[] }) {
                 Previous
               </button>
               <p className="hidden max-w-xl text-center text-xs text-ivory/54 md:block">
-                Private-preview crop · owner-original file required before
-                public launch
+                Owner-supplied restaurant photography · no AI-generated imagery
               </p>
               <button
                 type="button"

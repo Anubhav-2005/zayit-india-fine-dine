@@ -33,7 +33,7 @@ export function SectionHeading({
       </div>
       <h2
         className={cn(
-          "display-balance mt-8 font-serif text-[clamp(3.6rem,8vw,8.75rem)] font-normal leading-[0.78] tracking-[-0.07em]",
+          "display-balance mt-7 font-serif text-[clamp(3.05rem,8vw,8.75rem)] font-normal leading-[0.8] tracking-[-0.065em] md:mt-8 md:leading-[0.78] md:tracking-[-0.07em]",
           theme === "dark" ? "text-ivory" : "text-foreground",
         )}
       >

@@ -11,7 +11,7 @@ export function NewsletterInvitation({ className }: { className?: string }) {
   return (
     <aside
       className={cn(
-        "relative isolate overflow-hidden border border-white/18 bg-white/4 p-7 text-ivory md:p-10",
+        "relative isolate overflow-hidden border border-foreground/16 bg-ivory/72 p-7 text-foreground md:p-10",
         className,
       )}
       aria-labelledby="zayit-letter-title"
@@ -20,8 +20,8 @@ export function NewsletterInvitation({ className }: { className?: string }) {
         className="absolute -right-20 -top-20 -z-10 size-64 rounded-full border border-gold/20"
         aria-hidden="true"
       />
-      <Mail aria-hidden="true" className="size-5 text-gold-light" />
-      <p className="mt-12 text-[0.59rem] font-semibold uppercase tracking-[0.17em] text-gold-light">
+      <Mail aria-hidden="true" className="size-5 text-accent" />
+      <p className="mt-12 text-[0.59rem] font-semibold uppercase tracking-[0.17em] text-accent">
         Newsletter · integration ready
       </p>
       <h2
@@ -30,19 +30,16 @@ export function NewsletterInvitation({ className }: { className?: string }) {
       >
         The Zayit Letter.
       </h2>
-      <p className="pretty-copy mt-5 max-w-xl text-sm leading-7 text-ivory/64">
+      <p className="pretty-copy mt-5 max-w-xl text-sm leading-7 text-muted">
         Seasonal plates, Golden City notes and table announcements—once the
         owner connects an authorised mailing platform, consent wording and
         privacy policy.
       </p>
-      <a
-        className="rule-link dark-rule-link mt-7"
-        href={requestHref}
-      >
+      <a className="rule-link mt-7" href={requestHref}>
         Ask to be notified
         <ArrowUpRight aria-hidden="true" className="size-4" />
       </a>
-      <p className="mt-5 max-w-xl text-[0.67rem] leading-5 text-ivory/48">
+      <p className="mt-5 max-w-xl text-[0.67rem] leading-5 text-muted">
         This opens your email app. It does not subscribe or store your address.
         Replace with the owner’s consent-based provider before public launch.
       </p>

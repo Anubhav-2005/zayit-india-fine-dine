@@ -14,7 +14,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata = createPageMetadata({
   title: "Gallery",
   description:
-    "A cinematic private-preview gallery of Zayit India Fine Dine’s spaces, tables, kitchen and dishes, using real public-profile reference crops and no AI-generated images.",
+    "Explore owner-supplied photographs of Zayit India Fine Dine’s bright interiors, long table and Jaisalmer setting. No AI-generated or traveller imagery.",
   path: "/gallery",
 });
 
@@ -22,14 +22,14 @@ export default function GalleryPage() {
   return (
     <main id="main-content">
       <PageHero
-        eyebrow="Gallery · Private design preview"
-        title="A night,"
+        eyebrow="Gallery · Owner-supplied photography"
+        title="The room,"
         accent="frame by frame."
-        description="Dining spaces, the table, live fire and plates—shown through real public-profile reference crops while owner-original exports are prepared."
+        description="Bright interiors, the long table, architectural details and the Golden Fort—shown through real restaurant files supplied for this website."
         meta="No AI-generated or traveller photography"
       />
 
-      <section className="overflow-hidden px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="overflow-hidden px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
           <div className="grid gap-12 lg:grid-cols-[1fr_0.55fr] lg:items-end">
             <SectionHeading

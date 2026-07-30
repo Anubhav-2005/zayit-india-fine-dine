@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Compass, MoonStar, Sun } from "lucide-react";
 
@@ -47,13 +48,9 @@ export default function JaisalmerGuidePage() {
         accent="the table."
         description="A calm, source-backed route through nearby Golden City landmarks—designed as inspiration, not a claim of firsthand travel."
         meta="Live directions · approximate public-route distances"
-        image={{
-          src: "/images/jaisalmer-night-2560.webp",
-          alt: "Jaisalmer Fort illuminated above the city at night",
-        }}
       />
 
-      <section className="px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
           <SectionHeading
             index="01"
@@ -63,13 +60,29 @@ export default function JaisalmerGuidePage() {
             description="Use this structure loosely. Weather, traffic, opening hours and old-city access can change the shape of an afternoon."
           />
 
+          <figure className="mt-12 md:mt-16">
+            <div className="relative h-[30rem] overflow-hidden bg-sand-deep md:h-[38rem]">
+              <Image
+                src="/images/owner/zayit-fort-daylight-portrait.avif"
+                alt="Jaisalmer Fort in daylight above plants near Zayit"
+                fill
+                sizes="(max-width: 767px) 92vw, 88vw"
+                className="image-wash object-cover object-[center_38%]"
+              />
+            </div>
+            <figcaption className="mt-4 flex items-center justify-between border-b border-foreground/18 pb-3 text-[0.58rem] font-semibold uppercase tracking-[0.15em] text-muted">
+              <span>The Golden City</span>
+              <span>Owner-supplied photograph</span>
+            </figcaption>
+          </figure>
+
           <div className="mt-16 grid lg:grid-cols-3">
             {eveningChapters.map((chapter, index) => {
               const Icon = chapter.icon;
               return (
                 <article
                   key={chapter.time}
-                  className="min-h-[31rem] border-b border-foreground/20 py-8 lg:border-b-0 lg:border-r lg:px-8 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
+                  className="border-b border-foreground/20 py-8 lg:min-h-[31rem] lg:border-b-0 lg:border-r lg:px-8 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
                 >
                   <div className="flex items-center justify-between">
                     <Icon aria-hidden="true" className="size-5 text-accent" />
@@ -93,7 +106,7 @@ export default function JaisalmerGuidePage() {
         </div>
       </section>
 
-      <section className="bg-olive px-5 py-24 text-ivory sm:px-8 md:py-32 lg:px-12">
+      <section className="bg-sand px-5 py-16 text-foreground sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
           <div className="grid gap-12 lg:grid-cols-[1fr_0.6fr] lg:items-end">
             <SectionHeading
@@ -101,9 +114,8 @@ export default function JaisalmerGuidePage() {
               eyebrow="Near the restaurant"
               title="Four landmarks."
               accent="One live map."
-              theme="dark"
             />
-            <p className="pretty-copy max-w-md text-sm leading-7 text-ivory/62 lg:justify-self-end">
+            <p className="pretty-copy max-w-md text-sm leading-7 text-muted lg:justify-self-end">
               Distances are approximate public-route snapshots. Each row opens
               a live Google Maps search so you can check the route that day.
             </p>
@@ -112,7 +124,7 @@ export default function JaisalmerGuidePage() {
             <NearbyList />
           </div>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Button asChild variant="gold">
+            <Button asChild>
               <a
                 href={siteConfig.directions}
                 target="_blank"
@@ -125,7 +137,6 @@ export default function JaisalmerGuidePage() {
             <Button
               asChild
               variant="outline"
-              className="border-ivory/40 text-ivory hover:bg-ivory hover:text-olive"
             >
               <Link href="/reservations">Plan the table</Link>
             </Button>
@@ -133,7 +144,7 @@ export default function JaisalmerGuidePage() {
         </div>
       </section>
 
-      <section className="bg-sand px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="bg-background px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
           <div>
             <p className="text-[0.62rem] font-semibold uppercase tracking-[0.17em] text-accent">

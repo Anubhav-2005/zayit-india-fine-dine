@@ -54,12 +54,13 @@ export function DeferredGallerySwiper({ assets }: { assets: MediaAsset[] }) {
         <GallerySwiper assets={assets} />
       ) : (
         <figure className="group overflow-hidden pb-12">
-          <div className="relative h-[62svh] min-h-[32rem] overflow-hidden bg-olive">
+          <div className="relative h-[54svh] min-h-[26rem] overflow-hidden bg-olive md:h-[62svh] md:min-h-[32rem]">
             <Image
               src={firstAsset.src}
               alt={firstAsset.alt}
               fill
               sizes="92vw"
+              style={{ objectPosition: firstAsset.objectPosition }}
               className="image-wash object-cover object-center"
             />
             <span className="absolute bottom-4 right-4 grid size-11 place-items-center rounded-full border border-white/35 bg-olive/75 text-gold-light backdrop-blur-md">

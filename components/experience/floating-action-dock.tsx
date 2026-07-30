@@ -61,18 +61,19 @@ export function FloatingActionDock({
     <nav
       aria-label="Quick actions"
       className={cn(
-        "fixed bottom-3 left-1/2 z-[100] flex -translate-x-1/2 items-center gap-1 rounded-full border border-white/15 bg-olive/94 p-1.5 shadow-2xl backdrop-blur-md sm:bottom-5 sm:left-auto sm:right-5 sm:translate-x-0",
+        "fixed bottom-[max(0.75rem,env(safe-area-inset-bottom))] left-1/2 z-[100] flex -translate-x-1/2 items-center gap-1 rounded-full border border-white/15 bg-olive/94 p-1.5 shadow-2xl backdrop-blur-md sm:bottom-5 sm:left-auto sm:right-5 sm:translate-x-0",
         className,
       )}
     >
       <Link
         href={reserveHref}
         prefetch={false}
-        className={actionClassName}
+        className="inline-flex h-11 shrink-0 items-center gap-2 rounded-full bg-gold px-4 text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-olive outline-none transition-colors hover:bg-gold-light focus-visible:ring-2 focus-visible:ring-gold-light focus-visible:ring-offset-2 focus-visible:ring-offset-olive"
         aria-label="Reserve a table"
         title="Reserve a table"
       >
         <CalendarDays aria-hidden="true" className="size-4" />
+        <span>Reserve</span>
       </Link>
       <a
         href={phoneHref}
@@ -97,7 +98,7 @@ export function FloatingActionDock({
       {showBackToTop ? (
         <button
           type="button"
-          className={actionClassName}
+          className={cn(actionClassName, "hidden sm:grid")}
           aria-label="Back to top"
           title="Back to top"
           onClick={backToTop}

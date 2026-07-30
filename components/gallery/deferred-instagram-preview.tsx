@@ -56,7 +56,7 @@ export function DeferredInstagramPreview({
       ) : (
         <section
           className={cn(
-            "grid min-h-[48rem] place-items-center bg-background px-5 py-24 text-center sm:px-8 md:py-32 lg:px-12",
+            "grid min-h-[38rem] place-items-center bg-background px-5 py-16 text-center sm:px-8 md:min-h-[48rem] md:py-28 lg:px-12",
             className,
           )}
           aria-labelledby="instagram-preview-loader-title"
@@ -67,7 +67,7 @@ export function DeferredInstagramPreview({
               className="mx-auto size-6 text-accent"
             />
             <p className="mt-8 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-accent">
-              Official profile · curated preview
+              Inside Zayit · owner supplied
             </p>
             <h2
               id="instagram-preview-loader-title"
@@ -76,16 +76,16 @@ export function DeferredInstagramPreview({
               The visual journal waits just below.
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-sm leading-7 text-muted">
-              Real public-profile reference crops load only when this chapter
-              enters view. It is a private-preview sequence, never a simulated
-              live Instagram feed.
+              Owner-supplied restaurant photography loads only when this
+              chapter enters view. It is an editorial gallery, never a
+              simulated live Instagram feed.
             </p>
             <button
               type="button"
               className="mt-8 inline-flex min-h-11 items-center justify-center rounded-full border border-foreground px-5 text-[0.62rem] font-semibold uppercase tracking-[0.15em] transition-colors hover:bg-foreground hover:text-background"
               onClick={() => setReady(true)}
             >
-              Load curated profile preview
+              Load the visual journal
             </button>
           </div>
         </section>

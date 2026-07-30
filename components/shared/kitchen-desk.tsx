@@ -36,43 +36,43 @@ const deskCards = [
 
 export function KitchenDesk() {
   return (
-    <section className="bg-olive px-5 py-24 text-ivory sm:px-8 md:py-32 lg:px-12">
+    <section className="overflow-hidden bg-sand px-5 py-16 text-foreground sm:px-8 md:py-28 lg:px-12">
       <div className="mx-auto max-w-[1500px]">
-        <div className="grid gap-10 border-b border-white/18 pb-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-          <p className="text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold-light">
+        <div className="grid gap-8 border-b border-foreground/18 pb-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end lg:pb-12">
+          <p className="text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-accent">
             The kitchen desk
           </p>
-          <h2 className="display-balance max-w-5xl font-serif text-[clamp(3rem,6vw,6.8rem)] font-normal leading-[0.86] tracking-[-0.06em]">
+          <h2 className="display-balance max-w-5xl font-serif text-[clamp(2.9rem,6vw,6.8rem)] font-normal leading-[0.88] tracking-[-0.055em] md:leading-[0.86] md:tracking-[-0.06em]">
             What is known.
             <br />
-            <em className="font-normal text-gold-light">
+            <em className="font-normal text-accent">
               What still needs the chef.
             </em>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-3">
+        <div className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pt-6 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-0 lg:overflow-visible lg:px-0 lg:pt-0">
           {deskCards.map((card, index) => {
             const Icon = card.icon;
             const content = (
               <>
                 <div className="flex items-center justify-between">
-                  <Icon aria-hidden="true" className="size-5 text-gold-light" />
-                  <span className="text-[0.56rem] tracking-[0.15em] text-ivory/60">
+                  <Icon aria-hidden="true" className="size-5 text-accent" />
+                  <span className="text-[0.56rem] tracking-[0.15em] text-muted">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <div className="mt-20">
-                  <p className="text-[0.59rem] font-semibold uppercase tracking-[0.16em] text-gold-light">
+                <div className="mt-14 lg:mt-20">
+                  <p className="text-[0.59rem] font-semibold uppercase tracking-[0.16em] text-accent">
                     {card.eyebrow}
                   </p>
                   <h3 className="mt-5 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em]">
                     {card.title}
                   </h3>
-                  <p className="pretty-copy mt-5 text-sm leading-7 text-ivory/62">
+                  <p className="pretty-copy mt-5 text-sm leading-7 text-muted">
                     {card.copy}
                   </p>
-                  <span className="rule-link dark-rule-link mt-7">
+                  <span className="rule-link mt-7">
                     {card.action}
                     <ArrowUpRight aria-hidden="true" className="size-4" />
                   </span>
@@ -84,7 +84,7 @@ export function KitchenDesk() {
               <Link
                 key={card.eyebrow}
                 href={card.href}
-                className="group min-h-[33rem] border-b border-white/18 py-9 transition-colors hover:bg-white/4 focus-visible:bg-white/4 lg:border-b-0 lg:border-r lg:px-8 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
+                className="group min-h-[27rem] w-[84vw] max-w-sm shrink-0 snap-start border border-foreground/16 bg-ivory/55 p-6 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:w-[58vw] lg:min-h-[31rem] lg:w-auto lg:max-w-none lg:border-y-0 lg:border-l-0 lg:border-r lg:bg-transparent lg:px-8 lg:py-9 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
               >
                 {content}
               </Link>
@@ -92,7 +92,7 @@ export function KitchenDesk() {
               <a
                 key={card.eyebrow}
                 href={card.href}
-                className="group min-h-[33rem] border-b border-white/18 py-9 transition-colors hover:bg-white/4 focus-visible:bg-white/4 lg:border-b-0 lg:border-r lg:px-8 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
+                className="group min-h-[27rem] w-[84vw] max-w-sm shrink-0 snap-start border border-foreground/16 bg-ivory/55 p-6 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:w-[58vw] lg:min-h-[31rem] lg:w-auto lg:max-w-none lg:border-y-0 lg:border-l-0 lg:border-r lg:bg-transparent lg:px-8 lg:py-9 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
               >
                 {content}
               </a>

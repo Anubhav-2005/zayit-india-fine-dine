@@ -21,7 +21,7 @@ Production restaurant website built with Next.js 16, TypeScript, Tailwind CSS 4,
 Pages, layouts, metadata, navigation, editorial content and structured data are React Server Components by default. Browser-only functionality is isolated:
 
 - `components/motion/` — Framer Motion reveal island plus an idle-loaded Lenis/GSAP scroll enhancement
-- `components/experience/` — theme, procedural ambience, floating actions, loading screen and pointer aura
+- `components/experience/` — procedural ambience, floating actions, loading screen and pointer aura
 - `components/menu/menu-explorer.tsx` — searchable, filterable public-menu client island
 - `components/gallery/gallery-swiper.tsx` — route-level Swiper client island
 - `components/forms/inquiry-form.tsx` — React Hook Form and Zod client island
@@ -55,8 +55,9 @@ pnpm audit:lighthouse
 ## Content integrity
 
 See `RESEARCH-SOURCES.md` for the dated evidence ledger and
-`OWNER-CONTENT-CHECKLIST.md` for required owner approvals. Restaurant-profile
-images remain private-preview reference crops until owner-original files and
-permissions are supplied. Live availability, chef recommendations, signatures,
-today’s special, Instagram API data and newsletter delivery are never
-fabricated; the interface identifies each missing owner integration.
+`OWNER-CONTENT-CHECKLIST.md` for required owner approvals. The visible venue
+gallery now uses owner-supplied restaurant files and no AI-generated or
+traveller imagery. Photographer permissions and uncompressed masters still
+belong in the launch record. Live availability, chef recommendations,
+signatures, today’s special, Instagram API data and newsletter delivery are
+never fabricated; the interface identifies each missing owner integration.

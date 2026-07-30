@@ -24,7 +24,7 @@ export default function BlogPage() {
         meta="Original editorial · no fabricated news or firsthand claims"
       />
 
-      <section className="px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
           <p className="text-[0.62rem] font-semibold uppercase tracking-[0.17em] text-accent">
             Featured note

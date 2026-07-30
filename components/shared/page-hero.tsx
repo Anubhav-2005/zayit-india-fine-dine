@@ -25,8 +25,8 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "relative isolate min-h-[72svh] overflow-hidden bg-olive px-5 pb-16 pt-36 text-ivory sm:px-8 lg:px-12 lg:pb-24 lg:pt-44",
-        image && "min-h-[82svh]",
+        "relative isolate min-h-[60svh] overflow-hidden bg-sand px-5 pb-14 pt-28 text-foreground sm:px-8 sm:pt-32 lg:px-12 lg:pb-20 lg:pt-40",
+        image && "min-h-[72svh]",
       )}
     >
       {image ? (
@@ -45,32 +45,32 @@ export function PageHero({
       ) : (
         <>
           <div
-            className="absolute -right-[12vw] top-[12%] -z-10 size-[min(58vw,48rem)] rounded-full border border-gold/20"
+            className="absolute -right-[12vw] top-[12%] -z-10 size-[min(58vw,48rem)] rounded-full border border-accent/14"
             aria-hidden="true"
           />
           <div
-            className="absolute -right-[2vw] top-[28%] -z-10 size-[min(32vw,26rem)] rounded-full border border-gold/16"
+            className="absolute -right-[2vw] top-[28%] -z-10 size-[min(32vw,26rem)] rounded-full border border-accent/12"
             aria-hidden="true"
           />
         </>
       )}
-      <div className="mx-auto flex min-h-[calc(72svh-12rem)] max-w-[1500px] flex-col justify-end">
+      <div className="mx-auto flex min-h-[calc(60svh-9rem)] max-w-[1500px] flex-col justify-end">
         <div>
-          <p className="text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-gold-light">
+          <p className="text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-accent">
             {eyebrow}
           </p>
-          <h1 className="hero-display display-balance mt-6 max-w-6xl text-[clamp(4.2rem,10vw,10.5rem)] font-normal leading-[0.74] tracking-[-0.075em]">
+          <h1 className="hero-display display-balance mt-6 max-w-6xl text-[clamp(3.55rem,9vw,9.75rem)] font-normal leading-[0.77] tracking-[-0.07em]">
             {title}
             <br />
-            <em className="font-normal text-gold-light">{accent}</em>
+            <em className="font-normal text-accent">{accent}</em>
           </h1>
         </div>
-        <div className="mt-12 grid gap-6 border-t border-white/25 pt-6 md:grid-cols-[1fr_1fr] md:items-start">
-          <p className="pretty-copy max-w-xl text-sm leading-7 text-ivory/76 md:text-base md:leading-8">
+        <div className="mt-10 grid gap-5 border-t border-foreground/18 pt-5 md:grid-cols-[1fr_1fr] md:items-start">
+          <p className="pretty-copy max-w-xl text-sm leading-7 text-muted md:text-base md:leading-8">
             {description}
           </p>
           {meta ? (
-            <p className="text-[0.61rem] uppercase tracking-[0.15em] text-ivory/58 md:justify-self-end">
+            <p className="text-[0.61rem] uppercase tracking-[0.15em] text-muted md:justify-self-end">
               {meta}
             </p>
           ) : null}

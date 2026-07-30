@@ -51,14 +51,14 @@ export function LiveServiceStatus() {
   const isOpen = snapshot?.open;
 
   return (
-    <aside className="relative isolate overflow-hidden bg-olive p-7 text-ivory md:p-10">
+    <aside className="relative isolate overflow-hidden border border-foreground/16 bg-sand p-7 text-foreground md:p-10">
       <div
-        className="absolute -right-24 -top-24 -z-10 size-72 rounded-full border border-gold/20"
+        className="absolute -right-24 -top-24 -z-10 size-72 rounded-full border border-accent/15"
         aria-hidden="true"
       />
       <div className="flex items-start justify-between gap-6">
         <div>
-          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.17em] text-gold-light">
+          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.17em] text-accent">
             Live service status
           </p>
           <h2 className="mt-5 max-w-xl font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em] md:text-5xl">
@@ -70,10 +70,10 @@ export function LiveServiceStatus() {
           </h2>
         </div>
         <span
-          className="relative mt-1 grid size-11 shrink-0 place-items-center rounded-full border border-gold-light/35"
+          className="relative mt-1 grid size-11 shrink-0 place-items-center rounded-full border border-accent/25"
           aria-hidden="true"
         >
-          <Clock3 className="size-4 text-gold-light" />
+          <Clock3 className="size-4 text-accent" />
           {snapshot ? (
             <span
               className={`absolute right-0 top-0 size-2.5 rounded-full ${
@@ -84,9 +84,9 @@ export function LiveServiceStatus() {
         </span>
       </div>
 
-      <div className="mt-10 grid gap-5 border-t border-white/18 pt-6 sm:grid-cols-2">
+      <div className="mt-10 grid gap-5 border-t border-foreground/16 pt-6 sm:grid-cols-2">
         <div>
-          <p className="text-[0.56rem] uppercase tracking-[0.14em] text-ivory/52">
+          <p className="text-[0.56rem] uppercase tracking-[0.14em] text-muted">
             Jaisalmer now
           </p>
           <p className="mt-2 font-serif text-2xl">
@@ -94,14 +94,14 @@ export function LiveServiceStatus() {
           </p>
         </div>
         <div>
-          <p className="text-[0.56rem] uppercase tracking-[0.14em] text-ivory/52">
+          <p className="text-[0.56rem] uppercase tracking-[0.14em] text-muted">
             Published first-party hours
           </p>
           <p className="mt-2 font-serif text-2xl">{siteConfig.hours.compact}</p>
         </div>
       </div>
 
-      <p className="pretty-copy mt-6 max-w-2xl text-xs leading-6 text-ivory/62">
+      <p className="pretty-copy mt-6 max-w-2xl text-xs leading-6 text-muted">
         This live clock reflects the published service window, not real-time
         table inventory. A table is available only when the restaurant confirms
         your request.
@@ -110,7 +110,7 @@ export function LiveServiceStatus() {
       <div className="mt-7 flex flex-wrap gap-3">
         <a
           href={siteConfig.phoneHref}
-          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-gold bg-gold px-5 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-olive transition-colors hover:bg-gold-light"
+          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-olive bg-olive px-5 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-ivory transition-colors hover:bg-olive-soft"
         >
           <Phone aria-hidden="true" className="size-4" />
           Check by phone
@@ -119,7 +119,7 @@ export function LiveServiceStatus() {
           href={siteConfig.whatsapp}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-white/30 px-5 text-[0.62rem] font-semibold uppercase tracking-[0.14em] transition-colors hover:bg-white hover:text-olive"
+          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-foreground/25 px-5 text-[0.62rem] font-semibold uppercase tracking-[0.14em] transition-colors hover:bg-ivory"
         >
           <MessageCircle aria-hidden="true" className="size-4" />
           Request on WhatsApp

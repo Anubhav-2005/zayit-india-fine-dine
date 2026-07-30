@@ -2,24 +2,20 @@
 
 The current deployment should remain a private working preview until the items below are confirmed.
 
-## Required: original photography
+## Received: owner-supplied venue photography
 
-Replace the private-preview social crops in `public/images/` with the owner’s original, licensed high-resolution exports. Keep the same filenames to preserve the design:
+The visible site gallery now uses the owner-supplied interior, table, terrace,
+fort and exterior files delivered on July 29–30, 2026. The site serves
+lightweight AVIF derivatives plus one opt-in interior film. No traveller or
+AI-generated imagery is used.
 
-- `zayit-01.jpg` through `zayit-06.jpg` (source references; the interface
-  currently serves optimized `.webp` derivatives for `03`–`06`)
-- `zayit-ambience-dining.jpg` / `.webp`
-- `zayit-ambience-spaces.jpg` / `.webp`
-- `zayit-kitchen-fire.jpg` / `.webp`
+Still required for the final public launch record:
 
-Recommended delivery:
-
-- Original JPEG or WebP, minimum 2000 px on the long edge
-- No screenshots, social-media UI, watermarks or downloaded traveller photos
+- Uncompressed original JPEG/RAW exports, ideally minimum 2000 px on the long edge
 - Include photographer credit and written web-use permission where the photographer is not the owner
-- Identify the actual dish or room in each image so captions can be specific and accurate
-
-The licensed Jaisalmer hero may remain if the CC BY-SA credit is retained.
+- Confirm releases before publishing any future files with identifiable guests or staff
+- Supply original dish photography; the received files cover the venue and setting, not the food
+- Supply the official SVG/PDF/AI logo master if available
 
 ## Required: chef profile
 
@@ -54,7 +50,7 @@ Do not use “Chef Safa” based only on a historic customer review.
   email application and stores nothing.
 - If a live Instagram feed is required, provide approved official embed code or
   an authorized Meta integration. The current sequence is a labelled static
-  private-preview, not an API feed.
+  owner-supplied visual journal, not an API feed.
 
 ## Required: menu and commercial claims
 

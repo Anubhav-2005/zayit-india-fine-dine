@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { EditorialImage } from "@/components/gallery/editorial-image";
 import { Reveal } from "@/components/motion/reveal";
 import { CtaBand } from "@/components/shared/cta-band";
 import { OwnerNotice } from "@/components/shared/owner-notice";
@@ -7,7 +8,7 @@ import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { SourceStamp } from "@/components/shared/source-stamp";
 import { Button } from "@/components/ui/button";
-import { reviewThemes } from "@/lib/content";
+import { galleryAssets, reviewThemes } from "@/lib/content";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -28,7 +29,7 @@ export default function AboutPage() {
         meta="Jaisalmer · Rajasthan · India"
       />
 
-      <section className="px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
           <div className="editorial-grid gap-y-12">
             <Reveal className="col-span-12 lg:col-span-8">
@@ -54,10 +55,24 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+          <div className="mt-14 grid grid-cols-2 gap-3 md:mt-20 md:grid-cols-12 md:gap-7">
+            <EditorialImage
+              asset={galleryAssets[2]}
+              index={1}
+              className="col-span-2 [&>div]:min-h-[25rem] md:col-span-7 md:[&>div]:min-h-[40rem]"
+              sizes="(max-width: 767px) 92vw, 56vw"
+            />
+            <EditorialImage
+              asset={galleryAssets[0]}
+              index={2}
+              className="col-span-2 [&>div]:min-h-[19rem] md:col-span-5 md:mt-20 md:[&>div]:min-h-[32rem]"
+              sizes="(max-width: 767px) 92vw, 38vw"
+            />
+          </div>
         </div>
       </section>
 
-      <section className="bg-sand px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="bg-sand px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
           <SectionHeading
             index="02"
@@ -86,7 +101,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto grid max-w-[1500px] gap-8 lg:grid-cols-2">
           <OwnerNotice title="The founder story needs the owner’s voice.">
             Supply the founder or owner’s approved name, a concise origin story,
@@ -104,7 +119,7 @@ export default function AboutPage() {
             <Link href="/menu">Explore the current menu</Link>
           </Button>
           <Button asChild variant="outline">
-            <Link href="/gallery">See the private-preview gallery</Link>
+            <Link href="/gallery">See the owner-supplied gallery</Link>
           </Button>
         </div>
       </section>

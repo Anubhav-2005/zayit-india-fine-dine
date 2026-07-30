@@ -31,7 +31,9 @@ export function MenuExplorer({
   const resultsId = `${id}-results`;
   const statusId = `${id}-status`;
   const [query, setQuery] = useState("");
-  const [activeCategoryId, setActiveCategoryId] = useState("all");
+  const [activeCategoryId, setActiveCategoryId] = useState(
+    () => categories[1]?.id ?? categories[0]?.id ?? "all",
+  );
 
   const totalItemCount = useMemo(
     () => categories.reduce((total, category) => total + category.items.length, 0),
@@ -99,19 +101,19 @@ export function MenuExplorer({
       className={cn("w-full", className)}
       aria-labelledby={`${id}-heading`}
     >
-      <div className="relative isolate overflow-hidden bg-olive px-5 py-10 text-ivory sm:px-8 md:py-14 lg:px-12">
+      <div className="relative isolate overflow-hidden bg-sand px-5 py-10 text-foreground sm:px-8 md:py-14 lg:px-12">
         <div
-          className="pointer-events-none absolute -right-24 -top-32 -z-10 size-80 rounded-full border border-gold-light/10"
+          className="pointer-events-none absolute -right-24 -top-32 -z-10 size-80 rounded-full border border-accent/10"
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute -right-12 -top-20 -z-10 size-56 rounded-full border border-gold-light/10"
+          className="pointer-events-none absolute -right-12 -top-20 -z-10 size-56 rounded-full border border-accent/10"
           aria-hidden="true"
         />
 
         <div className="grid gap-10 xl:grid-cols-[0.72fr_1.28fr] xl:items-end">
           <div>
-            <p className="text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-gold-light">
+            <p className="text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-accent">
               Interactive menu index
             </p>
             <h2
@@ -120,7 +122,7 @@ export function MenuExplorer({
             >
               {heading}
             </h2>
-            <p className="mt-6 max-w-lg text-sm leading-7 text-ivory/64">
+            <p className="mt-6 max-w-lg text-sm leading-7 text-muted">
               {description}
             </p>
           </div>
@@ -128,14 +130,14 @@ export function MenuExplorer({
           <div>
             <label
               htmlFor={`${id}-search`}
-              className="text-[0.6rem] font-semibold uppercase tracking-[0.17em] text-gold-light"
+              className="text-[0.6rem] font-semibold uppercase tracking-[0.17em] text-accent"
             >
               Search dishes or sections
             </label>
-            <div className="relative mt-3 border-b border-ivory/35 focus-within:border-gold-light">
+            <div className="relative mt-3 border-b border-foreground/25 focus-within:border-accent">
               <Search
                 aria-hidden="true"
-                className="pointer-events-none absolute left-0 top-1/2 size-5 -translate-y-1/2 text-ivory/55"
+                className="pointer-events-none absolute left-0 top-1/2 size-5 -translate-y-1/2 text-muted"
               />
               <input
                 id={`${id}-search`}
@@ -154,13 +156,13 @@ export function MenuExplorer({
                 spellCheck={false}
                 aria-controls={resultsId}
                 aria-describedby={statusId}
-                className="h-16 w-full appearance-none bg-transparent pl-9 pr-14 font-serif text-xl text-ivory outline-none placeholder:text-ivory/38 focus-visible:ring-0 [&::-webkit-search-cancel-button]:hidden"
+                className="h-16 w-full appearance-none bg-transparent pl-9 pr-14 font-serif text-xl text-foreground outline-none placeholder:text-muted/65 focus-visible:ring-0 [&::-webkit-search-cancel-button]:hidden"
               />
               {query ? (
                 <button
                   type="button"
                   onClick={() => setQuery("")}
-                  className="absolute right-0 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-full text-ivory/65 transition-colors hover:bg-white/8 hover:text-ivory focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-light"
+                  className="absolute right-0 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-full text-muted transition-colors hover:bg-ivory hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus"
                   aria-label="Clear menu search"
                 >
                   <X aria-hidden="true" className="size-4" />
@@ -170,7 +172,7 @@ export function MenuExplorer({
           </div>
         </div>
 
-        <fieldset className="mt-10 border-t border-ivory/16 pt-6 md:mt-12">
+        <fieldset className="mt-10 border-t border-foreground/14 pt-6 md:mt-12">
           <legend className="sr-only">Filter menu by category</legend>
           <div className="-mx-5 flex snap-x snap-mandatory gap-2 overflow-x-auto px-5 pb-2 sm:-mx-8 sm:px-8 xl:mx-0 xl:flex-wrap xl:overflow-visible xl:px-0">
             <button
@@ -179,10 +181,10 @@ export function MenuExplorer({
               aria-controls={resultsId}
               onClick={() => setActiveCategoryId("all")}
               className={cn(
-                "inline-flex min-h-11 shrink-0 snap-start items-center gap-3 rounded-full border px-5 text-[0.6rem] font-semibold uppercase tracking-[0.13em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-light focus-visible:ring-offset-2 focus-visible:ring-offset-olive",
+                "inline-flex min-h-11 shrink-0 snap-start items-center gap-3 rounded-full border px-5 text-[0.6rem] font-semibold uppercase tracking-[0.13em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-sand",
                 activeCategoryId === "all"
-                  ? "border-gold bg-gold text-olive"
-                  : "border-ivory/24 text-ivory/72 hover:border-ivory/55 hover:text-ivory",
+                  ? "border-olive bg-olive text-ivory"
+                  : "border-foreground/22 text-muted hover:border-foreground/50 hover:text-foreground",
               )}
             >
               All dishes
@@ -190,8 +192,8 @@ export function MenuExplorer({
                 className={cn(
                   "tabular-nums",
                   activeCategoryId === "all"
-                    ? "text-olive"
-                    : "text-gold-light",
+                    ? "text-gold-light"
+                    : "text-accent",
                 )}
                 aria-hidden="true"
               >
@@ -210,17 +212,17 @@ export function MenuExplorer({
                   aria-controls={resultsId}
                   onClick={() => setActiveCategoryId(category.id)}
                   className={cn(
-                    "inline-flex min-h-11 shrink-0 snap-start items-center gap-3 rounded-full border px-5 text-[0.6rem] font-semibold uppercase tracking-[0.13em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-light focus-visible:ring-offset-2 focus-visible:ring-offset-olive",
+                    "inline-flex min-h-11 shrink-0 snap-start items-center gap-3 rounded-full border px-5 text-[0.6rem] font-semibold uppercase tracking-[0.13em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-sand",
                     isActive
-                      ? "border-gold bg-gold text-olive"
-                      : "border-ivory/24 text-ivory/72 hover:border-ivory/55 hover:text-ivory",
+                      ? "border-olive bg-olive text-ivory"
+                      : "border-foreground/22 text-muted hover:border-foreground/50 hover:text-foreground",
                   )}
                 >
                   {category.eyebrow}
                   <span
                     className={cn(
                       "tabular-nums",
-                      isActive ? "text-olive" : "text-gold-light",
+                      isActive ? "text-gold-light" : "text-accent",
                     )}
                     aria-hidden="true"
                   >
@@ -282,7 +284,7 @@ export function MenuExplorer({
                   className="grid min-h-14 grid-cols-[2.5rem_1fr] items-center gap-3 border-t border-foreground/12 py-3"
                 >
                   <span
-                    className="text-[0.56rem] tracking-[0.13em] text-muted/75 tabular-nums"
+                    className="text-[0.56rem] tracking-[0.13em] text-muted tabular-nums"
                     aria-hidden="true"
                   >
                     {String(index + 1).padStart(2, "0")}

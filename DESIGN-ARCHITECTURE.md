@@ -1,40 +1,44 @@
-# Zayit — The Golden Hour
+# Zayit — A Bright Table in the Golden City
 
 ## Creative premise
 
-Zayit should feel like a small, beautifully printed journal discovered in a Jaisalmer suite. The page does not introduce a restaurant; it slows the visitor down until a reservation feels like the natural final chapter.
+Zayit should feel like a bright, beautifully printed journal discovered in a
+Jaisalmer suite. Warm ivory, sandstone and daylight lead; dark olive is a small
+functional accent rather than a full-page atmosphere.
 
-**The central idea:** *the table after the desert light has gone down.*
+**The central idea:** *a table lit by the Golden City.*
 
-No palace pastiche, decorative borders, generic food-grid templates, or “best restaurant” claims. The local character comes from sandstone colour, deep night, controlled warmth and generous pauses.
+No palace pastiche, decorative borders, generic food-grid templates, or “best
+restaurant” claims. The local character comes from sandstone colour, daylight,
+controlled warmth and generous pauses.
 
 ## Visual system
 
 | Element | Direction |
 | --- | --- |
-| Palette | Sand `#E7DEC9`, Ivory `#F7F3E9`, Ember `#BF713D`, Olive `#1E281F`, Ink `#12130F`, Brass `#B99152` |
+| Palette | Sand `#F1E6D3`, Ivory `#FBF7EF`, Ember `#9B4F2E`, Olive `#263426`, Ink `#2B281F`, Brass `#C69B4C` |
 | Display type | Cormorant Garamond: high contrast, editorial, oversized |
 | Utility type | Manrope: calm, tiny caps, generous tracking |
 | Grid | Twelve columns on desktop; 24px gutters / 44px outer margin. Asymmetry is intentional. |
-| Image treatment | A licensed Jaisalmer Fort night panorama plus restaurant social-profile crops held only as private-preview references. Owner-original venue photography is required before public launch. |
+| Image treatment | Owner-supplied daylight fort, interior, table and exterior photography served as native-size AVIF crops; one opt-in owner interior film. No AI or traveller imagery. |
 | Motion | Quiet fade / rise reveals; a fine gold reading-progress line; no bouncy effects or scroll-jacking. |
 
 ## Page narrative
 
-1. **Arrival / Hero — “The golden hour, served after dark.”** A full-screen real night photograph of Jaisalmer Fort, paired with a live local-time dining status. The first action is a low-pressure reservation link.
+1. **Arrival / Hero — “A table lit by the Golden City.”** Responsive owner photography pairs a daylight fort view on mobile with the bright dining room on larger screens.
 2. **Verified facts ribbon.** The changing public Google signal, current first-party hours, phone and exact Fort Parking Road location appear immediately.
 3. **Manifesto and table.** Quiet editorial spreads establish the Indian–Mediterranean identity and recurring public guest themes.
 4. **The menu edit.** Four typographic chapters drawn from the current Zomato menu, with no invented prices and an explicit live-menu route.
-5. **A night at Zayit.** A cinematic horizontal photo journey, clearly labelled as private-preview social-profile reference crops.
+5. **Inside Zayit.** Owner-supplied interiors, a user-initiated film and a bright visual journal.
 6. **Proof in public.** Current Google, Tripadvisor and Zomato snapshots plus paraphrased review themes—never fabricated quotations.
 7. **The city nearby.** Approximate walks to the fort, Jain temples, Patwon Ki Haveli and Gadisar Lake.
-8. **The invitation.** A dark-olive booking panel with the verified telephone route and disclosed opening-hours conflict.
+8. **The invitation.** A sandstone booking panel with the verified telephone route and disclosed opening-hours conflict.
 9. **Arrival, FAQ and transparency.** Exact map coordinates, practical answers, live sources and owner-replacement requirements.
-10. **Closing spread.** Official logo, verified social/map links and image licence credit.
+10. **Closing spread.** Official logo, verified social/map links and owner-photography provenance.
 
 ## Interaction principles
 
-- Navigation becomes light-on-dark or dark-on-light based on the section behind it.
+- Navigation remains an ivory glass surface for consistent mobile readability.
 - The reading progress line rewards slow scrolling.
 - Image cards have a restrained hover crop; they do not become clickable “products.”
 - The booking panel has real, direct contact routes rather than a pretend reservation system.

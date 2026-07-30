@@ -17,14 +17,14 @@ export function RouteLoadingScreen({
       aria-live="polite"
       aria-busy="true"
       className={cn(
-        "fixed inset-0 z-[130] grid min-h-svh place-items-center bg-olive px-6 text-center text-ivory",
+        "fixed inset-0 z-[130] grid min-h-svh place-items-center bg-ivory px-6 text-center text-foreground",
         className,
       )}
     >
       <div>
         <div className="relative mx-auto grid size-28 place-items-center">
           <span
-            className="absolute inset-0 animate-spin rounded-full border border-gold/25 border-t-gold-light motion-reduce:animate-none"
+            className="absolute inset-0 animate-spin rounded-full border border-gold/25 border-t-accent motion-reduce:animate-none"
             aria-hidden="true"
           />
           <Image
@@ -37,7 +37,7 @@ export function RouteLoadingScreen({
             priority
           />
         </div>
-        <p className="mt-8 text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-gold-light">
+        <p className="mt-8 text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-accent">
           {message}
         </p>
         <span className="sr-only">Loading page</span>

@@ -3,14 +3,6 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-type OptionalIdleWindow = {
-  requestIdleCallback?: (
-    callback: IdleRequestCallback,
-    options?: IdleRequestOptions,
-  ) => number;
-  cancelIdleCallback?: (handle: number) => void;
-};
-
 export function CinematicEffects() {
   const pathname = usePathname();
 
@@ -18,11 +10,14 @@ export function CinematicEffects() {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (media.matches) return;
 
-    const idleWindow = window as unknown as OptionalIdleWindow;
     let disposed = false;
+    let initialising = false;
     let cleanup: (() => void) | undefined;
 
     const initialise = async () => {
+      if (initialising || disposed) return;
+      initialising = true;
+
       const [{ default: Lenis }, gsapModule, scrollTriggerModule] =
         await Promise.all([
           import("lenis"),
@@ -88,19 +83,30 @@ export function CinematicEffects() {
       };
     };
 
-    const idleId = idleWindow.requestIdleCallback
-      ? idleWindow.requestIdleCallback(() => void initialise(), {
-          timeout: 1200,
-        })
-      : window.setTimeout(() => void initialise(), 480);
+    const interactionEvents = ["wheel", "touchstart", "keydown"] as const;
+    const removeInteractionListeners = () => {
+      interactionEvents.forEach((eventName) =>
+        window.removeEventListener(eventName, start),
+      );
+    };
+    const start = () => {
+      window.clearTimeout(fallbackTimer);
+      removeInteractionListeners();
+      void initialise();
+    };
+    const fallbackTimer = window.setTimeout(start, 5000);
+
+    interactionEvents.forEach((eventName) =>
+      window.addEventListener(eventName, start, {
+        once: true,
+        passive: eventName !== "keydown",
+      }),
+    );
 
     return () => {
       disposed = true;
-      if (idleWindow.cancelIdleCallback && idleWindow.requestIdleCallback) {
-        idleWindow.cancelIdleCallback(idleId);
-      } else {
-        window.clearTimeout(idleId);
-      }
+      window.clearTimeout(fallbackTimer);
+      removeInteractionListeners();
       cleanup?.();
     };
   }, [pathname]);

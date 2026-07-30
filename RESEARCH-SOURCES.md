@@ -102,9 +102,14 @@ No current chef identity, title, biography or official portrait could be verifie
 
 ## Photography and logo provenance
 
-- Hero: [Jaisalmer Night by Jitendra Parande](https://commons.wikimedia.org/wiki/File:Jaisalmer_Night.jpg), Wikimedia Commons, CC BY-SA.
+- Visible venue and Jaisalmer photography: owner-supplied files delivered for
+  this website on July 29–30, 2026. The site serves optimized AVIF derivatives
+  and one opt-in interior film. Photographer permissions and uncompressed
+  masters should be retained by the restaurant.
 - Logo: faithful high-resolution reconstruction from the restaurant’s public official logo, prepared for this restaurant project at the user’s request. Owner should retain the original master brand file in the repository.
-- Restaurant-specific dish/interior crops: sourced from Zayit’s public social profile for private design review. Public availability is not a reuse licence. The site visibly labels this status and the files must be replaced with owner-original exports before public launch.
+- Legacy social-profile crop files remain in the repository but are no longer
+  used by the visible site. No owner dish photography was included in the new
+  handoff, so the menu remains intentionally text-led.
 - Traveller photos from Google, Tripadvisor and Restaurant Guru were not copied into the website.
 
 ## Nearby attractions
@@ -121,4 +126,3 @@ These are labelled approximate and link to live Google Maps searches. Background
 - [Rajasthan Tourism — Jaisalmer](https://www.tourism.rajasthan.gov.in/jaisalmer.html)
 - [Incredible India — Patwon Ki Haveli](https://www.incredibleindia.gov.in/en/rajasthan/jaisalmer/patwon-ki-haveli)
 - [Incredible India — Gadisar Lake](https://www.prod.incredibleindia.gov.in/content/incredible-india-v2/en/destinations/jaisalmer/gadsisar-lake.html)
-

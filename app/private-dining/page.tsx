@@ -1,9 +1,11 @@
+import { EditorialImage } from "@/components/gallery/editorial-image";
 import { DeferredInquiryForm } from "@/components/forms/deferred-inquiry-form";
 import { CtaBand } from "@/components/shared/cta-band";
 import { OwnerNotice } from "@/components/shared/owner-notice";
 import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { createPageMetadata } from "@/lib/metadata";
+import { galleryAssets } from "@/lib/content";
 
 export const metadata = createPageMetadata({
   title: "Private Dining",
@@ -41,7 +43,7 @@ export default function PrivateDiningPage() {
         meta="Availability and terms require owner confirmation"
       />
 
-      <section className="px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
           <SectionHeading
             index="01"
@@ -76,10 +78,25 @@ export default function PrivateDiningPage() {
             parking, AV facilities, group menus and service hours before these
             can appear as promises.
           </OwnerNotice>
+
+          <div className="mt-12 grid grid-cols-2 gap-3 md:mt-16 md:grid-cols-12 md:gap-7">
+            <EditorialImage
+              asset={galleryAssets[1]}
+              index={1}
+              className="col-span-1 [&>div]:min-h-[22rem] md:col-span-5 md:[&>div]:min-h-[38rem]"
+              sizes="(max-width: 767px) 46vw, 38vw"
+            />
+            <EditorialImage
+              asset={galleryAssets[3]}
+              index={2}
+              className="col-span-1 [&>div]:min-h-[22rem] md:col-span-7 md:mt-24 md:[&>div]:min-h-[34rem]"
+              sizes="(max-width: 767px) 46vw, 56vw"
+            />
+          </div>
         </div>
       </section>
 
-      <section className="bg-sand px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <section className="bg-sand px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
           <SectionHeading
             index="02"

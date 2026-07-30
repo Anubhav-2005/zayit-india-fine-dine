@@ -50,11 +50,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f8f3e9" },
-    { media: "(prefers-color-scheme: dark)", color: "#10150f" },
-  ],
-  colorScheme: "light dark",
+  themeColor: "#fbf7ef",
+  colorScheme: "light",
   width: "device-width",
   initialScale: 1,
 };
@@ -65,15 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "(function(){try{var t=localStorage.getItem('zayit-color-theme');var d=t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=d?'dark':'light';document.documentElement.classList.toggle('dark',d);document.documentElement.style.colorScheme=d?'dark':'light'}catch(e){}})();",
-          }}
-        />
-      </head>
+    <html lang="en">
       <body>
         <a className="skip-link" href="#main-content">
           Skip to content

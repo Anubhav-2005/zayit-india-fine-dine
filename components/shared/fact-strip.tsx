@@ -1,9 +1,11 @@
+import { StarRating } from "@/components/shared/star-rating";
 import { siteConfig } from "@/lib/site";
 
 const facts = [
   {
     label: "Google",
     value: "4.8 · 490+ reviews",
+    rating: 4.8,
     href: siteConfig.maps,
   },
   {
@@ -24,16 +26,19 @@ const facts = [
 
 export function FactStrip() {
   return (
-    <section className="grid border-b border-foreground/15 bg-sand sm:grid-cols-2 xl:grid-cols-4">
+    <section className="grid grid-cols-2 border-b border-foreground/15 bg-sand xl:grid-cols-4">
       {facts.map((fact) => {
         const content = (
           <>
-            <span className="text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-muted group-hover:text-ivory/72 group-focus-visible:text-ivory/72">
+            <span className="text-[0.55rem] font-semibold uppercase tracking-[0.15em] text-muted sm:text-[0.58rem] sm:tracking-[0.18em]">
               {fact.label}
             </span>
-            <strong className="font-serif text-lg font-medium tracking-[-0.02em]">
+            <strong className="font-serif text-base font-medium tracking-[-0.02em] sm:text-lg">
               {fact.value}
             </strong>
+            {"rating" in fact && fact.rating ? (
+              <StarRating value={fact.rating} size="sm" />
+            ) : null}
           </>
         );
 
@@ -43,14 +48,14 @@ export function FactStrip() {
             href={fact.href}
             target={fact.href.startsWith("http") ? "_blank" : undefined}
             rel={fact.href.startsWith("http") ? "noreferrer" : undefined}
-            className="group flex min-h-28 flex-col justify-center gap-2 border-b border-r border-foreground/15 px-5 transition-colors hover:bg-olive hover:text-ivory focus-visible:bg-olive focus-visible:text-ivory sm:px-8 xl:border-b-0"
+            className="group flex min-h-32 flex-col justify-center gap-2 border-b border-r border-foreground/15 px-4 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:px-8 xl:border-b-0"
           >
             {content}
           </a>
         ) : (
           <div
             key={fact.label}
-            className="flex min-h-28 flex-col justify-center gap-2 border-b border-r border-foreground/15 px-5 sm:px-8 xl:border-b-0"
+            className="flex min-h-32 flex-col justify-center gap-2 border-b border-r border-foreground/15 px-4 sm:px-8 xl:border-b-0"
           >
             {content}
           </div>
