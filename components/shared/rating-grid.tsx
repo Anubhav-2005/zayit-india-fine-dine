@@ -11,7 +11,7 @@ export function RatingGrid() {
           key={rating.platform}
           href={rating.href}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="group relative min-h-44 border border-foreground/20 bg-ivory p-6 transition-colors hover:bg-sand focus-visible:bg-sand md:min-h-72 md:border-y-0 md:border-l-0 md:border-r md:p-9 md:last:border-r-0"
         >
           <span className="text-[0.62rem] font-semibold uppercase tracking-[0.17em]">

@@ -3,6 +3,10 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=22.12.0 <25"
+  },
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1 --port 4173",
     "build": "next build --webpack && node scripts/prepare-sites-build.mjs",
@@ -10,6 +14,7 @@
     "preview": "pnpm build && pnpm start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
+    "security:check": "node scripts/check-build-security.mjs",
     "audit:lighthouse": "CHROME_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' lighthouse http://127.0.0.1:4173/ --chrome-flags='--headless --no-sandbox' --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=.lighthouse/report-mobile.json --quiet",
     "audit:lighthouse:desktop": "CHROME_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' lighthouse http://127.0.0.1:4173/ --preset=desktop --chrome-flags='--headless --no-sandbox' --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=.lighthouse/report-desktop.json --quiet"
   },

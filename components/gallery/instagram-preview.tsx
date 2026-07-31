@@ -59,7 +59,7 @@ export function InstagramPreview({ className }: InstagramPreviewProps) {
               className="rule-link mt-7"
               href={siteConfig.instagram}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               Visit the official profile
               <ArrowUpRight aria-hidden="true" className="size-4" />

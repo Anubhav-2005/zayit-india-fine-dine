@@ -131,7 +131,7 @@ export default function JaisalmerGuidePage() {
               <a
                 href={siteConfig.directions}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 Directions to Zayit
                 <ArrowUpRight aria-hidden="true" className="size-4" />

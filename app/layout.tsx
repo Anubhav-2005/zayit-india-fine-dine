@@ -11,6 +11,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { CinematicEffects } from "@/components/motion/cinematic-effects";
 import { RestaurantJsonLd } from "@/components/seo/json-ld";
 import { assetPath } from "@/lib/paths";
+import { contentSecurityPolicyMeta } from "@/lib/security";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
   creator: "Zayit India Fine Dine",
   publisher: "Zayit India Fine Dine",
   category: "restaurant",
+  referrer: "strict-origin-when-cross-origin",
   other: {
     framework: "Next.js 16 · React 19 · TypeScript",
   },
@@ -79,6 +81,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN" data-framework="nextjs">
+      <head>
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content={contentSecurityPolicyMeta}
+        />
+      </head>
       <body data-reactroot="">
         <a className="skip-link" href="#main-content">
           Skip to content

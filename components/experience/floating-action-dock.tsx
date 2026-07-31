@@ -88,7 +88,7 @@ export function FloatingActionDock({
         <a
           href={whatsappHref}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className={actionClassName}
           aria-label="Message the restaurant on WhatsApp"
           title="WhatsApp"

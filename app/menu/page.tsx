@@ -66,7 +66,11 @@ export default function MenuPage() {
 
           <div className="mt-12 flex flex-wrap items-center gap-4">
             <Button asChild>
-              <a href={siteConfig.menu} target="_blank" rel="noreferrer">
+              <a
+                href={siteConfig.menu}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Open live menu and prices
                 <ArrowUpRight aria-hidden="true" className="size-4" />
               </a>

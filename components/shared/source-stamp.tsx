@@ -31,7 +31,7 @@ export function SourceStamp() {
                 <a
                   href={source.url}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="flex min-h-12 items-center justify-between text-[0.62rem] font-semibold uppercase tracking-[0.12em] hover:text-accent"
                 >
                   {source.label}

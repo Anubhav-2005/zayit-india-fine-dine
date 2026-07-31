@@ -118,7 +118,7 @@ export function LiveServiceStatus() {
         <a
           href={siteConfig.whatsapp}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="inline-flex min-h-11 items-center gap-2 rounded-full border border-foreground/25 px-5 text-[0.62rem] font-semibold uppercase tracking-[0.14em] transition-colors hover:bg-ivory"
         >
           <MessageCircle aria-hidden="true" className="size-4" />

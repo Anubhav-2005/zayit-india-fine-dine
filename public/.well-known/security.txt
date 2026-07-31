@@ -1,0 +1,4 @@
+Contact: mailto:zayitindia@gmail.com
+Expires: 2027-07-30T23:59:59Z
+Preferred-Languages: en, hi
+Canonical: https://anubhav-2005.github.io/zayit-india-fine-dine-live/.well-known/security.txt

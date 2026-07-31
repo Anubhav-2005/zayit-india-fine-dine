@@ -145,7 +145,7 @@ export default function ContactPage() {
                   className="text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-muted underline underline-offset-4 hover:text-accent"
                   href={siteConfig.maps}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   Open full map
                 </a>
@@ -158,7 +158,8 @@ export default function ContactPage() {
               title="Google Map showing Zayit India Fine Dine in Jaisalmer"
               src={siteConfig.mapEmbed}
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
               className="min-h-[25rem] w-full grow border-0"
               allowFullScreen
             />
@@ -171,7 +172,7 @@ export default function ContactPage() {
                 className="rule-link"
                 href={siteConfig.directions}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 Live directions
                 <ArrowUpRight aria-hidden="true" className="size-4" />

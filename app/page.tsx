@@ -166,7 +166,7 @@ export default function HomePage() {
               className="rule-link lg:justify-self-end"
               href={siteConfig.menu}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               Live menu &amp; prices
               <ArrowUpRight aria-hidden="true" className="size-4" />

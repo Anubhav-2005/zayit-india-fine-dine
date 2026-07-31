@@ -52,7 +52,7 @@ export default function EventsPage() {
                 <a
                   href={siteConfig.instagram}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   Official Instagram
                   <ArrowUpRight aria-hidden="true" className="size-4" />

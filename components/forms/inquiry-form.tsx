@@ -29,18 +29,36 @@ function getJaisalmerDate() {
 }
 
 const inquirySchema = z.object({
-  name: z.string().trim().min(2, "Enter your name."),
-  email: z.email("Enter a valid email address."),
+  name: z
+    .string()
+    .trim()
+    .min(2, "Enter your name.")
+    .max(80, "Keep your name under 80 characters.")
+    .regex(
+      /^[^\u0000-\u001F\u007F]+$/,
+      "Remove control characters from your name.",
+    ),
+  email: z
+    .email("Enter a valid email address.")
+    .max(254, "Enter a shorter email address."),
   phone: z
     .string()
     .trim()
     .min(8, "Enter a phone number with country code.")
-    .max(24, "Enter a shorter phone number."),
+    .max(24, "Enter a shorter phone number.")
+    .regex(
+      /^[0-9+().\-\s]+$/,
+      "Use only numbers and standard phone punctuation.",
+    ),
   date: z
     .string()
     .optional()
     .refine(
-      (value) => !value || value >= getJaisalmerDate(),
+      (value) =>
+        !value ||
+        (/^\d{4}-\d{2}-\d{2}$/.test(value) &&
+          !Number.isNaN(Date.parse(`${value}T00:00:00+05:30`)) &&
+          value >= getJaisalmerDate()),
       "Choose today or a future date.",
     ),
   guests: z
@@ -56,7 +74,11 @@ const inquirySchema = z.object({
     .string()
     .trim()
     .min(10, "Add a little more detail so the restaurant can help.")
-    .max(1200, "Keep your message under 1,200 characters."),
+    .max(1200, "Keep your message under 1,200 characters.")
+    .refine(
+      (value) => !/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/.test(value),
+      "Remove unsupported control characters from your message.",
+    ),
 });
 
 type InquiryFormValues = z.infer<typeof inquirySchema>;
@@ -178,6 +200,7 @@ export function InquiryForm({
           </label>
           <Input
             id={`${kind}-name`}
+            maxLength={80}
             autoComplete="name"
             aria-invalid={Boolean(errors.name)}
             aria-describedby={errors.name ? `${kind}-name-error` : undefined}
@@ -198,6 +221,7 @@ export function InquiryForm({
           <Input
             id={`${kind}-email`}
             type="email"
+            maxLength={254}
             inputMode="email"
             autoComplete="email"
             aria-invalid={Boolean(errors.email)}
@@ -222,6 +246,7 @@ export function InquiryForm({
           <Input
             id={`${kind}-phone`}
             type="tel"
+            maxLength={24}
             inputMode="tel"
             autoComplete="tel"
             placeholder="+91…"
@@ -295,6 +320,7 @@ export function InquiryForm({
         </label>
         <Textarea
           id={`${kind}-message`}
+          maxLength={1200}
           placeholder={copy.messagePlaceholder}
           aria-invalid={Boolean(errors.message)}
           aria-describedby={

@@ -10,7 +10,7 @@ export function NearbyList() {
           key={place.name}
           href={place.href}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="group grid min-h-20 grid-cols-[2.25rem_1fr_auto] items-center gap-3 border-b border-foreground/18 py-3 text-foreground transition-[padding,background-color] hover:bg-sand/70 hover:px-3 focus-visible:bg-sand/70 md:min-h-28 md:grid-cols-[0.2fr_1fr_0.8fr_0.4fr_auto] md:gap-6"
         >
           <span className="text-[0.58rem] tracking-[0.15em] text-muted">

@@ -59,7 +59,7 @@ export function SiteFooter() {
                 className="text-muted hover:text-accent"
                 href={siteConfig.instagram}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 Official Instagram ↗
               </a>
@@ -67,7 +67,7 @@ export function SiteFooter() {
                 className="text-muted hover:text-accent"
                 href={siteConfig.whatsapp}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 WhatsApp enquiry* ↗
               </a>
