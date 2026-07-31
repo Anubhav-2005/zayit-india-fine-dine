@@ -2,6 +2,7 @@ packages:
   - "."
 
 overrides:
+  brace-expansion: 5.0.9
   postcss: 8.5.25
   sharp: 0.35.3
 
@@ -14,7 +15,13 @@ allowBuilds:
 minimumReleaseAgeExclude:
   - postcss@8.5.25
   - swiper@14.0.7
+  - miniflare@4.20260730.0
+  - wrangler@4.116.0
+  - brace-expansion@5.0.9
 
 onlyBuiltDependencies:
   - esbuild
   - unrs-resolver
+
+patchedDependencies:
+  minimatch@3.1.5: patches/minimatch@3.1.5.patch
