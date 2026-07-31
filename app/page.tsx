@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -12,7 +13,6 @@ import { KitchenDesk } from "@/components/shared/kitchen-desk";
 import { NearbyList } from "@/components/shared/nearby-list";
 import { RatingGrid } from "@/components/shared/rating-grid";
 import { SectionHeading } from "@/components/shared/section-heading";
-import { SourceStamp } from "@/components/shared/source-stamp";
 import { StarRating } from "@/components/shared/star-rating";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,6 +21,7 @@ import {
   reviewThemes,
 } from "@/lib/content";
 import { createPageMetadata } from "@/lib/metadata";
+import { assetPath } from "@/lib/paths";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = createPageMetadata({
@@ -34,28 +35,42 @@ export default function HomePage() {
   return (
     <main id="main-content">
       <section className="relative isolate min-h-svh overflow-hidden bg-sand px-4 pb-5 pt-24 text-foreground sm:px-8 sm:pb-8 sm:pt-28 lg:px-12">
-        <picture className="absolute inset-0 -z-20">
+        <div
+          className="home-hero-lounge-media"
+          aria-hidden="true"
+          style={{
+            backgroundImage: `url("${assetPath(
+              "/images/owner/zayit-lounge-original.jpeg",
+            )}")`,
+          }}
+        />
+        <picture className="home-hero-fort-media">
           <source
             media="(max-width: 767px)"
-            srcSet="/images/owner/zayit-fort-daylight-portrait-mobile.avif"
+            srcSet={assetPath(
+              "/images/owner/zayit-fort-official-daylight-mobile.webp",
+            )}
           />
-          <img
-            src="/images/owner/zayit-room-wide.avif"
-            alt="The bright dining room at Zayit India Fine Dine near Jaisalmer Fort"
-            width="1280"
-            height="575"
+          <Image
+            src={assetPath(
+              "/images/owner/zayit-fort-official-daylight.webp",
+            )}
+            alt="Jaisalmer Fort seen from Zayit India Fine Dine's bright terrace"
+            width={1333}
+            height={1420}
+            unoptimized
             fetchPriority="high"
             decoding="async"
             className="size-full object-cover object-center"
           />
         </picture>
         <div
-          className="home-hero-scrim absolute inset-0 -z-10"
+          className="home-hero-scrim pointer-events-none absolute inset-0 z-10"
           aria-hidden="true"
         />
 
-        <div className="mx-auto flex min-h-[calc(100svh-7.25rem)] max-w-[1500px] items-end">
-          <div className="w-full max-w-[53rem] border border-foreground/12 bg-ivory p-5 shadow-[0_1rem_3rem_rgba(58,42,21,0.1)] sm:p-8 lg:border-0 lg:bg-ivory/82 lg:p-10 lg:shadow-[0_2rem_6rem_rgba(58,42,21,0.13)] lg:backdrop-blur-md">
+        <div className="relative z-20 mx-auto flex min-h-[calc(100svh-7.25rem)] max-w-[1500px] items-end">
+          <div className="zayit-hero-card w-full max-w-[53rem] border border-foreground/12 bg-ivory p-5 shadow-[0_1rem_3rem_rgba(58,42,21,0.1)] sm:p-8 lg:max-w-[48rem] lg:border-white/40 lg:bg-ivory/88 lg:p-10 lg:shadow-[0_2rem_6rem_rgba(58,42,21,0.16)] xl:max-w-[44rem]">
             <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
               <p className="text-[0.58rem] font-semibold uppercase tracking-[0.17em] text-accent sm:text-[0.62rem] sm:tracking-[0.2em]">
                 Fine dining · Fort Parking Road
@@ -64,7 +79,7 @@ export default function HomePage() {
               <StarRating value={4.8} size="sm" showValue />
             </div>
 
-            <h1 className="hero-display display-balance mt-5 text-[clamp(3.45rem,8.4vw,8.5rem)] font-normal leading-[0.78] tracking-[-0.07em]">
+            <h1 className="hero-display display-balance mt-5 text-[clamp(2.65rem,11.5vw,3.05rem)] font-normal leading-none tracking-[-0.045em] sm:text-[clamp(3.4rem,8vw,4.75rem)] sm:leading-[0.94] lg:text-[clamp(4.5rem,5.6vw,6.25rem)] lg:leading-[0.9] lg:tracking-[-0.055em]">
               A table lit by
               <br />
               <em className="font-normal text-accent">the Golden City.</em>
@@ -88,7 +103,7 @@ export default function HomePage() {
               </Button>
             </div>
 
-            <div className="mt-7 border-t border-foreground/16 pt-5">
+            <div className="mt-7 hidden border-t border-foreground/16 pt-5 sm:block">
               <LocalTimeStatus />
             </div>
           </div>
@@ -99,10 +114,10 @@ export default function HomePage() {
 
       <section
         id="story"
-        className="overflow-hidden px-5 py-16 sm:px-8 md:py-28 lg:px-12"
+        className="zayit-section"
       >
-        <div className="mx-auto max-w-[1500px]">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-20">
+        <div className="zayit-shell">
+          <div className="zayit-story-intro">
             <SectionHeading
               index="01"
               eyebrow="A bright room in the Golden City"
@@ -110,7 +125,7 @@ export default function HomePage() {
               accent="Stay unhurried."
               description="Zayit means “olive” in Hebrew. Its public story brings an Indian kitchen and Mediterranean spirit together near Jaisalmer Fort."
             />
-            <p className="display-balance max-w-3xl font-serif text-[clamp(2.15rem,4.2vw,4.75rem)] leading-[0.98] tracking-[-0.045em] lg:justify-self-end">
+            <p className="display-balance max-w-3xl font-serif text-[clamp(1.7rem,7.5vw,2rem)] leading-[1.05] tracking-[-0.035em] md:text-[clamp(2.5rem,3.5vw,3.75rem)] md:leading-[1.02] md:tracking-[-0.04em] lg:justify-self-end">
               Warm hosting, generous spice and a room made for the whole table.
             </p>
           </div>
@@ -119,14 +134,18 @@ export default function HomePage() {
             <EditorialImage
               asset={galleryAssets[2]}
               index={1}
-              mobileSrc="/images/owner/zayit-lounge-mobile.avif"
+              mobileSrc={assetPath(
+                "/images/owner/zayit-lounge-mobile.avif",
+              )}
               className="col-span-2 [&>div]:min-h-[26rem] md:col-span-7 md:[&>div]:min-h-[42rem]"
               sizes="(max-width: 767px) 92vw, 56vw"
             />
             <EditorialImage
               asset={galleryAssets[4]}
               index={2}
-              mobileSrc="/images/owner/zayit-fort-daylight-square-mobile.avif"
+              mobileSrc={assetPath(
+                "/images/owner/zayit-fort-daylight-square-mobile.avif",
+              )}
               className="col-span-2 [&>div]:min-h-[23rem] md:col-span-5 md:mt-24 md:[&>div]:min-h-[38rem]"
               sizes="(max-width: 767px) 92vw, 38vw"
             />
@@ -134,55 +153,53 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-sand px-5 py-16 sm:px-8 md:py-28 lg:px-12">
-        <div className="mx-auto max-w-[1500px]">
-          <div className="grid gap-10 lg:grid-cols-[1fr_0.55fr] lg:items-end">
+      <section className="zayit-section zayit-section--sand">
+        <div className="zayit-shell">
+          <div className="zayit-menu-intro">
             <SectionHeading
-              index="02"
-              eyebrow="The current public menu"
+              eyebrow="From the kitchen"
               title="Four ways into"
               accent="the kitchen."
-              description="A selected reading of the live delivery menu. Prices and availability stay with the changing source of truth."
+              description="Tandoor smoke, slow-cooked curries and generous plates made for sharing. The live menu carries today’s selection and prices."
             />
             <a
               className="rule-link lg:justify-self-end"
               href={siteConfig.menu}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               Live menu &amp; prices
               <ArrowUpRight aria-hidden="true" className="size-4" />
             </a>
           </div>
 
-          <div className="-mx-5 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 sm:-mx-8 sm:px-8 md:grid md:grid-cols-2 md:gap-x-8 md:overflow-visible xl:grid-cols-4">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 md:gap-x-8 xl:grid-cols-4">
             {menuCategories.slice(1, 5).map((category, index) => (
               <MenuCategoryCard
                 key={category.id}
                 category={category}
                 index={index}
                 compact
-                className="w-[84vw] max-w-sm shrink-0 snap-start sm:w-[58vw] md:w-auto md:max-w-none"
+                className={index > 1 ? "hidden md:block" : undefined}
               />
             ))}
           </div>
           <div className="mt-8">
             <Button asChild variant="outline">
-              <Link href="/menu">Read the full menu edit</Link>
+              <Link href="/menu">View the complete menu</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
-        <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[0.85fr_0.65fr] lg:items-center lg:gap-24">
+      <section className="zayit-section">
+        <div className="zayit-shell zayit-interior-grid">
           <div>
             <SectionHeading
-              index="03"
               eyebrow="Inside Zayit"
               title="Ivory walls."
               accent="Golden light."
-              description="A quiet look through the restaurant’s owner-supplied interior film. It loads only when you choose to play it."
+              description="A quiet look through the restaurant’s light-filled dining room. The short film begins only when you choose to play it."
             />
             <div className="mt-9 border-t border-foreground/18 pt-7">
               <p className="max-w-xl text-sm leading-7 text-muted">
@@ -197,14 +214,13 @@ export default function HomePage() {
 
       <KitchenDesk />
 
-      <section className="overflow-hidden px-5 py-16 sm:px-8 md:py-28 lg:px-12">
-        <div className="mx-auto max-w-[1500px]">
+      <section className="zayit-section">
+        <div className="zayit-shell">
           <SectionHeading
-            index="04"
-            eyebrow="Owner-supplied visual journal"
+            eyebrow="A glimpse of Zayit"
             title="One place."
             accent="Many quiet details."
-            description="Real restaurant and Jaisalmer photographs supplied for this website. No AI-generated or traveller imagery."
+            description="The long table, soft blue seating and the fort beyond—photographed at Zayit."
           />
           <div className="mt-12 grid grid-cols-2 gap-3 md:mt-16 md:grid-cols-12 md:gap-7">
             <EditorialImage
@@ -233,29 +249,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-sand px-5 py-16 sm:px-8 md:py-28 lg:px-12">
-        <div className="mx-auto max-w-[1500px]">
+      <section className="zayit-section zayit-section--sand">
+        <div className="zayit-shell">
           <SectionHeading
-            index="05"
-            eyebrow="Public guest signals"
+            eyebrow="What guests say"
             title="Reputation,"
             accent="with the stars."
-            description="Platform snapshots checked July 29, 2026. Counts and scores continue to change."
+            description="Current ratings across Google, Tripadvisor and Zomato, with direct links to each platform."
           />
           <div className="mt-12 md:mt-16">
             <RatingGrid />
           </div>
 
-          <div className="-mx-5 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 sm:-mx-8 sm:px-8 md:mx-0 md:grid md:grid-cols-3 md:gap-9 md:overflow-visible md:px-0">
+          <div className="zayit-review-themes">
             {reviewThemes.map((theme) => (
               <article
                 key={theme.number}
-                className="w-[82vw] max-w-sm shrink-0 snap-start border-t border-foreground/18 pt-6 sm:w-[58vw] md:w-auto md:max-w-none"
+                className="border-t border-foreground/18 pt-6"
               >
                 <span className="text-[0.62rem] font-semibold tracking-[0.16em] text-accent">
                   {theme.number}
                 </span>
-                <h3 className="mt-7 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em]">
+                <h3 className="mt-6 font-serif text-[1.75rem] font-normal leading-[1.02] tracking-[-0.035em] md:mt-7 md:text-4xl md:leading-[0.94] md:tracking-[-0.045em]">
                   {theme.title}
                 </h3>
                 <p className="pretty-copy mt-5 max-w-sm text-sm leading-7 text-muted">
@@ -267,11 +282,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
-        <div className="mx-auto max-w-[1500px]">
-          <div className="grid gap-9 lg:grid-cols-[1fr_0.55fr] lg:items-end">
+      <section className="zayit-section">
+        <div className="zayit-shell">
+          <div className="zayit-nearby-intro">
             <SectionHeading
-              index="06"
               eyebrow="Before or after dinner"
               title="The city,"
               accent="within a walk."
@@ -287,10 +301,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="grid gap-12 bg-sand px-5 py-16 sm:px-8 md:py-28 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24 lg:px-12">
+      <section className="zayit-faq-section">
         <div className="lg:sticky lg:top-32 lg:self-start">
           <SectionHeading
-            index="07"
             eyebrow="Before you arrive"
             title="Good to"
             accent="know."
@@ -299,7 +312,6 @@ export default function HomePage() {
         <FaqBlock />
       </section>
 
-      <SourceStamp />
       <CtaBand />
     </main>
   );

@@ -59,7 +59,7 @@ export function PageHero({
           <p className="text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-accent">
             {eyebrow}
           </p>
-          <h1 className="hero-display display-balance mt-6 max-w-6xl text-[clamp(3.55rem,9vw,9.75rem)] font-normal leading-[0.77] tracking-[-0.07em]">
+          <h1 className="hero-display display-balance mt-5 max-w-6xl text-[clamp(2.65rem,11vw,3rem)] font-normal leading-none tracking-[-0.045em] md:mt-6 md:text-[clamp(4.25rem,5.8vw,7rem)] md:leading-[0.9] md:tracking-[-0.055em]">
             {title}
             <br />
             <em className="font-normal text-accent">{accent}</em>

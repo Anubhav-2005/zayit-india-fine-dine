@@ -20,48 +20,27 @@ export function SectionHeading({
   className,
 }: SectionHeadingProps) {
   return (
-    <div className={cn("max-w-5xl", className)}>
-      <div
-        className={cn(
-          "flex items-center gap-4 text-[0.62rem] font-semibold uppercase tracking-[0.19em]",
-          theme === "dark" ? "text-gold-light" : "text-accent",
-        )}
-      >
+    <header
+      className={cn("section-heading", className)}
+      data-theme={theme}
+    >
+      <div className="section-heading__kicker">
         {index ? <span aria-hidden="true">{index}</span> : null}
         <span className="h-px w-8 bg-current" aria-hidden="true" />
         <p>{eyebrow}</p>
       </div>
-      <h2
-        className={cn(
-          "display-balance mt-7 font-serif text-[clamp(3.05rem,8vw,8.75rem)] font-normal leading-[0.8] tracking-[-0.065em] md:mt-8 md:leading-[0.78] md:tracking-[-0.07em]",
-          theme === "dark" ? "text-ivory" : "text-foreground",
-        )}
-      >
+      <h2 className="section-heading__title">
         {title}
         {accent ? (
           <>
             <br />
-            <em
-              className={cn(
-                "font-normal",
-                theme === "dark" ? "text-gold-light" : "text-accent",
-              )}
-            >
-              {accent}
-            </em>
+            <em>{accent}</em>
           </>
         ) : null}
       </h2>
       {description ? (
-        <p
-          className={cn(
-            "pretty-copy mt-7 max-w-xl text-sm leading-7 md:text-base md:leading-8",
-            theme === "dark" ? "text-ivory/68" : "text-muted",
-          )}
-        >
-          {description}
-        </p>
+        <p className="section-heading__description">{description}</p>
       ) : null}
-    </div>
+    </header>
   );
 }

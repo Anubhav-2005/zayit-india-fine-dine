@@ -89,7 +89,7 @@ export default function AboutPage() {
                 <span className="text-[0.6rem] font-semibold tracking-[0.15em] text-accent">
                   {theme.number}
                 </span>
-                <h2 className="mt-10 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em]">
+                <h2 className="mt-8 font-serif text-[1.9rem] font-normal leading-[1.02] tracking-[-0.035em] md:mt-10 md:text-4xl md:leading-[0.94] md:tracking-[-0.045em]">
                   {theme.title}
                 </h2>
                 <p className="pretty-copy mt-5 text-sm leading-7 text-muted">
@@ -103,15 +103,14 @@ export default function AboutPage() {
 
       <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
         <div className="mx-auto grid max-w-[1500px] gap-8 lg:grid-cols-2">
-          <OwnerNotice title="The founder story needs the owner’s voice.">
-            Supply the founder or owner’s approved name, a concise origin story,
-            an original portrait and evidence for any milestones or awards.
-            Until then, no biography is presented as fact.
+          <OwnerNotice title="The story behind Zayit is coming.">
+            The restaurant has not yet published an official founder biography.
+            When Zayit shares that story and an original portrait, it will live
+            here.
           </OwnerNotice>
-          <OwnerNotice title="The chef story is waiting for its signature.">
-            No current chef name or biography could be verified from a
-            first-party source. Supply the chef’s full name, exact title, an
-            80–120 word biography, career highlights and an original portrait.
+          <OwnerNotice title="Meet the kitchen, soon.">
+            A current chef profile is not yet available from the restaurant.
+            Until it is, the team can guide your order when you call or visit.
           </OwnerNotice>
         </div>
         <div className="mx-auto mt-12 flex max-w-[1500px] flex-wrap gap-3">

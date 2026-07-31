@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { SourceStamp } from "@/components/shared/source-stamp";
 import { Button } from "@/components/ui/button";
 import { createPageMetadata } from "@/lib/metadata";
+import { assetPath } from "@/lib/paths";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = createPageMetadata({
@@ -63,7 +64,9 @@ export default function JaisalmerGuidePage() {
           <figure className="mt-12 md:mt-16">
             <div className="relative h-[30rem] overflow-hidden bg-sand-deep md:h-[38rem]">
               <Image
-                src="/images/owner/zayit-fort-daylight-portrait.avif"
+                src={assetPath(
+                  "/images/owner/zayit-fort-daylight-portrait.avif",
+                )}
                 alt="Jaisalmer Fort in daylight above plants near Zayit"
                 fill
                 sizes="(max-width: 767px) 92vw, 88vw"
@@ -93,7 +96,7 @@ export default function JaisalmerGuidePage() {
                   <p className="mt-20 text-[0.59rem] font-semibold uppercase tracking-[0.16em] text-accent">
                     {chapter.time}
                   </p>
-                  <h2 className="mt-5 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em]">
+                  <h2 className="mt-5 font-serif text-[1.9rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-4xl md:leading-[0.94] md:tracking-[-0.045em]">
                     {chapter.title}
                   </h2>
                   <p className="pretty-copy mt-5 text-sm leading-7 text-muted">
@@ -128,7 +131,7 @@ export default function JaisalmerGuidePage() {
               <a
                 href={siteConfig.directions}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 Directions to Zayit
                 <ArrowUpRight aria-hidden="true" className="size-4" />
@@ -150,16 +153,15 @@ export default function JaisalmerGuidePage() {
             <p className="text-[0.62rem] font-semibold uppercase tracking-[0.17em] text-accent">
               Travel-note standard
             </p>
-            <h2 className="mt-6 font-serif text-5xl font-normal leading-[0.86] tracking-[-0.05em] md:text-6xl">
+            <h2 className="mt-5 font-serif text-[2.2rem] font-normal leading-none tracking-[-0.04em] md:mt-6 md:text-6xl md:leading-[0.9] md:tracking-[-0.05em]">
               Check what changes.
             </h2>
           </div>
           <div>
-            <OwnerNotice title="Live attraction details stay outside this static guide.">
-              Entry fees, access rules, attraction hours, road conditions and
-              seasonal closures are not reproduced here because they can
-              change. Check Rajasthan Tourism and each attraction’s current
-              listing before travel.
+            <OwnerNotice title="Check the day before you go.">
+              Entry fees, access rules, opening hours, road conditions and
+              seasonal closures can change. Check Rajasthan Tourism and each
+              attraction’s current listing before travel.
             </OwnerNotice>
             <Link
               href="/blog/an-evening-near-jaisalmer-fort"

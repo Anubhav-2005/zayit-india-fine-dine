@@ -35,26 +35,25 @@ export function VirtualTourPlaceholder({
         <div>
           <p className="flex items-center gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.19em] text-accent">
             <Box aria-hidden="true" className="size-4" />
-            Future immersive chapter
+            A closer look
           </p>
           <h2
             id="virtual-tour-title"
-            className="display-balance mt-8 font-serif text-[clamp(3.5rem,7vw,7.75rem)] font-normal leading-[0.8] tracking-[-0.07em]"
+            className="display-balance mt-6 font-serif text-[clamp(2.35rem,10vw,2.8rem)] font-normal leading-none tracking-[-0.045em] md:mt-8 md:text-[clamp(4rem,5.4vw,6rem)] md:leading-[0.9] md:tracking-[-0.055em]"
           >
-            Enter the room,
+            Step inside,
             <br />
-            <em className="font-normal text-accent">when it is real.</em>
+            <em className="font-normal text-accent">from wherever you are.</em>
           </h2>
           <p className="pretty-copy mt-8 max-w-xl text-sm leading-7 text-muted md:text-base md:leading-8">
-            This space is intentionally not a fabricated virtual tour. It is
-            reserved for an owner-approved 360° panorama or an authorised tour
-            provider embed.
+            Zayit’s official 360° tour will appear here once it has been
+            photographed and approved by the restaurant.
           </p>
           <Link
             href="/contact"
             className="rule-link mt-9"
           >
-            Arrange the owner asset handoff
+            Ask about the dining room
             <ArrowRight aria-hidden="true" className="size-4" />
           </Link>
         </div>
@@ -79,22 +78,21 @@ export function VirtualTourPlaceholder({
                 <ScanLine aria-hidden="true" className="size-8" />
               </span>
               <p className="mt-7 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-accent">
-                Owner integration required
+                Virtual tour coming soon
               </p>
-              <p className="mt-5 font-serif text-4xl font-normal leading-[0.95] tracking-[-0.04em] md:text-5xl">
-                360° tour placeholder
+              <p className="mt-5 font-serif text-[1.8rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-5xl md:leading-[0.95] md:tracking-[-0.04em]">
+                The room, in every direction.
               </p>
               <p className="pretty-copy mx-auto mt-5 max-w-md text-sm leading-7 text-muted">
-                Supply an original 8K equirectangular panorama for each
-                viewpoint, photographer usage clearance, and—if applicable—the
-                approved Matterport, Google Street View or other provider embed
-                URL.
+                Until the official tour is ready, explore the gallery for
+                owner-supplied photographs of the dining room, long table and
+                fort view.
               </p>
             </div>
 
             <div className="absolute inset-x-5 bottom-5 flex items-center justify-between border-t border-foreground/14 pt-4 text-[0.56rem] font-semibold uppercase tracking-[0.14em] text-muted md:inset-x-8 md:bottom-8">
-              <span>No simulated view</span>
-              <span>Awaiting owner files</span>
+              <span>Official imagery only</span>
+              <span>Coming soon</span>
             </div>
           </div>
         </div>

@@ -21,11 +21,11 @@ export default function MenuPage() {
   return (
     <main id="main-content">
       <PageHero
-        eyebrow="Menu · Current public listing"
+        eyebrow="From the kitchen"
         title="A generous"
         accent="table."
         description="Indian and Mediterranean in identity; North Indian, Chinese, biryani, breads, café plates, desserts and beverages in the current public delivery menu."
-        meta="141 public listings · 11 sections · checked July 29, 2026"
+        meta="141 dishes · 11 sections · live prices linked below"
       />
 
       <section className="px-5 py-20 sm:px-8 md:py-28 lg:px-12">
@@ -35,12 +35,12 @@ export default function MenuPage() {
           <div className="mt-20 grid gap-10 border-y border-foreground/20 py-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
             <div>
               <p className="text-[0.62rem] font-semibold uppercase tracking-[0.17em] text-accent">
-                Most mentioned in public reviews
+                Names guests remember
               </p>
-              <h2 className="mt-5 font-serif text-5xl font-normal leading-[0.84] tracking-[-0.055em] md:text-6xl">
+              <h2 className="mt-5 font-serif text-[2.2rem] font-normal leading-none tracking-[-0.04em] md:text-6xl md:leading-[0.9] md:tracking-[-0.05em]">
                 Guest favourites,
                 <br />
-                <em className="font-normal text-accent">not sales claims.</em>
+                <em className="font-normal text-accent">in their own words.</em>
               </h2>
             </div>
             <div>
@@ -58,16 +58,19 @@ export default function MenuPage() {
                 ))}
               </ol>
               <p className="pretty-copy mt-6 text-xs leading-6 text-muted">
-                No public POS data exists, so this website does not call any
-                dish a best seller. Review-mentioned dishes may not be on the
-                current delivery menu; call to confirm.
+                These dishes recur in public guest reviews. Availability can
+                change, so call the restaurant if you have one in mind.
               </p>
             </div>
           </div>
 
           <div className="mt-12 flex flex-wrap items-center gap-4">
             <Button asChild>
-              <a href={siteConfig.menu} target="_blank" rel="noreferrer">
+              <a
+                href={siteConfig.menu}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Open live menu and prices
                 <ArrowUpRight aria-hidden="true" className="size-4" />
               </a>
@@ -77,8 +80,7 @@ export default function MenuPage() {
             </Button>
           </div>
           <p className="mt-5 max-w-2xl text-xs leading-6 text-muted">
-            Prices are intentionally not copied because the live ordering
-            platform is the changing source of truth.
+            Follow the live menu link for current prices and availability.
           </p>
         </div>
       </section>

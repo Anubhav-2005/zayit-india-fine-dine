@@ -71,7 +71,7 @@ export function DeferredInstagramPreview({
             </p>
             <h2
               id="instagram-preview-loader-title"
-              className="mt-6 font-serif text-5xl font-normal leading-[0.88] tracking-[-0.05em] md:text-6xl"
+              className="mt-5 font-serif text-[2.1rem] font-normal leading-none tracking-[-0.04em] md:mt-6 md:text-6xl md:leading-[0.9] md:tracking-[-0.05em]"
             >
               The visual journal waits just below.
             </h2>

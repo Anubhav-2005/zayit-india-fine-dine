@@ -39,8 +39,8 @@ export default function PrivateDiningPage() {
         eyebrow="Private dining enquiries"
         title="Gather close."
         accent="Plan clearly."
-        description="This page starts a conversation without claiming a private room, fixed capacity, exclusive terrace or package that has not been publicly verified."
-        meta="Availability and terms require owner confirmation"
+        description="Begin a conversation about a birthday, family meal or intimate gathering near the fort."
+        meta="Availability and arrangements confirmed directly by Zayit"
       />
 
       <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
@@ -60,7 +60,7 @@ export default function PrivateDiningPage() {
                 <span className="text-[0.6rem] font-semibold tracking-[0.15em] text-accent">
                   {item.number}
                 </span>
-                <h2 className="mt-10 font-serif text-4xl font-normal tracking-[-0.045em]">
+                <h2 className="mt-8 font-serif text-[1.9rem] font-normal leading-[1.02] tracking-[-0.035em] md:mt-10 md:text-4xl md:leading-[0.94] md:tracking-[-0.045em]">
                   {item.title}
                 </h2>
                 <p className="pretty-copy mt-5 text-sm leading-7 text-muted">
@@ -71,12 +71,11 @@ export default function PrivateDiningPage() {
           </div>
           <OwnerNotice
             className="mt-16"
-            title="Private dining is an enquiry, not a published guarantee."
+            title="A gathering begins with a conversation."
           >
-            The owner must confirm capacity, room or terrace exclusivity,
-            minimum spend, deposits, cancellation terms, accessibility,
-            parking, AV facilities, group menus and service hours before these
-            can appear as promises.
+            Ask Zayit to confirm the best available space, guest capacity,
+            menus, accessibility, parking, deposits and cancellation terms for
+            your date.
           </OwnerNotice>
 
           <div className="mt-12 grid grid-cols-2 gap-3 md:mt-16 md:grid-cols-12 md:gap-7">

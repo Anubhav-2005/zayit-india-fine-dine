@@ -13,7 +13,7 @@ type CtaBandProps = {
 export function CtaBand({
   eyebrow = "Come to the table",
   title = "Save the best part of the day.",
-  description = "Calling the restaurant is the only reservation channel currently verified.",
+  description = "For the quickest confirmation, call the restaurant directly.",
 }: CtaBandProps) {
   return (
     <section className="relative overflow-hidden bg-sand-deep/55 px-5 py-16 text-foreground sm:px-8 lg:px-12 lg:py-24">
@@ -26,7 +26,7 @@ export function CtaBand({
           <p className="text-[0.62rem] font-semibold uppercase tracking-[0.19em] text-accent">
             {eyebrow}
           </p>
-          <h2 className="display-balance mt-6 max-w-4xl font-serif text-[clamp(3.1rem,7vw,7.5rem)] font-normal leading-[0.8] tracking-[-0.065em] md:leading-[0.78] md:tracking-[-0.07em]">
+          <h2 className="display-balance mt-5 max-w-4xl font-serif text-[clamp(2.35rem,10vw,2.75rem)] font-normal leading-none tracking-[-0.045em] md:mt-6 md:text-[clamp(4rem,5.4vw,6rem)] md:leading-[0.9] md:tracking-[-0.055em]">
             {title}
           </h2>
         </div>

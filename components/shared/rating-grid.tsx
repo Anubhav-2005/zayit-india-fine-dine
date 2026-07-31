@@ -5,19 +5,19 @@ import { ratings } from "@/lib/content";
 
 export function RatingGrid() {
   return (
-    <div className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto border-y border-foreground/20 px-5 sm:-mx-8 sm:px-8 md:mx-0 md:grid md:grid-cols-3 md:gap-0 md:overflow-visible md:px-0">
+    <div className="grid gap-3 border-y border-foreground/20 py-3 md:grid-cols-3 md:gap-0 md:py-0">
       {ratings.map((rating) => (
         <a
           key={rating.platform}
           href={rating.href}
           target="_blank"
-          rel="noreferrer"
-          className="group relative min-h-48 w-[78vw] max-w-sm shrink-0 snap-start border-r border-foreground/20 bg-ivory/55 p-6 transition-colors hover:bg-sand focus-visible:bg-sand sm:w-[58vw] md:min-h-72 md:w-auto md:max-w-none md:p-9 md:last:border-r-0"
+          rel="noopener noreferrer"
+          className="group relative min-h-44 border border-foreground/20 bg-ivory p-6 transition-colors hover:bg-sand focus-visible:bg-sand md:min-h-72 md:border-y-0 md:border-l-0 md:border-r md:p-9 md:last:border-r-0"
         >
           <span className="text-[0.62rem] font-semibold uppercase tracking-[0.17em]">
             {rating.platform}
           </span>
-          <strong className="mt-8 block font-serif text-6xl font-normal leading-[0.72] tracking-[-0.07em] md:mt-12 md:text-8xl">
+          <strong className="mt-7 block font-serif text-5xl font-normal leading-[0.9] tracking-[-0.05em] md:mt-12 md:text-7xl md:leading-[0.82] md:tracking-[-0.06em]">
             {rating.rating}
           </strong>
           <StarRating

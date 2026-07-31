@@ -9,22 +9,21 @@ export function SourceStamp() {
       <div className="mx-auto grid max-w-[1500px] gap-10 md:grid-cols-[1fr_1.2fr]">
         <div>
           <p className="text-[0.6rem] font-semibold uppercase tracking-[0.17em] text-accent">
-            Source transparency
+            Useful links
           </p>
           <h2
             id="source-heading"
-            className="mt-5 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em] md:text-5xl"
+            className="mt-5 font-serif text-[1.9rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-5xl md:leading-[0.94] md:tracking-[-0.045em]"
           >
-            Facts checked
+            Plan with
             <br />
-            July 29, 2026.
+            current details.
           </h2>
         </div>
         <div>
           <p className="pretty-copy max-w-2xl text-sm leading-7 text-muted">
-            Business details are cross-checked against live public sources.
-            Conflicts are disclosed, changing ratings are date-stamped, and
-            owner-only information is never invented.
+            Hours, ratings and menus can change. These links take you to the
+            restaurant’s current public listings before you set out.
           </p>
           <ul className="mt-7 grid gap-x-7 border-t border-foreground/20 sm:grid-cols-2">
             {sources.slice(0, 4).map((source) => (
@@ -32,7 +31,7 @@ export function SourceStamp() {
                 <a
                   href={source.url}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="flex min-h-12 items-center justify-between text-[0.62rem] font-semibold uppercase tracking-[0.12em] hover:text-accent"
                 >
                   {source.label}

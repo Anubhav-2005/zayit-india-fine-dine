@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { AmbientSoundToggle } from "@/components/experience";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { Button } from "@/components/ui/button";
+import { assetPath } from "@/lib/paths";
 import { navigation } from "@/lib/site";
 
 export function SiteHeader() {
@@ -17,7 +17,7 @@ export function SiteHeader() {
           aria-label="Zayit India Fine Dine, home"
         >
           <Image
-            src="/images/zayit-official-logo-112.webp"
+            src={assetPath("/images/zayit-official-logo-112.webp")}
             alt=""
             width={52}
             height={52}
@@ -51,7 +51,14 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <AmbientSoundToggle className="hidden text-foreground/70 hover:bg-sand sm:inline-flex" />
+          <Button
+            asChild
+            variant="default"
+            size="sm"
+            className="inline-flex px-4 sm:hidden"
+          >
+            <Link href="/reservations">Reserve</Link>
+          </Button>
           <Button
             asChild
             variant="default"

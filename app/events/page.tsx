@@ -20,10 +20,10 @@ export default function EventsPage() {
     <main id="main-content">
       <PageHero
         eyebrow="Events"
-        title="What is on,"
-        accent="honestly."
-        description="No current public events calendar, ticketing page or dated programme could be verified. Contact the restaurant directly for current plans."
-        meta="Public programme status · checked July 29, 2026"
+        title="An evening,"
+        accent="worth gathering for."
+        description="Zayit has not published a dated events calendar. Follow the restaurant or call directly for the latest plans."
+        meta="For current announcements · Instagram or phone"
       />
 
       <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">
@@ -38,22 +38,21 @@ export default function EventsPage() {
               className="size-7 text-accent"
             />
             <p className="mt-12 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-accent">
-              Current public status
+              At the moment
             </p>
-            <h2 className="display-balance mt-6 max-w-5xl font-serif text-[clamp(3.4rem,7vw,7.5rem)] font-normal leading-[0.8] tracking-[-0.065em]">
-              No dated programme is currently verified.
+            <h2 className="display-balance mt-5 max-w-5xl font-serif text-[clamp(2.35rem,10vw,2.8rem)] font-normal leading-none tracking-[-0.045em] md:mt-6 md:text-[clamp(4rem,5.4vw,6rem)] md:leading-[0.9] md:tracking-[-0.055em]">
+              No event dates are currently listed.
             </h2>
             <p className="pretty-copy mt-7 max-w-2xl text-sm leading-7 text-muted">
-              For the newest announcements, use the official Instagram profile
-              or call the restaurant directly. A future owner-supplied calendar
-              can replace this state without changing the page architecture.
+              For the newest announcements, follow the official Instagram
+              profile or call the restaurant directly.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild>
                 <a
                   href={siteConfig.instagram}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   Official Instagram
                   <ArrowUpRight aria-hidden="true" className="size-4" />
@@ -78,12 +77,11 @@ export default function EventsPage() {
               eyebrow="Event enquiry"
               title="Ask about"
               accent="your date."
-              description="Submitting this form prepares an email enquiry; it does not promise a programme, space or booking."
+              description="Tell Zayit the date and kind of evening you have in mind. The restaurant will confirm what is possible."
             />
-            <OwnerNotice className="mt-10" title="Capabilities are not assumed.">
-              Venue availability, capacity, timings, entertainment, menus,
-              ticketing, deposits and technical requirements all need direct
-              owner confirmation.
+            <OwnerNotice className="mt-10" title="Every gathering is different.">
+              Ask the restaurant about current availability, capacity, timings,
+              menus, deposits and any technical requirements for your date.
             </OwnerNotice>
           </div>
           <DeferredInquiryForm kind="event" />

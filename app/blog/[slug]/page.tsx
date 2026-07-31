@@ -57,7 +57,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <p className="mt-14 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-accent">
               {post.category}
             </p>
-            <h1 className="hero-display display-balance mt-6 text-[clamp(4rem,9vw,8.5rem)] font-normal leading-[0.76] tracking-[-0.07em]">
+            <h1 className="hero-display display-balance mt-5 text-[clamp(2.65rem,11vw,3.1rem)] font-normal leading-none tracking-[-0.045em] md:mt-6 md:text-[clamp(4.25rem,5.8vw,7rem)] md:leading-[0.9] md:tracking-[-0.055em]">
               {post.title}
             </h1>
             <div className="mt-10 flex flex-wrap gap-x-7 gap-y-2 border-t border-foreground/18 pt-5 text-[0.62rem] uppercase tracking-[0.13em] text-muted">
@@ -80,7 +80,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <a
                       href={source.url}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="flex min-h-12 items-center justify-between text-xs hover:text-accent"
                     >
                       {source.label}
@@ -91,7 +91,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </ul>
             </aside>
             <div className="space-y-8">
-              <p className="display-balance font-serif text-4xl leading-[1.02] tracking-[-0.04em] text-accent md:text-5xl">
+              <p className="display-balance font-serif text-[1.9rem] leading-[1.08] tracking-[-0.035em] text-accent md:text-5xl md:leading-[1.02] md:tracking-[-0.04em]">
                 {post.dek}
               </p>
               {post.paragraphs.map((paragraph) => (

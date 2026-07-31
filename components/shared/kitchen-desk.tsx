@@ -7,8 +7,8 @@ import { siteConfig } from "@/lib/site";
 const deskCards = [
   {
     eyebrow: "Today’s special",
-    title: "Ask what arrived in the kitchen today.",
-    copy: "Zayit does not currently publish a dependable same-day special online. Call or message for tonight’s kitchen update.",
+    title: "Ask what the kitchen is serving tonight.",
+    copy: "The day’s special changes with the kitchen. Call or message before you arrive for tonight’s recommendation.",
     icon: Sparkles,
     href: siteConfig.phoneHref,
     action: "Call for today’s special",
@@ -16,17 +16,17 @@ const deskCards = [
   },
   {
     eyebrow: "Chef recommendations",
-    title: "The chef’s edit awaits an owner-approved selection.",
-    copy: "The current chef identity and personal recommendations are not verified in public first-party information. This card is ready for the owner’s original profile and choices.",
+    title: "Let the table guide the order.",
+    copy: "Tell the team what you enjoy—vegetarian or non-vegetarian, mild or fiery—and ask them to shape a spread for the table.",
     icon: ChefHat,
     href: "/about",
-    action: "See the chef asset brief",
+    action: "Meet the restaurant",
     external: false,
   },
   {
-    eyebrow: "Signature dishes",
-    title: "Guest favourites, clearly separated from sales claims.",
-    copy: `${guestMentionedDishes.slice(1, 4).join(", ")} recur in public guest feedback. They are not presented as signatures or best sellers without owner or POS confirmation.`,
+    eyebrow: "Guest favourites",
+    title: "A few names guests return to.",
+    copy: `${guestMentionedDishes.slice(1, 4).join(", ")} are among the dishes mentioned in public guest reviews. Availability can change, so call if you have one in mind.`,
     icon: BadgeCheck,
     href: "/menu",
     action: "Explore the public menu",
@@ -42,16 +42,16 @@ export function KitchenDesk() {
           <p className="text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-accent">
             The kitchen desk
           </p>
-          <h2 className="display-balance max-w-5xl font-serif text-[clamp(2.9rem,6vw,6.8rem)] font-normal leading-[0.88] tracking-[-0.055em] md:leading-[0.86] md:tracking-[-0.06em]">
-            What is known.
+          <h2 className="display-balance max-w-5xl font-serif text-[clamp(2.3rem,9.5vw,2.7rem)] font-normal leading-none tracking-[-0.04em] md:text-[clamp(3.75rem,4.8vw,5.5rem)] md:leading-[0.9] md:tracking-[-0.05em]">
+            Begin with curiosity.
             <br />
             <em className="font-normal text-accent">
-              What still needs the chef.
+              Let the table unfold.
             </em>
           </h2>
         </div>
 
-        <div className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pt-6 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-0 lg:overflow-visible lg:px-0 lg:pt-0">
+        <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pt-6 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-0 lg:overflow-visible lg:px-0 lg:pt-0">
           {deskCards.map((card, index) => {
             const Icon = card.icon;
             const content = (
@@ -66,7 +66,7 @@ export function KitchenDesk() {
                   <p className="text-[0.59rem] font-semibold uppercase tracking-[0.16em] text-accent">
                     {card.eyebrow}
                   </p>
-                  <h3 className="mt-5 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em]">
+                  <h3 className="mt-5 font-serif text-[1.75rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-4xl md:leading-[0.94] md:tracking-[-0.045em]">
                     {card.title}
                   </h3>
                   <p className="pretty-copy mt-5 text-sm leading-7 text-muted">
@@ -84,7 +84,7 @@ export function KitchenDesk() {
               <Link
                 key={card.eyebrow}
                 href={card.href}
-                className="group min-h-[27rem] w-[84vw] max-w-sm shrink-0 snap-start border border-foreground/16 bg-ivory/55 p-6 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:w-[58vw] lg:min-h-[31rem] lg:w-auto lg:max-w-none lg:border-y-0 lg:border-l-0 lg:border-r lg:bg-transparent lg:px-8 lg:py-9 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
+                className="group min-h-[25rem] w-full shrink-0 snap-start border border-foreground/16 bg-ivory p-6 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:w-[58vw] lg:min-h-[31rem] lg:w-auto lg:max-w-none lg:border-y-0 lg:border-l-0 lg:border-r lg:bg-transparent lg:px-8 lg:py-9 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
               >
                 {content}
               </Link>
@@ -92,7 +92,7 @@ export function KitchenDesk() {
               <a
                 key={card.eyebrow}
                 href={card.href}
-                className="group min-h-[27rem] w-[84vw] max-w-sm shrink-0 snap-start border border-foreground/16 bg-ivory/55 p-6 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:w-[58vw] lg:min-h-[31rem] lg:w-auto lg:max-w-none lg:border-y-0 lg:border-l-0 lg:border-r lg:bg-transparent lg:px-8 lg:py-9 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
+                className="group min-h-[25rem] w-full shrink-0 snap-start border border-foreground/16 bg-ivory p-6 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:w-[58vw] lg:min-h-[31rem] lg:w-auto lg:max-w-none lg:border-y-0 lg:border-l-0 lg:border-r lg:bg-transparent lg:px-8 lg:py-9 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
               >
                 {content}
               </a>

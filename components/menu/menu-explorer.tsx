@@ -118,7 +118,7 @@ export function MenuExplorer({
             </p>
             <h2
               id={`${id}-heading`}
-              className="mt-5 max-w-xl font-serif text-[clamp(2.8rem,5vw,5.4rem)] font-normal leading-[0.88] tracking-[-0.055em]"
+              className="mt-5 max-w-xl font-serif text-[clamp(2.25rem,9.5vw,2.65rem)] font-normal leading-none tracking-[-0.04em] md:text-[clamp(3.5rem,4.5vw,5rem)] md:leading-[0.9] md:tracking-[-0.05em]"
             >
               {heading}
             </h2>
@@ -247,6 +247,7 @@ export function MenuExplorer({
           <button
             type="button"
             onClick={resetExplorer}
+            aria-label="Reset menu explorer"
             className="min-h-11 shrink-0 text-accent underline decoration-accent/35 underline-offset-4 hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus"
           >
             Reset
@@ -268,7 +269,7 @@ export function MenuExplorer({
                 <p className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-muted">
                   {category.eyebrow}
                 </p>
-                <h3 className="mt-5 max-w-md font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em] md:text-5xl">
+                <h3 className="mt-5 max-w-md font-serif text-[1.8rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-5xl md:leading-[0.94] md:tracking-[-0.045em]">
                   {category.title}
                 </h3>
                 <p className="mt-4 max-w-md text-xs leading-6 text-muted">
@@ -301,7 +302,7 @@ export function MenuExplorer({
             <p className="text-[0.6rem] font-semibold uppercase tracking-[0.17em] text-accent">
               Nothing found
             </p>
-            <h3 className="mt-5 max-w-2xl font-serif text-4xl font-normal leading-[0.95] tracking-[-0.045em] md:text-6xl">
+            <h3 className="mt-5 max-w-2xl font-serif text-[1.8rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-6xl md:leading-[0.95] md:tracking-[-0.045em]">
               Try another dish, or return to the complete menu.
             </h3>
             <button

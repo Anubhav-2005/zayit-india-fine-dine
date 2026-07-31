@@ -15,6 +15,7 @@ import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { SourceStamp } from "@/components/shared/source-stamp";
 import { createPageMetadata } from "@/lib/metadata";
+import { assetPath } from "@/lib/paths";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = createPageMetadata({
@@ -121,7 +122,7 @@ export default function ContactPage() {
           <figure className="lg:col-span-2">
             <div className="relative h-[24rem] overflow-hidden bg-olive md:h-[34rem]">
               <Image
-                src="/images/owner/zayit-fort-sign.avif"
+                src={assetPath("/images/owner/zayit-fort-sign.avif")}
                 alt="Zayit India sign below the illuminated walls of Jaisalmer Fort"
                 fill
                 sizes="(max-width: 767px) 92vw, 88vw"
@@ -144,12 +145,12 @@ export default function ContactPage() {
                   className="text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-muted underline underline-offset-4 hover:text-accent"
                   href={siteConfig.maps}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   Open full map
                 </a>
               </div>
-              <h2 className="mt-5 font-serif text-4xl font-normal leading-[0.88] tracking-[-0.05em]">
+              <h2 className="mt-5 font-serif text-[1.9rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-4xl md:leading-[0.94] md:tracking-[-0.045em]">
                 {siteConfig.address.line1}
               </h2>
             </div>
@@ -157,7 +158,8 @@ export default function ContactPage() {
               title="Google Map showing Zayit India Fine Dine in Jaisalmer"
               src={siteConfig.mapEmbed}
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
               className="min-h-[25rem] w-full grow border-0"
               allowFullScreen
             />
@@ -170,7 +172,7 @@ export default function ContactPage() {
                 className="rule-link"
                 href={siteConfig.directions}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 Live directions
                 <ArrowUpRight aria-hidden="true" className="size-4" />
@@ -181,7 +183,7 @@ export default function ContactPage() {
             <p className="text-[0.62rem] font-semibold uppercase tracking-[0.17em] text-accent">
               Contact enquiry
             </p>
-            <h2 className="mt-5 font-serif text-5xl font-normal leading-[0.86] tracking-[-0.05em]">
+            <h2 className="mt-5 font-serif text-[2.2rem] font-normal leading-none tracking-[-0.04em] md:text-5xl md:leading-[0.92] md:tracking-[-0.05em]">
               Write a clear note.
             </h2>
             <DeferredInquiryForm kind="contact" className="mt-10" />

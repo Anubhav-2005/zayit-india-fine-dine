@@ -3,7 +3,9 @@ export const siteConfig = {
   legalName: "Zayit India Fine Dine - Best Restaurant In Jaisalmer",
   description:
     "Indian and Mediterranean dining near Jaisalmer Fort, with verified hours, menu, ratings, directions and reservation contact.",
-  url: "https://zayit-india-jaisalmer.hello-tchopra.chatgpt.site",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    "https://zayit-india-jaisalmer.hello-tchopra.chatgpt.site",
   phoneDisplay: "+91 70730 96695",
   phoneHref: "tel:+917073096695",
   whatsapp:

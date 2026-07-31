@@ -43,7 +43,7 @@ export default function GalleryPage() {
               className="rule-link lg:justify-self-end"
               href={siteConfig.instagram}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               View official Instagram
               <ArrowUpRight aria-hidden="true" className="size-4" />

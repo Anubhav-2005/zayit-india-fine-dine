@@ -64,7 +64,7 @@ export function DeferredInquiryForm({
           <p className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-accent">
             Online request form
           </p>
-          <p className="mt-5 max-w-lg font-serif text-3xl leading-[0.95] tracking-[-0.04em]">
+          <p className="mt-5 max-w-lg font-serif text-[1.75rem] leading-[1.04] tracking-[-0.035em] md:text-3xl md:leading-none md:tracking-[-0.04em]">
             Ready as you reach this chapter.
           </p>
           <p className="mt-5 max-w-lg text-sm leading-7 text-muted">

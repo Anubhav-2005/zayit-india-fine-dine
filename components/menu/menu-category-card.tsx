@@ -30,7 +30,7 @@ export function MenuCategoryCard({
         <span>{String(index + 1).padStart(2, "0")}</span>
         <span>{category.eyebrow}</span>
       </div>
-      <Heading className="mt-8 font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em] md:text-5xl">
+      <Heading className="mt-7 font-serif text-[1.8rem] font-normal leading-[1.02] tracking-[-0.035em] md:mt-8 md:text-5xl md:leading-[0.94] md:tracking-[-0.045em]">
         {category.title}
       </Heading>
       <p className="mt-4 max-w-sm text-xs leading-6 text-muted">

@@ -12,7 +12,7 @@ export default function NotFound() {
         <p className="text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-accent">
           404 · The path ends here
         </p>
-        <h1 className="hero-display mt-6 text-[clamp(5rem,14vw,10rem)] font-normal leading-[0.74] tracking-[-0.08em]">
+        <h1 className="hero-display mt-5 text-[clamp(3.5rem,16vw,4.5rem)] font-normal leading-none tracking-[-0.05em] md:mt-6 md:text-[clamp(6rem,10vw,9rem)] md:leading-[0.88] md:tracking-[-0.065em]">
           Back to
           <br />
           <em className="font-normal text-accent">the table.</em>

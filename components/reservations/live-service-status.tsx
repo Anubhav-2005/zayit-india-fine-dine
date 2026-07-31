@@ -61,7 +61,7 @@ export function LiveServiceStatus() {
           <p className="text-[0.6rem] font-semibold uppercase tracking-[0.17em] text-accent">
             Live service status
           </p>
-          <h2 className="mt-5 max-w-xl font-serif text-4xl font-normal leading-[0.9] tracking-[-0.045em] md:text-5xl">
+          <h2 className="mt-5 max-w-xl font-serif text-[1.9rem] font-normal leading-[1.02] tracking-[-0.035em] md:text-5xl md:leading-[0.94] md:tracking-[-0.045em]">
             {snapshot
               ? isOpen
                 ? "Inside the published service window."
@@ -118,7 +118,7 @@ export function LiveServiceStatus() {
         <a
           href={siteConfig.whatsapp}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="inline-flex min-h-11 items-center gap-2 rounded-full border border-foreground/25 px-5 text-[0.62rem] font-semibold uppercase tracking-[0.14em] transition-colors hover:bg-ivory"
         >
           <MessageCircle aria-hidden="true" className="size-4" />

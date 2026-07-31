@@ -36,8 +36,9 @@ export function FloatingActionDock({
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     const handleMotionPreference = () => setReduceMotion(media.matches);
-    const handleScroll = () =>
+    const handleScroll = () => {
       setShowBackToTop(window.scrollY > backToTopThreshold);
+    };
 
     handleMotionPreference();
     handleScroll();
@@ -61,7 +62,7 @@ export function FloatingActionDock({
     <nav
       aria-label="Quick actions"
       className={cn(
-        "fixed bottom-[max(0.75rem,env(safe-area-inset-bottom))] left-1/2 z-[100] flex -translate-x-1/2 items-center gap-1 rounded-full border border-white/15 bg-olive/94 p-1.5 shadow-2xl backdrop-blur-md sm:bottom-5 sm:left-auto sm:right-5 sm:translate-x-0",
+        "fixed bottom-5 right-5 z-[100] hidden items-center gap-1 rounded-full border border-white/15 bg-olive/94 p-1.5 shadow-2xl backdrop-blur-md sm:flex",
         className,
       )}
     >
@@ -87,7 +88,7 @@ export function FloatingActionDock({
         <a
           href={whatsappHref}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className={actionClassName}
           aria-label="Message the restaurant on WhatsApp"
           title="WhatsApp"
@@ -98,7 +99,7 @@ export function FloatingActionDock({
       {showBackToTop ? (
         <button
           type="button"
-          className={cn(actionClassName, "hidden sm:grid")}
+          className={actionClassName}
           aria-label="Back to top"
           title="Back to top"
           onClick={backToTop}

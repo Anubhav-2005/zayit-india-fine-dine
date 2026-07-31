@@ -81,7 +81,7 @@ export default function ReservationsPage() {
           <a
             href={siteConfig.whatsapp}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="group flex min-h-36 flex-col justify-between border border-foreground/20 bg-background p-4 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:min-h-40 sm:p-6"
           >
             <MessageCircle aria-hidden="true" className="size-5 text-accent" />
@@ -108,7 +108,7 @@ export default function ReservationsPage() {
           <a
             href={siteConfig.directions}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="group flex min-h-36 flex-col justify-between border border-foreground/20 bg-background p-4 transition-colors hover:bg-ivory focus-visible:bg-ivory sm:min-h-40 sm:p-6"
           >
             <MapPin aria-hidden="true" className="size-5 text-accent" />
@@ -141,11 +141,11 @@ export default function ReservationsPage() {
             />
             <OwnerNotice
               className="mt-10"
-              title="Email delivery is not yet owner-confirmed."
+              title="Calling is the quickest route."
             >
-              The address zayitindia@gmail.com is publicly listed but still
-              requires owner confirmation. For a time-sensitive reservation,
-              call the verified number.
+              Email requests use the restaurant’s public address, but a table
+              is held only after Zayit replies. For a time-sensitive visit,
+              call the restaurant directly.
             </OwnerNotice>
             <div className="mt-5">
               <LiveServiceStatus />
