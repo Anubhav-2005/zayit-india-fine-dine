@@ -6,6 +6,7 @@ import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { createPageMetadata } from "@/lib/metadata";
 import { galleryAssets } from "@/lib/content";
+import { assetPath } from "@/lib/paths";
 
 export const metadata = createPageMetadata({
   title: "Private Dining",
@@ -41,6 +42,10 @@ export default function PrivateDiningPage() {
         accent="Plan clearly."
         description="Begin a conversation about a birthday, family meal or intimate gathering near the fort."
         meta="Availability and arrangements confirmed directly by Zayit"
+        image={{
+          src: assetPath("/images/owner/zayit-table-window.avif"),
+          alt: "The long dining table prepared for a gathering at Zayit",
+        }}
       />
 
       <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">

@@ -6,9 +6,17 @@ import { Button } from "@/components/ui/button";
 import { assetPath } from "@/lib/paths";
 import { navigation } from "@/lib/site";
 
+const desktopNavigationHrefs = new Set([
+  "/menu",
+  "/about",
+  "/gallery",
+  "/private-dining",
+  "/contact",
+]);
+
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-80 border-b border-foreground/10 bg-ivory text-foreground shadow-[0_0.35rem_2rem_rgba(66,47,23,0.05)] sm:bg-ivory/92 sm:backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-80 border-b border-foreground/10 bg-ivory/95 text-foreground shadow-[0_0.35rem_2rem_rgba(66,47,23,0.05)] backdrop-blur-xl">
       <div className="mx-auto flex h-[4.5rem] max-w-[1600px] items-center justify-between px-4 sm:h-20 sm:px-8 lg:px-12">
         <Link
           href="/"
@@ -36,29 +44,23 @@ export function SiteHeader() {
         </Link>
 
         <nav aria-label="Primary navigation" className="hidden xl:block">
-          <ul className="flex items-center gap-5 2xl:gap-7">
-            {navigation.slice(1).map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="inline-flex min-h-11 items-center text-[0.61rem] font-semibold uppercase tracking-[0.14em] text-foreground/72 transition-colors hover:text-accent focus-visible:text-accent"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+          <ul className="flex items-center gap-6 2xl:gap-8">
+            {navigation
+              .filter((item) => desktopNavigationHrefs.has(item.href))
+              .map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="inline-flex min-h-11 items-center text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-foreground/72 transition-colors hover:text-accent focus-visible:text-accent"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button
-            asChild
-            variant="default"
-            size="sm"
-            className="inline-flex px-4 sm:hidden"
-          >
-            <Link href="/reservations">Reserve</Link>
-          </Button>
           <Button
             asChild
             variant="default"

@@ -142,7 +142,7 @@ export default function ContactPage() {
                   Google Maps
                 </p>
                 <a
-                  className="text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-muted underline underline-offset-4 hover:text-accent"
+                  className="inline-flex min-h-11 items-center text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-muted underline underline-offset-4 hover:text-accent"
                   href={siteConfig.maps}
                   target="_blank"
                   rel="noopener noreferrer"

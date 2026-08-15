@@ -57,16 +57,6 @@ export function MobileNavigation() {
     finishClose();
   }, [finishClose, pathname]);
 
-  useEffect(() => {
-    const desktop = window.matchMedia("(min-width: 80rem)");
-    const closeOnDesktop = () => {
-      if (desktop.matches) finishClose();
-    };
-
-    desktop.addEventListener("change", closeOnDesktop);
-    return () => desktop.removeEventListener("change", closeOnDesktop);
-  }, [finishClose]);
-
   useEffect(
     () => () => {
       if (closingTimer.current !== undefined) {
@@ -81,7 +71,7 @@ export function MobileNavigation() {
     <>
       <button
         type="button"
-        className="grid size-11 place-items-center rounded-full border border-foreground/20 text-foreground transition-colors hover:bg-sand focus-visible:border-focus xl:hidden"
+        className="grid size-11 place-items-center rounded-full border border-foreground/20 text-foreground transition-colors hover:bg-sand focus-visible:border-focus"
         aria-label="Open navigation"
         aria-haspopup="dialog"
         aria-controls="mobile-navigation-dialog"

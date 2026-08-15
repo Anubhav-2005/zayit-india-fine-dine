@@ -172,7 +172,7 @@ export function MenuExplorer({
           </div>
         </div>
 
-        <fieldset className="mt-10 border-t border-foreground/14 pt-6 md:mt-12">
+        <fieldset className="mt-10 w-full min-w-0 max-w-full border-t border-foreground/14 pt-6 md:mt-12">
           <legend className="sr-only">Filter menu by category</legend>
           <div className="-mx-5 flex snap-x snap-mandatory gap-2 overflow-x-auto px-5 pb-2 sm:-mx-8 sm:px-8 xl:mx-0 xl:flex-wrap xl:overflow-visible xl:px-0">
             <button

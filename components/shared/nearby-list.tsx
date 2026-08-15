@@ -2,10 +2,16 @@ import { ArrowUpRight } from "lucide-react";
 
 import { nearbyPlaces } from "@/lib/content";
 
-export function NearbyList() {
+type NearbyListProps = {
+  limit?: number;
+};
+
+export function NearbyList({ limit }: NearbyListProps) {
+  const visiblePlaces = limit ? nearbyPlaces.slice(0, limit) : nearbyPlaces;
+
   return (
     <div className="border-t border-foreground/18">
-      {nearbyPlaces.map((place, index) => (
+      {visiblePlaces.map((place, index) => (
         <a
           key={place.name}
           href={place.href}

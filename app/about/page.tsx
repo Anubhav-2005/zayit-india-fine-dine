@@ -10,6 +10,7 @@ import { SourceStamp } from "@/components/shared/source-stamp";
 import { Button } from "@/components/ui/button";
 import { galleryAssets, reviewThemes } from "@/lib/content";
 import { createPageMetadata } from "@/lib/metadata";
+import { assetPath } from "@/lib/paths";
 
 export const metadata = createPageMetadata({
   title: "About",
@@ -27,6 +28,10 @@ export default function AboutPage() {
         accent="in the desert."
         description="“Zayit” means olive in Hebrew. The restaurant’s public identity joins an Indian kitchen with Mediterranean ease in the Golden City."
         meta="Jaisalmer · Rajasthan · India"
+        image={{
+          src: assetPath("/images/owner/zayit-lounge-original.jpeg"),
+          alt: "The light-filled lounge inside Zayit India Fine Dine",
+        }}
       />
 
       <section className="px-5 py-16 sm:px-8 md:py-28 lg:px-12">

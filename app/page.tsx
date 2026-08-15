@@ -5,7 +5,6 @@ import { ArrowUpRight } from "lucide-react";
 import { EditorialImage } from "@/components/gallery/editorial-image";
 import { InteriorFilm } from "@/components/gallery/interior-film";
 import { MenuCategoryCard } from "@/components/menu/menu-category-card";
-import { LocalTimeStatus } from "@/components/motion/local-time-status";
 import { CtaBand } from "@/components/shared/cta-band";
 import { FactStrip } from "@/components/shared/fact-strip";
 import { FaqBlock } from "@/components/shared/faq-block";
@@ -34,79 +33,94 @@ export const metadata = createPageMetadata({
 export default function HomePage() {
   return (
     <main id="main-content">
-      <section className="relative isolate min-h-svh overflow-hidden bg-sand px-4 pb-5 pt-24 text-foreground sm:px-8 sm:pb-8 sm:pt-28 lg:px-12">
-        <div
-          className="home-hero-lounge-media"
-          aria-hidden="true"
-          style={{
-            backgroundImage: `url("${assetPath(
-              "/images/owner/zayit-lounge-original.jpeg",
-            )}")`,
-          }}
-        />
-        <picture className="home-hero-fort-media">
+      <section className="home-hero">
+        <picture className="home-hero__media">
           <source
             media="(max-width: 767px)"
             srcSet={assetPath(
-              "/images/owner/zayit-fort-official-daylight-mobile.webp",
+              "/images/owner/zayit-fort-official-daylight.webp",
             )}
           />
           <Image
             src={assetPath(
-              "/images/owner/zayit-fort-official-daylight.webp",
+              "/images/owner/zayit-fort-official-daylight-mobile.webp",
             )}
             alt="Jaisalmer Fort seen from Zayit India Fine Dine's bright terrace"
             width={1333}
-            height={1420}
+            height={1100}
             unoptimized
             fetchPriority="high"
             decoding="async"
-            className="size-full object-cover object-center"
+            className="size-full object-cover"
           />
         </picture>
         <div
-          className="home-hero-scrim pointer-events-none absolute inset-0 z-10"
+          className="home-hero__scrim"
           aria-hidden="true"
         />
 
-        <div className="relative z-20 mx-auto flex min-h-[calc(100svh-7.25rem)] max-w-[1500px] items-end">
-          <div className="zayit-hero-card w-full max-w-[53rem] border border-foreground/12 bg-ivory p-5 shadow-[0_1rem_3rem_rgba(58,42,21,0.1)] sm:p-8 lg:max-w-[48rem] lg:border-white/40 lg:bg-ivory/88 lg:p-10 lg:shadow-[0_2rem_6rem_rgba(58,42,21,0.16)] xl:max-w-[44rem]">
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-              <p className="text-[0.58rem] font-semibold uppercase tracking-[0.17em] text-accent sm:text-[0.62rem] sm:tracking-[0.2em]">
+        <div className="home-hero__inner zayit-shell">
+          <div className="home-hero__copy">
+            <div className="home-hero__kicker">
+              <p>
                 Fine dining · Fort Parking Road
               </p>
-              <span className="hidden h-3 w-px bg-foreground/20 sm:block" />
-              <StarRating value={4.8} size="sm" showValue />
+              <span aria-hidden="true" />
+              <StarRating
+                value={4.8}
+                size="sm"
+                showValue
+                className="home-hero__rating"
+              />
             </div>
 
-            <h1 className="hero-display display-balance mt-5 text-[clamp(2.65rem,11.5vw,3.05rem)] font-normal leading-none tracking-[-0.045em] sm:text-[clamp(3.4rem,8vw,4.75rem)] sm:leading-[0.94] lg:text-[clamp(4.5rem,5.6vw,6.25rem)] lg:leading-[0.9] lg:tracking-[-0.055em]">
+            <h1 className="home-hero__title">
               A table lit by
               <br />
-              <em className="font-normal text-accent">the Golden City.</em>
+              <em>the Golden City.</em>
             </h1>
 
-            <p className="pretty-copy mt-6 max-w-2xl text-sm leading-7 text-muted sm:text-base sm:leading-8">
-              Indian warmth, Mediterranean ease and a bright room close to the
-              living walls of Jaisalmer Fort.
+            <p className="home-hero__description">
+              Indian warmth, Mediterranean ease and a light-filled dining room
+              beside the living walls of Jaisalmer Fort.
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Button asChild>
+            <div className="home-hero__actions">
+              <Button
+                asChild
+                size="lg"
+                variant="gold"
+                className="w-full sm:w-auto"
+              >
                 <Link href="/reservations" prefetch={false}>
                   Reserve a table
                 </Link>
               </Button>
-              <Button asChild variant="outline">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="w-full border-ivory/70 text-ivory hover:bg-ivory hover:text-olive sm:w-auto"
+              >
                 <Link href="/menu" prefetch={false}>
                   Explore the menu
                 </Link>
               </Button>
             </div>
 
-            <div className="mt-7 hidden border-t border-foreground/16 pt-5 sm:block">
-              <LocalTimeStatus />
+            <div className="home-hero__details" aria-label="Visit details">
+              <p>
+                <span aria-hidden="true" />
+                Daily · {siteConfig.hours.compact}
+              </p>
+              <p>First floor · Fort Parking Road</p>
             </div>
           </div>
+
+          <p className="home-hero__caption">
+            Jaisalmer Fort
+            <span>Seen from Zayit</span>
+          </p>
         </div>
       </section>
 
@@ -146,7 +160,7 @@ export default function HomePage() {
               mobileSrc={assetPath(
                 "/images/owner/zayit-fort-daylight-square-mobile.avif",
               )}
-              className="col-span-2 [&>div]:min-h-[23rem] md:col-span-5 md:mt-24 md:[&>div]:min-h-[38rem]"
+              className="col-span-2 hidden [&>div]:min-h-[23rem] md:col-span-5 md:mt-24 md:block md:[&>div]:min-h-[38rem]"
               sizes="(max-width: 767px) 92vw, 38vw"
             />
           </div>
@@ -214,41 +228,6 @@ export default function HomePage() {
 
       <KitchenDesk />
 
-      <section className="zayit-section">
-        <div className="zayit-shell">
-          <SectionHeading
-            eyebrow="A glimpse of Zayit"
-            title="One place."
-            accent="Many quiet details."
-            description="The long table, soft blue seating and the fort beyond—photographed at Zayit."
-          />
-          <div className="mt-12 grid grid-cols-2 gap-3 md:mt-16 md:grid-cols-12 md:gap-7">
-            <EditorialImage
-              asset={galleryAssets[0]}
-              index={1}
-              className="col-span-2 [&>div]:min-h-[20rem] md:col-span-6 md:[&>div]:min-h-[37rem]"
-              sizes="(max-width: 767px) 92vw, 48vw"
-            />
-            <EditorialImage
-              asset={galleryAssets[1]}
-              index={2}
-              className="col-span-1 [&>div]:min-h-[20rem] md:col-span-3 md:mt-20 md:[&>div]:min-h-[32rem]"
-              sizes="(max-width: 767px) 46vw, 24vw"
-            />
-            <EditorialImage
-              asset={galleryAssets[5]}
-              index={3}
-              className="col-span-1 [&>div]:min-h-[20rem] md:col-span-3 md:mt-8 md:[&>div]:min-h-[35rem]"
-              sizes="(max-width: 767px) 46vw, 24vw"
-            />
-          </div>
-          <Link href="/gallery" className="rule-link mt-10">
-            Enter the full gallery
-            <ArrowUpRight aria-hidden="true" className="size-4" />
-          </Link>
-        </div>
-      </section>
-
       <section className="zayit-section zayit-section--sand">
         <div className="zayit-shell">
           <SectionHeading
@@ -262,10 +241,14 @@ export default function HomePage() {
           </div>
 
           <div className="zayit-review-themes">
-            {reviewThemes.map((theme) => (
+            {reviewThemes.map((theme, index) => (
               <article
                 key={theme.number}
-                className="border-t border-foreground/18 pt-6"
+                className={
+                  index === 0
+                    ? "border-t border-foreground/18 pt-6"
+                    : "hidden border-t border-foreground/18 pt-6 md:block"
+                }
               >
                 <span className="text-[0.62rem] font-semibold tracking-[0.16em] text-accent">
                   {theme.number}
@@ -296,7 +279,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="mt-12 md:mt-16">
-            <NearbyList />
+            <NearbyList limit={3} />
           </div>
         </div>
       </section>
@@ -309,7 +292,7 @@ export default function HomePage() {
             accent="know."
           />
         </div>
-        <FaqBlock />
+        <FaqBlock limit={5} />
       </section>
 
       <CtaBand />

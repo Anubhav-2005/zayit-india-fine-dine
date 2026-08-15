@@ -9,6 +9,7 @@ import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { galleryAssets } from "@/lib/content";
 import { createPageMetadata } from "@/lib/metadata";
+import { assetPath } from "@/lib/paths";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = createPageMetadata({
@@ -27,6 +28,10 @@ export default function GalleryPage() {
         accent="frame by frame."
         description="Bright interiors, the long table, architectural details and the Golden Fort—shown through real restaurant files supplied for this website."
         meta="No AI-generated or traveller photography"
+        image={{
+          src: assetPath("/images/owner/zayit-room-wide.jpg"),
+          alt: "Zayit India Fine Dine's bright dining room and long table",
+        }}
       />
 
       <section className="overflow-hidden px-5 py-16 sm:px-8 md:py-28 lg:px-12">

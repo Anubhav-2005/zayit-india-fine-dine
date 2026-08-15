@@ -8,12 +8,15 @@ import { faqs } from "@/lib/content";
 
 type FaqBlockProps = {
   entries?: typeof faqs;
+  limit?: number;
 };
 
-export function FaqBlock({ entries = faqs }: FaqBlockProps) {
+export function FaqBlock({ entries = faqs, limit }: FaqBlockProps) {
+  const visibleEntries = limit ? entries.slice(0, limit) : entries;
+
   return (
     <Accordion type="single" collapsible className="border-t border-foreground/20">
-      {entries.map((item, index) => (
+      {visibleEntries.map((item, index) => (
         <AccordionItem value={`faq-${index + 1}`} key={item.question}>
           <AccordionTrigger>
             <span className="mr-2 text-[0.58rem] font-semibold tracking-[0.13em] text-muted">
