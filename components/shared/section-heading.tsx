@@ -23,10 +23,15 @@ export function SectionHeading({
     <header
       className={cn("section-heading", className)}
       data-theme={theme}
+      data-reveal="heading"
     >
       <div className="section-heading__kicker">
         {index ? <span aria-hidden="true">{index}</span> : null}
-        <span className="h-px w-8 bg-current" aria-hidden="true" />
+        <span
+          className="h-px w-8 origin-left bg-current"
+          aria-hidden="true"
+          data-rule
+        />
         <p>{eyebrow}</p>
       </div>
       <h2 className="section-heading__title">

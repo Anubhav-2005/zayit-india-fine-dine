@@ -3,9 +3,10 @@
 import { useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { CalendarDays, MapPinned, Menu, Phone, X } from "lucide-react";
 
 import { footerNavigation, siteConfig } from "@/lib/site";
+import { cn } from "@/lib/utils";
 
 const primaryHrefs = new Set([
   "/",
@@ -22,7 +23,11 @@ const secondaryNavigation = mobileNavigation.filter(
   (item) => !primaryHrefs.has(item.href),
 );
 
-export function MobileNavigation() {
+export function MobileNavigation({
+  triggerClassName,
+}: {
+  triggerClassName?: string;
+}) {
   const pathname = usePathname();
   const dialogRef = useRef<HTMLDialogElement>(null);
   const closingTimer = useRef<number | undefined>(undefined);
@@ -71,7 +76,10 @@ export function MobileNavigation() {
     <>
       <button
         type="button"
-        className="grid size-11 place-items-center rounded-full border border-foreground/20 text-foreground transition-colors hover:bg-sand focus-visible:border-focus"
+        className={cn(
+          "grid size-11 place-items-center rounded-full border border-foreground/20 text-foreground transition-colors hover:bg-sand focus-visible:border-focus",
+          triggerClassName,
+        )}
         aria-label="Open navigation"
         aria-haspopup="dialog"
         aria-controls="mobile-navigation-dialog"
@@ -156,7 +164,7 @@ export function MobileNavigation() {
                         ? "page"
                         : undefined
                     }
-                    className="inline-flex min-h-11 items-center text-[0.61rem] font-semibold uppercase tracking-[0.13em] text-muted hover:text-accent focus-visible:ring-2 focus-visible:ring-focus"
+                    className="inline-flex min-h-11 items-center text-[0.69rem] font-semibold uppercase tracking-[0.115em] text-muted hover:text-accent focus-visible:ring-2 focus-visible:ring-focus"
                     onClick={closeDialog}
                   >
                     {item.label}
@@ -166,19 +174,35 @@ export function MobileNavigation() {
             </ul>
           </nav>
           <div className="mt-auto border-t border-foreground/16 pt-6">
-            <div className="flex items-center justify-between gap-4">
-              <div>
-                <a
-                  href={siteConfig.phoneHref}
-                  className="inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-[0.16em] text-accent"
-                >
-                  Call {siteConfig.phoneDisplay}
-                </a>
-                <p className="text-xs leading-6 text-muted">
-                  {siteConfig.hours.display}
-                </p>
-              </div>
+            <div className="grid grid-cols-3 gap-2" aria-label="Visit shortcuts">
+              <Link
+                href="/reservations"
+                onClick={closeDialog}
+                className="flex min-h-12 flex-col items-center justify-center gap-1 rounded-xl bg-olive px-2 text-[0.58rem] font-semibold uppercase tracking-[0.1em] text-ivory focus-visible:ring-2 focus-visible:ring-focus"
+              >
+                <CalendarDays aria-hidden="true" className="size-4 text-gold-light" />
+                Reserve
+              </Link>
+              <a
+                href={siteConfig.directions}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-12 flex-col items-center justify-center gap-1 rounded-xl border border-foreground/18 px-2 text-[0.58rem] font-semibold uppercase tracking-[0.1em] text-foreground focus-visible:ring-2 focus-visible:ring-focus"
+              >
+                <MapPinned aria-hidden="true" className="size-4 text-accent" />
+                Directions
+              </a>
+              <a
+                href={siteConfig.phoneHref}
+                className="flex min-h-12 flex-col items-center justify-center gap-1 rounded-xl border border-foreground/18 px-2 text-[0.58rem] font-semibold uppercase tracking-[0.1em] text-foreground focus-visible:ring-2 focus-visible:ring-focus"
+              >
+                <Phone aria-hidden="true" className="size-4 text-accent" />
+                Call
+              </a>
             </div>
+            <p className="mt-3 text-center text-[0.68rem] leading-5 text-muted">
+              {siteConfig.hours.display} · {siteConfig.phoneDisplay}
+            </p>
           </div>
         </div>
       </dialog>

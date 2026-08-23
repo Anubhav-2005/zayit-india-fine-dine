@@ -1,14 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 
 import { EditorialImage } from "@/components/gallery/editorial-image";
-import { InteriorFilm } from "@/components/gallery/interior-film";
 import { MenuCategoryCard } from "@/components/menu/menu-category-card";
 import { CtaBand } from "@/components/shared/cta-band";
 import { FactStrip } from "@/components/shared/fact-strip";
-import { FaqBlock } from "@/components/shared/faq-block";
-import { KitchenDesk } from "@/components/shared/kitchen-desk";
+import { HomeInteriorSequence } from "@/components/shared/home-interior-sequence";
 import { NearbyList } from "@/components/shared/nearby-list";
 import { RatingGrid } from "@/components/shared/rating-grid";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -33,7 +31,7 @@ export const metadata = createPageMetadata({
 export default function HomePage() {
   return (
     <main id="main-content">
-      <section className="home-hero">
+      <section className="home-hero" aria-labelledby="home-hero-title">
         <picture className="home-hero__media">
           <source
             media="(max-width: 767px)"
@@ -59,6 +57,7 @@ export default function HomePage() {
           className="home-hero__scrim"
           aria-hidden="true"
         />
+        <div className="home-hero__halo" aria-hidden="true" />
 
         <div className="home-hero__inner zayit-shell">
           <div className="home-hero__copy">
@@ -75,10 +74,15 @@ export default function HomePage() {
               />
             </div>
 
-            <h1 className="home-hero__title">
-              A table lit by
-              <br />
-              <em>the Golden City.</em>
+            <h1 id="home-hero-title" className="home-hero__title">
+              <span className="home-hero__line">
+                <span>A table lit by</span>
+              </span>
+              <span className="home-hero__line">
+                <span>
+                  <em>the Golden City.</em>
+                </span>
+              </span>
             </h1>
 
             <p className="home-hero__description">
@@ -122,6 +126,11 @@ export default function HomePage() {
             Jaisalmer Fort
             <span>Seen from Zayit</span>
           </p>
+
+          <a className="home-hero__scroll" href="#story">
+            <span>Enter Zayit</span>
+            <ArrowDown aria-hidden="true" className="size-3.5" />
+          </a>
         </div>
       </section>
 
@@ -140,7 +149,10 @@ export default function HomePage() {
               accent="Stay unhurried."
               description="Zayit means “olive” in Hebrew. Its public story brings an Indian kitchen and Mediterranean spirit together near Jaisalmer Fort."
             />
-            <p className="display-balance max-w-3xl font-serif text-[clamp(1.7rem,7.5vw,2rem)] leading-[1.05] tracking-[-0.035em] md:text-[clamp(2.5rem,3.5vw,3.75rem)] md:leading-[1.02] md:tracking-[-0.04em] lg:justify-self-end">
+            <p
+              className="display-balance max-w-3xl font-serif text-[clamp(1.7rem,7.5vw,2rem)] leading-[1.05] tracking-[-0.035em] md:text-[clamp(2.5rem,3.5vw,3.75rem)] md:leading-[1.02] md:tracking-[-0.04em] lg:justify-self-end"
+              data-reveal="heading"
+            >
               Warm hosting, generous spice and a room made for the whole table.
             </p>
           </div>
@@ -207,27 +219,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="zayit-section">
-        <div className="zayit-shell zayit-interior-grid">
-          <div>
-            <SectionHeading
-              eyebrow="Inside Zayit"
-              title="Ivory walls."
-              accent="Golden light."
-              description="A quiet look through the restaurant’s light-filled dining room. The short film begins only when you choose to play it."
-            />
-            <div className="mt-9 border-t border-foreground/18 pt-7">
-              <p className="max-w-xl text-sm leading-7 text-muted">
-                The long table, carved detailing and soft blue seating shape a
-                room that feels polished without feeling distant.
-              </p>
-            </div>
-          </div>
-          <InteriorFilm />
-        </div>
-      </section>
-
-      <KitchenDesk />
+      <HomeInteriorSequence />
 
       <section className="zayit-section zayit-section--sand">
         <div className="zayit-shell">
@@ -245,6 +237,7 @@ export default function HomePage() {
             {reviewThemes.map((theme, index) => (
               <article
                 key={theme.number}
+                data-reveal="card"
                 className={
                   index === 0
                     ? "border-t border-foreground/18 pt-6"
@@ -283,17 +276,6 @@ export default function HomePage() {
             <NearbyList limit={3} />
           </div>
         </div>
-      </section>
-
-      <section className="zayit-faq-section">
-        <div className="lg:sticky lg:top-32 lg:self-start">
-          <SectionHeading
-            eyebrow="Before you arrive"
-            title="Good to"
-            accent="know."
-          />
-        </div>
-        <FaqBlock limit={5} />
       </section>
 
       <CtaBand />

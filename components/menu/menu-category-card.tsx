@@ -21,6 +21,7 @@ export function MenuCategoryCard({
   return (
     <article
       id={category.id}
+      data-reveal="card"
       className={cn(
         "scroll-mt-28 border-t border-foreground/20 py-7 md:py-9",
         className,

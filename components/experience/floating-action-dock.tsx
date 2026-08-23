@@ -38,25 +38,37 @@ export function FloatingActionDock({
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     const handleMotionPreference = () => setReduceMotion(media.matches);
-    const handleScroll = () => {
-      setShowBackToTop(window.scrollY > backToTopThreshold);
-      setShowQuickActions(
+    let scrollFrame = 0;
+    const updateScrollState = () => {
+      scrollFrame = 0;
+      const nextBackToTop = window.scrollY > backToTopThreshold;
+      const nextQuickActions =
         window.scrollY >
-          Math.min(
-            backToTopThreshold,
-            Math.max(240, window.innerHeight * 0.55),
-          ),
+        Math.min(
+          backToTopThreshold,
+          Math.max(240, window.innerHeight * 0.55),
+        );
+      setShowBackToTop((current) =>
+        current === nextBackToTop ? current : nextBackToTop,
       );
+      setShowQuickActions((current) =>
+        current === nextQuickActions ? current : nextQuickActions,
+      );
+    };
+    const handleScroll = () => {
+      if (scrollFrame) return;
+      scrollFrame = window.requestAnimationFrame(updateScrollState);
     };
 
     handleMotionPreference();
-    handleScroll();
+    updateScrollState();
     media.addEventListener("change", handleMotionPreference);
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       media.removeEventListener("change", handleMotionPreference);
       window.removeEventListener("scroll", handleScroll);
+      window.cancelAnimationFrame(scrollFrame);
     };
   }, [backToTopThreshold]);
 

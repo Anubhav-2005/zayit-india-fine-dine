@@ -25,9 +25,10 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "relative isolate min-h-[60svh] overflow-hidden bg-sand px-5 pb-14 pt-28 text-foreground sm:px-8 sm:pt-32 lg:px-12 lg:pb-20 lg:pt-40",
+        "page-hero relative isolate min-h-[60svh] overflow-hidden bg-sand px-5 pb-14 pt-28 text-foreground sm:px-8 sm:pt-32 lg:px-12 lg:pb-20 lg:pt-40",
         image && "min-h-[72svh]",
       )}
+      data-page-hero
     >
       {image ? (
         <>
@@ -38,7 +39,7 @@ export function PageHero({
             preload
             fetchPriority="high"
             sizes="100vw"
-            className="-z-20 object-cover object-center"
+            className="page-hero__media -z-20 object-cover object-center"
           />
           <div className="hero-scrim absolute inset-0 -z-10" aria-hidden="true" />
         </>
@@ -54,7 +55,7 @@ export function PageHero({
           />
         </>
       )}
-      <div className="mx-auto flex min-h-[calc(60svh-9rem)] max-w-[1500px] flex-col justify-end">
+      <div className="page-hero__content mx-auto flex min-h-[calc(60svh-9rem)] max-w-[1500px] flex-col justify-end">
         <div>
           <p className="text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-accent">
             {eyebrow}

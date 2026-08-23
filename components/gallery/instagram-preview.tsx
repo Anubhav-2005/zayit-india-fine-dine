@@ -35,7 +35,7 @@ export function InstagramPreview({ className }: InstagramPreviewProps) {
     >
       <div className="mx-auto max-w-[1500px]">
         <div className="grid gap-10 border-t border-foreground/20 pt-8 lg:grid-cols-[1fr_0.72fr] lg:items-end">
-          <div>
+          <div data-reveal="heading">
             <p className="flex items-center gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.19em] text-accent">
               <Camera aria-hidden="true" className="size-4" />
               Inside Zayit · Owner supplied
@@ -71,6 +71,7 @@ export function InstagramPreview({ className }: InstagramPreviewProps) {
           {previewAssets.map((asset, index) => (
             <figure
               key={asset.src}
+              data-reveal="image"
               className={cn(
                 "group relative isolate h-full overflow-hidden bg-olive",
                 editorialLayouts[index],
@@ -85,7 +86,7 @@ export function InstagramPreview({ className }: InstagramPreviewProps) {
                     ? "(max-width: 767px) 100vw, 42vw"
                     : "(max-width: 767px) 50vw, 34vw"
                 }
-                className="image-wash object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                className="image-wash object-cover"
               />
               <div
                 aria-hidden="true"
@@ -114,10 +115,9 @@ export function InstagramPreview({ className }: InstagramPreviewProps) {
             Photography status
           </p>
           <p className="pretty-copy max-w-5xl">
-            These are owner-supplied restaurant files, not traveller or
-            AI-generated images. The restaurant should retain photographer
-            permissions and uncompressed masters. This editorial grid is not
-            presented as a live Instagram API feed.
+            These photographs were supplied by the restaurant, not taken from
+            travellers or generated with AI. For the latest posts and stories,
+            visit Zayit’s official Instagram profile.
           </p>
         </aside>
       </div>

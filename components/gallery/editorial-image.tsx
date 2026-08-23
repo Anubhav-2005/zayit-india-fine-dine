@@ -35,7 +35,7 @@ export function EditorialImage({
   );
 
   return (
-    <figure className={cn("group", className)}>
+    <figure className={cn("group", className)} data-reveal="image">
       <div
         className="relative min-h-96 overflow-hidden bg-olive"
         data-parallax

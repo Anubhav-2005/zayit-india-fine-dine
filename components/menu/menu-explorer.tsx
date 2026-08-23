@@ -31,9 +31,7 @@ export function MenuExplorer({
   const resultsId = `${id}-results`;
   const statusId = `${id}-status`;
   const [query, setQuery] = useState("");
-  const [activeCategoryId, setActiveCategoryId] = useState(
-    () => categories[1]?.id ?? categories[0]?.id ?? "all",
-  );
+  const [activeCategoryId, setActiveCategoryId] = useState("all");
 
   const totalItemCount = useMemo(
     () => categories.reduce((total, category) => total + category.items.length, 0),

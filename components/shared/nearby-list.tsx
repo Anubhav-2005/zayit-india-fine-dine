@@ -14,6 +14,7 @@ export function NearbyList({ limit }: NearbyListProps) {
       {visiblePlaces.map((place, index) => (
         <a
           key={place.name}
+          data-reveal="card"
           href={place.href}
           target="_blank"
           rel="noopener noreferrer"

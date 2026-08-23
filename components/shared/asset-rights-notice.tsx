@@ -5,10 +5,8 @@ export function AssetRightsNotice() {
         Authentic restaurant photography
       </p>
       <p className="pretty-copy mt-4 max-w-4xl text-sm leading-7 text-muted">
-        This gallery now uses the restaurant files supplied by the owner for
+        Every photograph in this gallery was supplied by the restaurant for
         this website. No traveller photography or AI-generated imagery is used.
-        Keep the original photographer permissions and uncompressed masters
-        with the restaurant’s launch records.
       </p>
     </aside>
   );

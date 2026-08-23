@@ -16,13 +16,13 @@ export function CtaBand({
   description = "For the quickest confirmation, call the restaurant directly.",
 }: CtaBandProps) {
   return (
-    <section className="relative overflow-hidden bg-sand-deep/55 px-5 py-16 text-foreground sm:px-8 lg:px-12 lg:py-24">
+    <section className="cta-band relative overflow-hidden bg-sand-deep/55 px-5 py-16 text-foreground sm:px-8 lg:px-12 lg:py-24">
       <div
         className="absolute -right-20 -top-48 size-[36rem] rounded-full border border-accent/15"
         aria-hidden="true"
       />
       <div className="relative mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-        <div>
+        <div data-reveal="heading">
           <p className="text-[0.62rem] font-semibold uppercase tracking-[0.19em] text-accent">
             {eyebrow}
           </p>
@@ -30,7 +30,7 @@ export function CtaBand({
             {title}
           </h2>
         </div>
-        <div className="lg:justify-self-end">
+        <div className="lg:justify-self-end" data-reveal="card">
           <p className="pretty-copy max-w-md text-sm leading-7 text-muted">
             {description}
           </p>

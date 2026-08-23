@@ -6,7 +6,7 @@ import { CtaBand } from "@/components/shared/cta-band";
 import { PageHero } from "@/components/shared/page-hero";
 import { SourceStamp } from "@/components/shared/source-stamp";
 import { Button } from "@/components/ui/button";
-import { guestMentionedDishes } from "@/lib/content";
+import { guestMentionedDishes, menuCategories } from "@/lib/content";
 import { createPageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 
@@ -17,6 +17,11 @@ export const metadata = createPageMetadata({
   path: "/menu",
 });
 
+const menuItemCount = menuCategories.reduce(
+  (total, category) => total + category.items.length,
+  0,
+);
+
 export default function MenuPage() {
   return (
     <main id="main-content">
@@ -25,7 +30,7 @@ export default function MenuPage() {
         title="A generous"
         accent="table."
         description="Indian and Mediterranean in identity; North Indian, Chinese, biryani, breads, café plates, desserts and beverages in the current public delivery menu."
-        meta="141 dishes · 11 sections · live prices linked below"
+        meta={`${menuItemCount} dishes · ${menuCategories.length} collections · live prices linked below`}
       />
 
       <section className="px-5 py-20 sm:px-8 md:py-28 lg:px-12">

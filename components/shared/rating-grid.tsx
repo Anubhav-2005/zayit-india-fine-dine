@@ -9,6 +9,7 @@ export function RatingGrid() {
       {ratings.map((rating) => (
         <a
           key={rating.platform}
+          data-reveal="card"
           href={rating.href}
           target="_blank"
           rel="noopener noreferrer"
